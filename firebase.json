@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/kampf-der-diener",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
