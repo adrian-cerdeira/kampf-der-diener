@@ -1,0 +1,167 @@
+[
+    {
+        "name": "Agent Eule",
+        "img": "../../assets/cards/agent-eule.jpg",
+        "description": "Agent Eule ist eine Karte der Art Diener aus der ersten Edition. Sie kostet 4 Kristalle und ist daher eher für den Anfang des Spieles brauchbar. Da die Karte sehr viel Angriff aber kaum Leben besitzt, funktioniert sie am besten mit einem Schildträger. Durch den hohen Angriff lässt sich schon früh einen Spielvorteil erschaffen.",
+        "effects": null,
+        "attack": 10,
+        "life": 1,
+        "shield": 0,
+        "crystal": 4,
+        "type": 0
+    },
+    {
+        "name": "Agent K.Hund",
+        "img": "../../assets/cards/agent-khund.jpg",
+        "description": "Agent K.Hund ist eine Karte der Art Diener aus der ersten Edition. Der Angriff und die Leben dieser Karte sind verglichen mit den Kosten für das Setzen der Karte gering. Durch den Effekt der Karte aber wird sie die stärkste Karte im Spiel.",
+        "effects": "Der Effekt von Agent K.Hund besagt, dass er mit jedem Lebenspunkt auf dem Feld ein Angriff dazu bekommt. Das heisst, dass wenn beide Spieler nur je ein Leben haben und Agent K.Hund die einzige Karte auf dem Feld ist, er 8 Angriff hat. Das bedeutet, egal wie viel Leben der Gegner hat, er wird immer mit einem Schlag von dieser Karte besiegt.",
+        "attack": 1,
+        "life": 5,
+        "shield": 0,
+        "crystal": 10,
+        "type": 0
+    },
+    {
+        "name": "Agent Rabe",
+        "img": "../../assets/cards/agent-rabe.jpg",
+        "description": "Agent Rabe ist eine Karte der Art Diener aus der ersten Edition. Der Angriff und die Leben sind im Verhältnis mit den Kosten sehr gering. Der hohe Schildwert und der Effekt verhilft der Karte, zu den Stärkeren zu gehören.",
+        "effects": "Der Effekt von Agent Rabe besagt, dass jeder Diener, der Schaden erleidet, stirbt. Das bedeutet sobald ein Diener schaden erleidet, egal wie, stribt er, auch wenn er noch Leben übrig hat. Falls der Schildwert aber den gesamten Schaden blocken kann, stirbt der Diener nicht.",
+        "attack": 2,
+        "life": 2,
+        "shield": 8,
+        "crystal": 9,
+        "type": 0
+    },
+    {
+        "name": "Agent Schaf",
+        "img": "../../assets/cards/agent-schaf.jpg",
+        "description": "Agent Schaf ist eine Karte der Art Diener aus der ersten Edition. Durch die niedrigen Kosten ist diese Karte sehr gut für den Einsatz am Anfang des Spieles geeignet. Durch ihren Effekt kann diese Karten sehr gut helfen.",
+        "effects": "Der Effekt von Agent Schaf besagt, dass jeder Diener am Ende deiner Runde um 4 geheilt wird. Das bedeutet, dass jeder Diener, auch die gegnerischen, um 4 Leben geheilt werden. Die Heilung kann die Maximal-Leben nicht überschreiten.",
+        "attack": 1,
+        "life": 1,
+        "shield": 0,
+        "crystal": 2,
+        "type": 0
+    },
+    {
+        "name": "Agent Schnecke",
+        "img": "../../assets/cards/agent-schnecke.jpg",
+        "description": "Agent Schnecke ist eine Karte der Art Diener aus der ersten Edition. Durch die niedrigen Kosten ist diese Karte sehr gut für den Einsatz am Anfang des Spieles geeignet. Durch die Kosten von 1 kann diese Karte gut im ersten Zug oder wenn mal ein Kirstall übrig bleibt gebraucht werden.",
+        "effects": null,
+        "attack": 1,
+        "life": 1,
+        "shield": 0,
+        "crystal": 1,
+        "type": 0
+    },
+    {
+        "name": "Agent Horn",
+        "img": "../../assets/cards/agent-horn.jpg",
+        "description": "Agent Horn ist eine Karte der Art Diener aus der ersten Edition. Durch ihren Effekt ist sie eine sehr gute Karte, sollte aber am Anfang geschützt werden, bis sie stark genug ist.",
+        "effects": "Der Effekt von Agent Horn besagt, dass Agent Horn pro getötetem Gegner 2 Angriff und 1 Leben dazubekommt. Dieser Effekt wird aber nur ausgelöst, wenn Agent Horn den Gegner besiegt. Für besiegte Gegner von anderen Dienern bekommt Agent Horn keinen Bonus.",
+        "attack": 2,
+        "life": 2,
+        "shield": 2,
+        "crystal": 5,
+        "type": 0
+    },
+    {
+        "name": "Agent Katze",
+        "img": "../../assets/cards/agent-katze.jpg",
+        "description": "Agent Katze ist eine Karte der Art Diener aus der ersten Edition. Durch ihre Leben und ihren Effekt ist sie eine Karte, welche gut als Verteidigung gebraucht werden kann.",
+        "effects": "Der Effekt von Agent Katze besagt, dass sie sich nach jedem Zug um 2 Leben heilt. Das heisst, sie heilt sich auch nach jeder gegnerischen Runde voll.",
+        "attack": 5,
+        "life": 8,
+        "shield": 3,
+        "crystal": 8,
+        "type": 0
+    },
+    {
+        "name": "Agent Möwe",
+        "img": "../../assets/cards/agent-moewe.jpg",
+        "description": "Agent Möwe ist eine Karte der Art Diener aus der ersten Edition. Durch ihren verdoppelten Schaden gegen Wildtiere und ihre hohen Leben ist Agent Möwe eine der besseren Karten für das Besiegen gegnerischen Diener",
+        "effects": "Der Effekt von Agent Möwe besagt, dass sie gegen jedes Wildtier doppelten Schaden macht. Der Effekt gilt auch bei der Verteidigung.",
+        "attack": 6,
+        "life": 8,
+        "shield": 1,
+        "crystal": 7,
+        "type": 0
+    },
+    {
+        "name": "Aggressives Eichhörnchen",
+        "img": "../../assets/cards/aggresives-eichhoernchen.jpg",
+        "description": "Aggressives Eichhörnchen ist eine Karte der Art Diener aus der ersten Edition. Durch ihren Wutanfall kann diese Karte kaum besiegt werden.",
+        "effects": "Der Effekt von Aggressives Eichhörnchen besagt, dass sie, sobald sie mindestens 1 Leben unter ihrem maximalen Leben ist, 10 Schild dazubekommt. Diese 10 Schild verliert sie nach einer Heilung auf volle Leben wieder.",
+        "attack": 2,
+        "life": 2,
+        "shield": 10,
+        "crystal": 4,
+        "type": 0
+    },
+    {
+        "name": "Aggroziege",
+        "img": "../../assets/cards/aggroziege.jpg",
+        "description": "Aggroziege ist eine Karte der Art Diener aus der ersten Edition. Durch ihren hohen Angriff lässt sich mit der Karte sehr viel Schaden anrichten.",
+        "effects": null,
+        "attack": 10,
+        "life": 3,
+        "shield": 0,
+        "crystal": 6,
+        "type": 0
+    },
+    {
+        "name": "Ak-Adler",
+        "img": "../../assets/cards/ak-adler.jpg",
+        "description": "Ak-Adler ist eine Karte der Art Diener aus der ersten Edition. Durch seinen hohen Angriff ist Ak-Adler eine sehr gute Karte für den Angriff. Die Leben und der Schildwert bieten genug Verteidigung für eine Runde.",
+        "effects": null,
+        "attack": 15,
+        "life": 5,
+        "shield": 2,
+        "crystal": 4,
+        "type": 0
+    },
+    {
+        "name": "Alfred",
+        "img": "../../assets/cards/alfred.jpg",
+        "description": "Alfred ist eine Karte der Art Diener aus der ersten Edition. Durch seinen Effekt lässt sich billig einen kurzen Schutz aufbauen.",
+        "effects": "Der Effekt von Alfred erstellt für eine Runde eine Kampfsperre. Diese startet am Beginn des nächsten gegnerischen Zuges und endet am Beginn des übernächsten gegnerischen Zuges.",
+        "attack": 1,
+        "life": 1,
+        "shield": 3,
+        "crystal": 3,
+        "type": 0
+    },
+    {
+        "name": "Alpaka",
+        "img": "../../assets/cards/alpaka.jpg",
+        "description": "Alpaka ist eine Karte der Art Diener aus der ersten Edition. Durch ihren Effekt verstärkt sie befreundete Diener enorm.",
+        "effects": "Der Effekt von Alpaka verdoppelt den Angriff aller befreundeten Diener. Das gilt aber nur so lange, wie Alpaka auf dem Feld ist.",
+        "attack": 1,
+        "life": 4,
+        "shield": 0,
+        "crystal": 4,
+        "type": 0
+    },
+    {
+        "name": "Bison Armee",
+        "img": "../../assets/cards/bison-armee.jpg",
+        "description": "Bison Armee ist eine Karte der Art Diener aus der ersten Edition. Sie erlangt ihre wahre Stärke erst, wenn viele Diener auf dem Feld sind.",
+        "effects": "Der Effekt macht die Karte Bison Armee für jedes Wildtier auf dem Feld um einen Kristall billiger. Er erhält ausserdem für jedes Wildtier auf dem Feld einen Bonus von je einem Angriff und einem Schild. Dieser kann sich wieder verändern, wenn neue Wildtiere kommen oder andere zerstört werden.",
+        "attack": 10,
+        "life": 5,
+        "shield": 5,
+        "crystal": 16,
+        "type": 0
+    },
+    {
+        "name": "Blutsauger",
+        "img": "../../assets/cards/blutsauger.jpg",
+        "description": "Blutsauger ist eine Karte der Art Diener aus der ersten Edition. Durch ihre niedrigen Kosten kann sie früh im Spiel einen ersten Angriff landen.",
+        "effects": null,
+        "attack": 3,
+        "life": 1,
+        "shield": 0,
+        "crystal": 1,
+        "type": 0
+    }
+]
