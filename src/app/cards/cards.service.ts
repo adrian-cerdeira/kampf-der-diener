@@ -62,8 +62,8 @@ export class CardsService {
     };
 
     return {
-      ...template,
-      ...newCard
+      ...newCard,
+      ...template
     };
   }
 
