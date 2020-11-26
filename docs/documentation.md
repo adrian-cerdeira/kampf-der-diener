@@ -15,3 +15,7 @@ Webseite + Shop + Spiel von Spiel der [Abschlussarbeit der 3. Sekundarstufe](old
 ### Wiki
 
 ![Mockup Wiki](Mockups/D_Wiki.png)
+
+### Spielen
+
+![Mockup Play](Mockups/D_Spielen.png)
