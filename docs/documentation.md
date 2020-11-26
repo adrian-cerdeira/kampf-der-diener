@@ -6,16 +6,16 @@ Webseite + Shop + Spiel von Spiel der [Abschlussarbeit der 3. Sekundarstufe](old
 
 ### Home 
 
-![Mockup Home](Mockups/D_Home.png)
+![Mockup Home](Mockups/d-home.png)
 
 ### Regeln
 
-![Mockup Rules](Mockups/D_Regeln.png)
+![Mockup Rules](Mockups/d-regeln.png)
 
 ### Wiki
 
-![Mockup Wiki](Mockups/D_Wiki.png)
+![Mockup Wiki](Mockups/d-wiki.png)
 
 ### Spielen
 
-![Mockup Play](Mockups/D_Spielen.png)
+![Mockup Play](Mockups/d-spielen.png)
