@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { FooterComponent } from './footer/footer.component';
+import { SearchBoxComponent } from './search-box/search-box.component';
 
 @NgModule({
   imports: [
@@ -12,11 +13,13 @@ import { FooterComponent } from './footer/footer.component';
   ],
   exports: [
     ToolbarComponent,
-    FooterComponent
+    FooterComponent,
+    SearchBoxComponent
   ],
   declarations: [
     ToolbarComponent,
-    FooterComponent
+    FooterComponent,
+    SearchBoxComponent
   ],
 })
 export class SharedModule { }
