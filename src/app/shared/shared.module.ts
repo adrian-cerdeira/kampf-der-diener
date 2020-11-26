@@ -15,11 +15,11 @@ import { SearchBoxComponent } from './search-box/search-box.component';
     ReactiveFormsModule,
   ],
   exports: [
+    FormsModule,
+    ReactiveFormsModule,
     ToolbarComponent,
     FooterComponent,
     SearchBoxComponent,
-    FormsModule,
-    ReactiveFormsModule,
   ],
   declarations: [
     ToolbarComponent,

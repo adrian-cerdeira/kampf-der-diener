@@ -27,4 +27,8 @@ export class SearchBoxComponent implements OnInit {
     ).subscribe(term => this.searchChanged.emit(term));
   }
 
+  clear(): void {
+    this.searchControl.patchValue(null);
+  }
+
 }

@@ -1,2 +1,11 @@
-<!-- TODO: Search Icon integrieren -->
-<input [formControl]="searchControl" #searchElement class="input" type="search" [placeholder]="placeholder">
+<div class="field">
+  <p class="control has-icons-left has-icons-right">
+    <input [formControl]="searchControl" #searchElement class="input" type="search" [placeholder]="placeholder">
+    <span class="icon is-small is-left">
+      <i class="fas fa-search"></i>
+    </span>
+    <span class="icon is-small is-right">
+      <i class="fas fa-times"></i>
+    </span>
+  </p>
+</div>
