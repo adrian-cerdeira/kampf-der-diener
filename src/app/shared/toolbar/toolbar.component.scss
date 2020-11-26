@@ -1,0 +1,38 @@
+// ******* typography *******
+.luxbar {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.luxbar-navigation {
+  // Workarround: Damit Navbar auch im IE richtig ausgerichtet wird
+  justify-content: space-around;
+}
+
+.luxbar-item {
+  text-transform: uppercase;
+}
+
+// ******* luxbar custom theme *******
+.luxbar-menu-kdd {
+  background-color: black;
+  color: white;
+}
+
+.luxbar-menu-kdd {
+
+  .active,
+  .luxbar-item a:hover {
+    background-color: white;
+    color: black;
+  }
+
+  .luxbar-hamburger {
+
+    span,
+    span::before,
+    span::after {
+      background-color: white;
+    }
+  }
+}
