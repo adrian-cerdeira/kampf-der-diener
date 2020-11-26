@@ -4,10 +4,10 @@ Webseite + Shop + Spiel von Spiel der [Abschlussarbeit der 3. Sekundarstufe](old
 
 ## Mockups Desktop Version
 
-### Home 
+### Home
 
-![Mockup Home](Mockups/D_Home.png)
+![MockupHome](Mockups/D_Home.png)
 
 ### Regeln
 
-![Mockup Rules](Mockups/D_Regeln.png)
+![MockupRules](Mockups/D_Regeln.png)
