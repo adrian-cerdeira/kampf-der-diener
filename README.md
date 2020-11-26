@@ -1,7 +1,11 @@
 # Kampf Der Diener
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.0.
-CSS Framework [Bulma](https://i.imgur.com/RPPQmXo.png)
+
+## Tools
+
+- CSS Framework [Bulma](https://github.com/jgthms/bulma)
+- Navbar mit [Luxbar](https://github.com/balzss/luxbar)
 
 ## [Documentation](docs/documentation.md)
 
