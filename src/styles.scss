@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
 @import '../node_modules/luxbar/scss/luxbar.scss';
 @import '../node_modules/bulma/bulma.sass';
 
 /*** Layout ***/
 body {
+  font-family: 'Noto Sans JP', sans-serif;
   margin-top: 3rem; // Abstand für Toolbar
 }
