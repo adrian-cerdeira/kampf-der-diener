@@ -6,6 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 - CSS Framework [Bulma](https://github.com/jgthms/bulma)
 - Navbar mit [Luxbar](https://github.com/balzss/luxbar)
+- Fonts mit [FontAwesome](https://fontawesome.com/start)
 
 ## [Documentation](docs/documentation.md)
 
