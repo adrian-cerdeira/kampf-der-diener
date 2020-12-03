@@ -1,6 +1,12 @@
 {
   "hosting": {
     "public": "dist/kampf-der-diener",
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ],
     "ignore": [
       "firebase.json",
       "**/.*",
