@@ -12,4 +12,8 @@ export class WikiComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  searchChanges(event: any): void {
+    console.log(event);
+  }
+
 }

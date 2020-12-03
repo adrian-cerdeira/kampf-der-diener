@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { SharedModule } from '../shared/shared.module';
 
 import { WikiRoutingModule } from './wiki-routing.module';
 import { WikiComponent } from './wiki/wiki.component';
@@ -11,6 +12,7 @@ import { WikiComponent } from './wiki/wiki.component';
   ],
   imports: [
     CommonModule,
+    SharedModule,
     WikiRoutingModule
   ]
 })
