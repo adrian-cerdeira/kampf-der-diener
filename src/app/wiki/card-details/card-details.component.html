@@ -12,8 +12,10 @@
         <h2 class="subtitle has-text-left">Beschreibung</h2>
         <p class="has-text-left">{{card.description}}</p>
         <br />
-        <h2 class="subtitle has-text-left">Effekte</h2>
-        <p class="has-text-left">{{card.effects}}</p>
+        <ng-container *ngIf="card.effects">
+          <h2 class="subtitle has-text-left">Effekte</h2>
+          <p class="has-text-left">{{card.effects}}</p>
+        </ng-container>
         <br />
         <app-card-details-table [card]="card"></app-card-details-table>
       </div>
