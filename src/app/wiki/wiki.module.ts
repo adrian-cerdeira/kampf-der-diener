@@ -5,12 +5,14 @@ import { SharedModule } from '../shared/shared.module';
 import { WikiRoutingModule } from './wiki-routing.module';
 import { WikiComponent } from './wiki/wiki.component';
 import { WikiListComponent } from './wiki-list/wiki-list.component';
+import { WikiListItemComponent } from './wiki-list-item/wiki-list-item.component';
 
 
 @NgModule({
   declarations: [
     WikiComponent,
-    WikiListComponent
+    WikiListComponent,
+    WikiListItemComponent
   ],
   imports: [
     CommonModule,

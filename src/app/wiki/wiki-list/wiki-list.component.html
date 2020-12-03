@@ -1,33 +1,3 @@
 <ng-container *ngFor="let card of cards">
-  <a class="panel-block columns">
-    <!-- TODO AC: Improve Mobile -->
-    <div class="column">
-      {{card.name}}
-    </div>
-    <div class="column is-one-third is-hidden-mobile">
-      <app-card-type [type]="card.type"></app-card-type>
-    </div>
-    <div class="column is-hidden-mobile">
-      <img src="assets/custom-icons/crystal.svg" width="16" height="16" />
-      {{card.crystal}}
-    </div>
-    <div class="column">
-      <ng-container *ngIf="card.attack">
-        <img src="assets/custom-icons/sword.svg" width="16" height="16" />
-        {{card.attack}}
-      </ng-container>
-    </div>
-    <div class="column">
-      <ng-container *ngIf="card.life">
-        <i class="fas fa-tint"></i>
-        {{card.life}}
-      </ng-container>
-    </div>
-    <div class="column">
-      <ng-container *ngIf="card.shield !== null">
-        <i class="fas fa-shield-alt"></i>
-        {{card.shield}}
-      </ng-container>
-    </div>
-  </a>
+  <app-wiki-list-item [card]="card"></app-wiki-list-item>
 </ng-container>
