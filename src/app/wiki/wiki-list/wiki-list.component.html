@@ -1,9 +1,13 @@
 <ng-container *ngFor="let card of cards">
   <a class="panel-block columns">
+    <!-- TODO AC: Improve Mobile -->
     <div class="column">
       {{card.name}}
     </div>
-    <div class="column">
+    <div class="column is-one-third is-hidden-mobile">
+      <app-card-type [type]="card.type"></app-card-type>
+    </div>
+    <div class="column is-hidden-mobile">
       <img src="assets/custom-icons/crystal.svg" width="16" height="16" />
       {{card.crystal}}
     </div>

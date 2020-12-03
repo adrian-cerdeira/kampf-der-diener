@@ -1,5 +1,5 @@
-enum CardType {
-    Wildtier = 0,
+export enum CardType {
+    Diener = 0,
     Partner = 1,
     Zauber = 2,
     Schildtraeger = 3,

@@ -6,6 +6,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { SearchBoxComponent } from './search-box/search-box.component';
+import { CardTypeComponent } from './card-type/card-type.component';
 
 @NgModule({
   imports: [
@@ -20,11 +21,13 @@ import { SearchBoxComponent } from './search-box/search-box.component';
     ToolbarComponent,
     FooterComponent,
     SearchBoxComponent,
+    CardTypeComponent
   ],
   declarations: [
     ToolbarComponent,
     FooterComponent,
-    SearchBoxComponent
+    SearchBoxComponent,
+    CardTypeComponent
   ],
 })
 export class SharedModule { }
