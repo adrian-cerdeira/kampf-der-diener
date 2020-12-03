@@ -11,7 +11,6 @@ export class WikiListComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.cards);
   }
 
 }

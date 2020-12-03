@@ -1,5 +1,13 @@
 <ng-container *ngFor="let card of cards">
   <a class="panel-block">
-    {{card.name}}
+    <div class="columns">
+      <div class="column is-three-quarters">
+        {{card.name}}
+      </div>
+      <div class="column">
+        <i class="fas fa-shield-alt"></i>
+        {{card.shield}}
+      </div>
+    </div>
   </a>
 </ng-container>
