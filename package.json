@@ -20,6 +20,8 @@
     "@angular/platform-browser-dynamic": "~11.0.0",
     "@angular/router": "~11.0.0",
     "@angular/service-worker": "~11.0.0",
+    "@ngx-loading-bar/core": "^5.1.0",
+    "@ngx-loading-bar/router": "^5.1.0",
     "bulma": "^0.9.1",
     "luxbar": "^0.3.2",
     "rxjs": "~6.6.0",
