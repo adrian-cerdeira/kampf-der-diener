@@ -4,18 +4,34 @@ Webseite + Shop + Spiel von Spiel der [Abschlussarbeit der 3. Sekundarstufe](old
 
 ## Mockups Desktop Version
 
-### Home 
+### Home
 
-![Mockup Home](Mockups/d-home.png)
+![Mockup Home Desktop](Mockups/d-home.png)
 
 ### Regeln
 
-![Mockup Rules](Mockups/d-regeln.png)
+![Mockup Rules Desktop](Mockups/d-regeln.png)
 
 ### Wiki
 
-![Mockup Wiki](Mockups/d-wiki.png)
+![Mockup Wiki Desktop](Mockups/d-wiki.png)
 
 ### Spielen
 
-![Mockup Play](Mockups/d-spielen.png)
+![Mockup Play Desktop](Mockups/d-spielen.png)
+
+## Mockups Mobile Version
+
+Das Kartenspiel soll nicht Responsive sein. Deswegen gibt es auch kein Mockup für die Seite Spielen.
+
+### Home
+
+![Mockup Home Mobile](Mockups/m-home.png)
+
+### Regeln
+
+![Mockup Regeln Mobile](Mockups/m-regeln.png)
+
+### Wiki
+
+![Mockup Regeln Mobile](Mockups/m-wiki.png)
