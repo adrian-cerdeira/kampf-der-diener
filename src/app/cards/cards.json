@@ -481,7 +481,7 @@
         "life": 9,
         "shield": 10,
         "crystal": 10,
-        "type": null
+        "type": 0
     },
     {
         "name": "Übergewichtige Katze",
@@ -580,7 +580,7 @@
         "life": 5,
         "shield": 1,
         "crystal": 3,
-        "type": null
+        "type": 0
     },
     {
         "name": "Gans",
@@ -635,7 +635,7 @@
         "life": 5,
         "shield": 3,
         "crystal": 8,
-        "type": null
+        "type": 0
     },
     {
         "name": "Insekte",
