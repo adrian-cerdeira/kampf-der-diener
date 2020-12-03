@@ -1,1 +1,9 @@
-<p>card-details works!</p>
+<section class="section has-background-white has-text-black">
+  <div class="container has-text-centered">
+    <h1 class="title">
+      {{card.id}} {{card.name}}
+      <app-card-type [type]="card.type"></app-card-type>
+    </h1>
+    <img [src]="card.img" />
+  </div>
+</section>
