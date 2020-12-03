@@ -16,8 +16,8 @@ export class WikiComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.cards = this.cardService.getAll();
-    this.filteredCards = this.cardService.getAll();
+    this.cards = this.cardService.getBasicsAll();
+    this.filteredCards = this.cardService.getBasicsAll();
   }
 
   searchChanges(searchTerm: any): void {

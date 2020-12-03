@@ -17,6 +17,21 @@ export class CardsService {
     return this.cards;
   }
 
+  getBasicsAll(): void {
+    return this.cards
+      .map((c: { id: any; name: any; type: any; crystal: any; attack: any; life: any; shield: any; }) => {
+        return {
+          id: c.id,
+          name: c.name,
+          type: c.type,
+          crystal: c.crystal,
+          attack: c.attack,
+          life: c.life,
+          shield: c.shield,
+        };
+      });
+  }
+
   getById(id: number): any {
     return this.cards.find((c: { id: number; }) => c.id === id);
   }
