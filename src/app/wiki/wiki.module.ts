@@ -18,8 +18,8 @@ import { CardDetailsComponent } from './card-details/card-details.component';
   ],
   imports: [
     CommonModule,
-    WikiRoutingModule,
     SharedModule,
+    WikiRoutingModule,
   ]
 })
 export class WikiModule { }
