@@ -4,11 +4,13 @@ import { SharedModule } from '../shared/shared.module';
 
 import { WikiRoutingModule } from './wiki-routing.module';
 import { WikiComponent } from './wiki/wiki.component';
+import { WikiListComponent } from './wiki-list/wiki-list.component';
 
 
 @NgModule({
   declarations: [
-    WikiComponent
+    WikiComponent,
+    WikiListComponent
   ],
   imports: [
     CommonModule,
