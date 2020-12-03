@@ -13,7 +13,7 @@
                 {{card.crystal}}
             </td>
         <tr>
-        <tr>
+        <tr *ngIf="card.attack">
             <td class="has-text-left">
                 <strong>
                     Angriff:
@@ -25,7 +25,7 @@
                 </span>
                 {{card.attack}}
             </td>
-        <tr>
+        <tr *ngIf="card.life">
             <td class="has-text-left">
                 <strong>
                     Leben:
@@ -38,7 +38,7 @@
                 {{card.life}}
             </td>
         </tr>
-        <tr>
+        <tr *ngIf="card.shield !== null">
             <td class="has-text-left">
                 <strong>
                     Schild:
