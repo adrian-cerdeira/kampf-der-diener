@@ -10,6 +10,8 @@ import { CardsService } from '../../cards/cards.service';
 })
 export class CardDetailsComponent implements OnInit {
   card: any;
+  previousCard: any;
+  nextCard: any;
 
   constructor(
     private route: ActivatedRoute,
@@ -18,7 +20,12 @@ export class CardDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     const id = Number(this.route.snapshot.params.id);
+    const previousId = Number(this.route.snapshot.params.id) - 1;
+    const nextId = Number(this.route.snapshot.params.id) + 1;
+
     this.card = this.cardService.getById(id);
+    this.previousCard = this.cardService.getById(previousId);
+    this.nextCard = this.cardService.getById(nextId);
   }
 
 }

@@ -18,5 +18,20 @@
         <app-card-details-table [card]="card"></app-card-details-table>
       </div>
     </div>
+    <nav class="pagination">
+      <a *ngIf="!previousCard"></a>
+      <ng-container *ngIf="previousCard">
+        <a href="/wiki/{{previousCard.id}}" class="pagination-previous">
+          {{ previousCard.id }}
+          {{ previousCard.name }}
+        </a>
+      </ng-container>
+      <ng-container *ngIf="nextCard">
+        <a href="/wiki/{{nextCard.id}}" c class="pagination-next">
+          {{ nextCard.id }}
+          {{ nextCard.name }}
+        </a>
+      </ng-container>
+    </nav>
   </div>
 </section>
