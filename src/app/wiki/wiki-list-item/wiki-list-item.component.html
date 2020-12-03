@@ -1,5 +1,6 @@
 <a [routerLink]="['/wiki', card.id]" class="panel-block is-flex is-flex-wrap-wrap">
-  <div class="column is-half-mobile">
+  <div class="column is-one-third-desktop is-half-mobile">
+    <strong>{{card.id}}</strong>
     {{card.name}}
   </div>
   <div class="column is-half-mobile is-one-third-desktop">
