@@ -11,7 +11,7 @@
     {{card.crystal}}
   </div>
   <div class="column">
-    <ng-container *ngIf="card.attack">
+    <ng-container *ngIf="card.attack !== null">
       <img src="assets/custom-icons/sword.svg" width="16" height="16" />
       {{card.attack}}
     </ng-container>
