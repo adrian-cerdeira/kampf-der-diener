@@ -22,4 +22,10 @@ Webseite + Shop + Spiel von Spiel der [Abschlussarbeit der 3. Sekundarstufe](old
 
 ## Mockups Mobile Version
 
+### Home
+
 ![Mockup Home Mobile](Mockups/m-home.png)
+
+### Regeln
+
+![Mockup Regeln Mobile](Mockups/m-regeln.png)
