@@ -21,7 +21,11 @@
       </div>
     </div>
     <nav class="pagination">
-      <a *ngIf="!previousCard"></a>
+      <ng-container *ngIf="!previousCard">
+        <a [routerLink]="['/wiki']" class="pagination-next">
+          Zurück zur Übersicht
+        </a>
+      </ng-container>
       <ng-container *ngIf="previousCard">
         <a href="/wiki/{{previousCard.id}}" class="pagination-previous">
           {{ previousCard.id }}
@@ -29,9 +33,14 @@
         </a>
       </ng-container>
       <ng-container *ngIf="nextCard">
-        <a href="/wiki/{{nextCard.id}}" c class="pagination-next">
+        <a href="/wiki/{{nextCard.id}}" class="pagination-next">
           {{ nextCard.id }}
           {{ nextCard.name }}
+        </a>
+      </ng-container>
+      <ng-container *ngIf="!nextCard">
+        <a [routerLink]="['/wiki']" class="pagination-next">
+          Zurück zur Übersicht
         </a>
       </ng-container>
     </nav>
