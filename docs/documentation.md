@@ -4,7 +4,7 @@ Webseite + Shop + Spiel von Spiel der [Abschlussarbeit der 3. Sekundarstufe](old
 
 ## Mockups Desktop Version
 
-### Home 
+### Home
 
 ![Mockup Home Desktop](Mockups/d-home.png)
 
