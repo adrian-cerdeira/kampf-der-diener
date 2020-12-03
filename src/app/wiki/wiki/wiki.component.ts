@@ -9,6 +9,7 @@ import { CardsService } from '../../cards/cards.service';
 })
 export class WikiComponent implements OnInit {
   cards: any;
+  filteredCards: any;
 
   constructor(
     private cardService: CardsService,
@@ -16,10 +17,12 @@ export class WikiComponent implements OnInit {
 
   ngOnInit(): void {
     this.cards = this.cardService.getAll();
+    this.filteredCards = this.cardService.getAll();
   }
 
-  searchChanges(event: any): void {
-    console.log(event);
+  searchChanges(searchTerm: any): void {
+    this.filteredCards = this.cards
+      .filter((c: { name: string; }) => c.name.toUpperCase().indexOf(searchTerm.toUpperCase()) > -1);
   }
 
 }

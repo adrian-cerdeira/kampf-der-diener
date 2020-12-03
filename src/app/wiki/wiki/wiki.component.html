@@ -9,7 +9,7 @@
           <app-search-box (searchChanged)="searchChanges($event)" #searchBox></app-search-box>
         </p>
       </div>
-      <app-wiki-list [cards]="cards"></app-wiki-list>
+      <app-wiki-list [cards]="filteredCards"></app-wiki-list>
     </nav>
   </div>
 </section>
