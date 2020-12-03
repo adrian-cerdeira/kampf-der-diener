@@ -13,19 +13,19 @@ export class CardsService {
     this.cards = this.createAll();
   }
 
-  getAll() {
+  getAll(): void {
     return this.cards;
   }
 
-  getById(id: number) {
-    return this.cards.find(c => c.id === id);
+  getById(id: number): any {
+    return this.cards.find((c: { id: number; }) => c.id === id);
   }
 
-  getByName(name: string) {
-    return this.cards.find(c => c.name === name);
+  getByName(name: string): any {
+    return this.cards.find((c: { name: string; }) => c.name === name);
   }
 
-  private createAll() {
+  private createAll(): any {
     // Erstellt Karten Array in alphabetisch nach Namen sortiert
     return cards
       .sort((a, b) => a.name.localeCompare(b.name))
@@ -42,12 +42,12 @@ export class CardsService {
           shield: c.shield,
           crystal: c.crystal,
           type: c.type,
-        })
+        });
 
       });
   }
 
-  private create(template: any) {
+  private create(template: any): any {
     const newCard = {
       id: null,
       name: null,
