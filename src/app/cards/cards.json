@@ -847,17 +847,6 @@
         "type": 1
     },
     {
-        "name": "Dr. Echse",
-        "img": "../../assets/cards/dr-echse.png",
-        "description": "Dr. Echse ist eine Karte der Art Diener aus der zweiten Edition. Durch seinen Effekt lässt sich entweder ein befreundeter Diener stärken.",
-        "effects": "Mit dem Effekt von Dr. Echse kann der Spieler entweder einem Diener 0 Angriff 0 Leben und 2 Schild verleihen.",
-        "attack": 2,
-        "life": 6,
-        "shield": 2,
-        "crystal": 7,
-        "type": 0
-    },
-    {
         "name": "Delphin",
         "img": "../../assets/cards/delphin.png",
         "description": "Delphin ist eine Karte der Art Partner aus der zweiten Edition. Durch seinen Effekt lässt sich entweder ein befreundeter Diener stärken oder einen feindlichen Diener schwächen.",
