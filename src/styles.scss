@@ -5,6 +5,11 @@
 /*** Layout ***/
 body {
   font-family: 'Noto Sans JP', sans-serif;
+
+  /* Responsive base font size */
+  /* Inspired by: https://www.codementor.io/ricardozea/100-responsive-typography-system-using-a-modular-scale-s5rhft58g*/
+  font-size: calc(1rem + .15vw);
+
   margin-top: 3rem; // Abstand für Toolbar
   margin-bottom: 5rem; // Abstand für Footer
 }
