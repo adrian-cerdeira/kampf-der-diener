@@ -1,33 +1,35 @@
-<section class="section has-background-white has-text-black">
-  <div class="container has-text-centered">
-    <h1 class="title">
-      {{card.id}} {{card.name}}
-      <app-card-type [type]="card.type"></app-card-type>
-    </h1>
-    <app-card-details-info [card]="card"></app-card-details-info>
-    <nav class="pagination">
-      <ng-container *ngIf="!previousCard">
-        <a [routerLink]="['/wiki']" class="pagination-next">
-          Zurück zur Übersicht
-        </a>
-      </ng-container>
-      <ng-container *ngIf="previousCard">
-        <a href="/wiki/{{previousCard.id}}" class="pagination-previous">
-          {{ previousCard.id }}
-          {{ previousCard.name }}
-        </a>
-      </ng-container>
-      <ng-container *ngIf="nextCard">
-        <a href="/wiki/{{nextCard.id}}" class="pagination-next">
-          {{ nextCard.id }}
-          {{ nextCard.name }}
-        </a>
-      </ng-container>
-      <ng-container *ngIf="!nextCard">
-        <a [routerLink]="['/wiki']" class="pagination-next">
-          Zurück zur Übersicht
-        </a>
-      </ng-container>
-    </nav>
-  </div>
-</section>
+<ng-container *ngIf="card">
+  <section class="section has-background-white has-text-black">
+    <div class="container has-text-centered">
+      <h1 class="title">
+        {{card.id}} {{card.name}}
+        <app-card-type [type]="card.type"></app-card-type>
+      </h1>
+      <app-card-details-info [card]="card"></app-card-details-info>
+      <nav class="pagination">
+        <ng-container *ngIf="!previousCard">
+          <a [routerLink]="['/wiki']" class="pagination-next">
+            Zurück zur Übersicht
+          </a>
+        </ng-container>
+        <ng-container *ngIf="previousCard">
+          <a href="/wiki/{{previousCard.id}}" class="pagination-previous">
+            {{ previousCard.id }}
+            {{ previousCard.name }}
+          </a>
+        </ng-container>
+        <ng-container *ngIf="nextCard">
+          <a href="/wiki/{{nextCard.id}}" class="pagination-next">
+            {{ nextCard.id }}
+            {{ nextCard.name }}
+          </a>
+        </ng-container>
+        <ng-container *ngIf="!nextCard">
+          <a [routerLink]="['/wiki']" class="pagination-next">
+            Zurück zur Übersicht
+          </a>
+        </ng-container>
+      </nav>
+    </div>
+  </section>
+</ng-container>

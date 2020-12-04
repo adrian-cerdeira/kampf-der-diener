@@ -1,60 +1,56 @@
 import { Injectable } from '@angular/core';
+import { AngularFireDatabase } from '@angular/fire/database';
 
-import cards from './cards.json';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CardsService {
-  private cards: any;
+  private dbConnection: any;
 
-  constructor() {
-    // Initialiserung des Karten Array mit alphabetischer Sortierung
-    this.cards = cards
-      .sort((a, b) => a.name.localeCompare(b.name))
-      .map((c, i) => {
-
-        return {
-          id: i + 1,
-          name: c.name,
-          img: c.img,
-          description: c.description,
-          effects: c.effects,
-          attack: c.attack,
-          life: c.life,
-          shield: c.shield,
-          crystal: c.crystal,
-          type: c.type,
-        };
-
-      });
+  constructor(
+    private db: AngularFireDatabase,
+  ) {
+    this.dbConnection = this.getConnection();
   }
 
-  getAll(): void {
-    return this.cards;
+  getAll(): Observable<any> {
+    return this.dbConnection.valueChanges();
   }
 
-  getBasicsAll(): void {
-    return this.cards
-      .map((c: { id: any; name: any; type: any; crystal: any; attack: any; life: any; shield: any; }) => {
-        return {
-          id: c.id,
-          name: c.name,
-          type: c.type,
-          crystal: c.crystal,
-          attack: c.attack,
-          life: c.life,
-          shield: c.shield,
-        };
-      });
+  getBasicsAll(): Observable<any> {
+    return this.dbConnection.valueChanges().pipe(
+      map((cards: any) => cards
+        .sort((a: any, b: any) => a.id - b.id)
+        .map((c: any) => {
+
+          return {
+            id: c.id,
+            name: c.name,
+            img: c.img,
+            description: c.description,
+            effects: c.effects,
+            attack: c.attack,
+            life: c.life,
+            shield: c.shield,
+            crystal: c.crystal,
+            type: c.type,
+          }
+
+        })
+      ))
   }
 
-  getById(id: number): any {
-    return this.cards.find((c: { id: number; }) => c.id === id);
+  getById(id: number): Observable<any> {
+    return this.dbConnection.valueChanges().pipe(
+      map((cards: any) => cards.find((c: any) => c.id === id))
+    )
   }
 
-  getByName(name: string): any {
-    return this.cards.find((c: { name: string; }) => c.name === name);
+  private getConnection(config?: any): any {
+    return this.db.list('/cards', config);
   }
 
 }
