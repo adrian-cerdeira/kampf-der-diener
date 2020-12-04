@@ -27,9 +27,17 @@ export class CardDetailsComponent implements OnInit {
     const previousId = Number(this.route.snapshot.params.id) - 1;
     const nextId = Number(this.route.snapshot.params.id) + 1;
 
-    this.card = this.cardService.getById(id);
-    this.previousCard = this.cardService.getById(previousId);
-    this.nextCard = this.cardService.getById(nextId);
+    this.cardService.getById(id).subscribe(card => {
+      this.card = card;
+    });
+
+    this.cardService.getById(previousId).subscribe(previousCard => {
+      this.previousCard = previousCard;
+    });
+
+    this.cardService.getById(nextId).subscribe(nextCard => {
+      this.nextCard = nextCard;
+    });
   }
 
 }

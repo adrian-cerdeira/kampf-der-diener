@@ -20,8 +20,10 @@ export class WikiComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.cards = this.cardService.getBasicsAll();
-    this.filteredCards = this.cardService.getBasicsAll();
+    this.cardService.getBasicsAll().subscribe(cards => {
+      this.cards = cards;
+      this.filteredCards = cards;
+    });
   }
 
   searchChanges(searchTerm: any): void {

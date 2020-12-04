@@ -1,5 +1,6 @@
 [
     {
+        "id": 1,
         "name": "Agent Eule",
         "img": "../../assets/cards/agent-eule.png",
         "description": "Agent Eule ist eine Karte der Art Diener aus der ersten Edition. Sie kostet 4 Kristalle und ist daher eher für den Anfang des Spieles brauchbar. Da die Karte sehr viel Angriff aber kaum Leben besitzt, funktioniert sie am besten mit einem Schildträger. Durch den hohen Angriff lässt sich schon früh einen Spielvorteil erschaffen.",
@@ -11,6 +12,7 @@
         "type": 0
     },
     {
+        "id": 2,
         "name": "Agent K.Hund",
         "img": "../../assets/cards/agent-khund.png",
         "description": "Agent K.Hund ist eine Karte der Art Diener aus der ersten Edition. Der Angriff und die Leben dieser Karte sind verglichen mit den Kosten für das Setzen der Karte gering. Durch den Effekt der Karte aber wird sie die stärkste Karte im Spiel.",
@@ -22,6 +24,7 @@
         "type": 0
     },
     {
+        "id": 3,
         "name": "Agent Rabe",
         "img": "../../assets/cards/agent-rabe.png",
         "description": "Agent Rabe ist eine Karte der Art Diener aus der ersten Edition. Der Angriff und die Leben sind im Verhältnis mit den Kosten sehr gering. Der hohe Schildwert und der Effekt verhilft der Karte, zu den Stärkeren zu gehören.",
@@ -33,6 +36,7 @@
         "type": 0
     },
     {
+        "id": 4,
         "name": "Agent Schaf",
         "img": "../../assets/cards/agent-schaf.png",
         "description": "Agent Schaf ist eine Karte der Art Diener aus der ersten Edition. Durch die niedrigen Kosten ist diese Karte sehr gut für den Einsatz am Anfang des Spieles geeignet. Durch ihren Effekt kann diese Karten sehr gut helfen.",
@@ -44,6 +48,7 @@
         "type": 0
     },
     {
+        "id": 5,
         "name": "Agent Schnecke",
         "img": "../../assets/cards/agent-schnecke.png",
         "description": "Agent Schnecke ist eine Karte der Art Diener aus der ersten Edition. Durch die niedrigen Kosten ist diese Karte sehr gut für den Einsatz am Anfang des Spieles geeignet. Durch die Kosten von 1 kann diese Karte gut im ersten Zug oder wenn mal ein Kirstall übrig bleibt gebraucht werden.",
@@ -55,6 +60,7 @@
         "type": 0
     },
     {
+        "id": 6,
         "name": "Agent Horn",
         "img": "../../assets/cards/agent-horn.png",
         "description": "Agent Horn ist eine Karte der Art Diener aus der ersten Edition. Durch ihren Effekt ist sie eine sehr gute Karte, sollte aber am Anfang geschützt werden, bis sie stark genug ist.",
@@ -66,6 +72,7 @@
         "type": 0
     },
     {
+        "id": 7,
         "name": "Agent Katze",
         "img": "../../assets/cards/agent-katze.png",
         "description": "Agent Katze ist eine Karte der Art Diener aus der ersten Edition. Durch ihre Leben und ihren Effekt ist sie eine Karte, welche gut als Verteidigung gebraucht werden kann.",
@@ -77,6 +84,7 @@
         "type": 0
     },
     {
+        "id": 8,
         "name": "Agent Möwe",
         "img": "../../assets/cards/agent-moewe.png",
         "description": "Agent Möwe ist eine Karte der Art Diener aus der ersten Edition. Durch ihren verdoppelten Schaden gegen Wildtiere und ihre hohen Leben ist Agent Möwe eine der besseren Karten für das Besiegen gegnerischen Diener",
@@ -88,6 +96,7 @@
         "type": 0
     },
     {
+        "id": 9,
         "name": "Aggressives Eichhörnchen",
         "img": "../../assets/cards/aggresives-eichhoernchen.png",
         "description": "Aggressives Eichhörnchen ist eine Karte der Art Diener aus der ersten Edition. Durch ihren Wutanfall kann diese Karte kaum besiegt werden.",
@@ -99,6 +108,7 @@
         "type": 0
     },
     {
+        "id": 10,
         "name": "Aggroziege",
         "img": "../../assets/cards/aggroziege.png",
         "description": "Aggroziege ist eine Karte der Art Diener aus der ersten Edition. Durch ihren hohen Angriff lässt sich mit der Karte sehr viel Schaden anrichten.",
@@ -110,6 +120,7 @@
         "type": 0
     },
     {
+        "id": 11,
         "name": "Ak-Adler",
         "img": "../../assets/cards/ak-adler.png",
         "description": "Ak-Adler ist eine Karte der Art Diener aus der ersten Edition. Durch seinen hohen Angriff ist Ak-Adler eine sehr gute Karte für den Angriff. Die Leben und der Schildwert bieten genug Verteidigung für eine Runde.",
@@ -121,6 +132,7 @@
         "type": 0
     },
     {
+        "id": 12,
         "name": "Alfred",
         "img": "../../assets/cards/alfred.png",
         "description": "Alfred ist eine Karte der Art Diener aus der ersten Edition. Durch seinen Effekt lässt sich billig einen kurzen Schutz aufbauen.",
@@ -132,6 +144,7 @@
         "type": 0
     },
     {
+        "id": 13,
         "name": "Alpaka",
         "img": "../../assets/cards/alpaka.png",
         "description": "Alpaka ist eine Karte der Art Diener aus der ersten Edition. Durch ihren Effekt verstärkt sie befreundete Diener enorm.",
@@ -143,6 +156,7 @@
         "type": 0
     },
     {
+        "id": 14,
         "name": "Bison Armee",
         "img": "../../assets/cards/bison-armee.png",
         "description": "Bison Armee ist eine Karte der Art Diener aus der ersten Edition. Sie erlangt ihre wahre Stärke erst, wenn viele Diener auf dem Feld sind.",
@@ -154,6 +168,7 @@
         "type": 0
     },
     {
+        "id": 15,
         "name": "Blutsauger",
         "img": "../../assets/cards/blutsauger.png",
         "description": "Blutsauger ist eine Karte der Art Diener aus der ersten Edition. Durch ihre niedrigen Kosten kann sie früh im Spiel einen ersten Angriff landen.",
@@ -165,6 +180,7 @@
         "type": 0
     },
     {
+        "id": 16,
         "name": "Burger",
         "img": "../../assets/cards/burger.png",
         "description": "Burger ist eine Karte der Art Zauber aus der ersten Edition. Nach dem Konsumieren dieser Amerikanischen Spezialität fühlt sich der Diener besser und kann gestärkt weiter Diener zerstören.",
@@ -176,6 +192,7 @@
         "type": 2
     },
     {
+        "id": 17,
         "name": "Dein Untergang?",
         "img": "../../assets/cards/dein-untergang.png",
         "description": "Dein Untergang? ist eine Karte der Art Zauber aus der ersten Edition. Diese Karte ist die Lösung, falls der Gegner eine Wand aus starken Dienern aufgebaut hat.",
@@ -187,6 +204,7 @@
         "type": 2
     },
     {
+        "id": 18,
         "name": "Dunkle Bestie",
         "img": "../../assets/cards/dunkle-bestie.png",
         "description": "Dunkle Bestie ist eine Karte der Art Diener aus der ersten Edition. Durch ihren vierfachen Schaden eignet sie sich perfekt für Kämpfe gegen Wildtiere.",
@@ -198,6 +216,7 @@
         "type": 0
     },
     {
+        "id": 19,
         "name": "Feuerball",
         "img": "../../assets/cards/feuerball.png",
         "description": "Feuerball ist eine Karte der Art Zauber aus der ersten Edition. Durch seinen Effekt kann sie gegnerische Diener zerstören.",
@@ -209,6 +228,7 @@
         "type": 2
     },
     {
+        "id": 20,
         "name": "Flugfähige Maus",
         "img": "../../assets/cards/flugfaehige-maus.png",
         "description": "Flugfähige Maus ist eine Karte der Art Diener aus der ersten Edition. Durch ihre hohen Leben kann sie lange auf dem Feld bleiben.",
@@ -220,6 +240,7 @@
         "type": 0
     },
     {
+        "id": 21,
         "name": "Fred",
         "img": "../../assets/cards/fred.png",
         "description": "Fred ist eine Karte der Art Diener aus der ersten Edition. Durch sein Schildträger kann Fred schon früh im Spiel über einige Runden einen guten Schutz bieten.",
@@ -231,6 +252,7 @@
         "type": 3
     },
     {
+        "id": 22,
         "name": "Gelbes Ufo?",
         "img": "../../assets/cards/gelbes-ufo.png",
         "description": "Gelbes Ufo? ist eine Karte der Art Diener aus der ersten Edition. Durch ihre Immunität bekommt Gelbes Ufo auch beim Angreifen keinen Schaden.",
@@ -242,6 +264,7 @@
         "type": 0
     },
     {
+        "id": 23,
         "name": "Gibbon",
         "img": "../../assets/cards/gibbon.png",
         "description": "Gibbon ist eine Karte der Art Diener aus der ersten Edition. Durch ihren hohen Schildwert kann er früh im Spiel über längere Zeit auf dem Feld sein.",
@@ -253,6 +276,7 @@
         "type": 0
     },
     {
+        "id": 24,
         "name": "Goldaffe",
         "img": "../../assets/cards/goldaffe.png",
         "description": "Goldaffe ist eine Karte der Art Diener aus der ersten Edition. Durch den Ansturm kann diese Karte schon früh in das Spiel des Gegners eingreifen.",
@@ -264,6 +288,7 @@
         "type": 0
     },
     {
+        "id": 25,
         "name": "Gorilla",
         "img": "../../assets/cards/gorilla.png",
         "description": "Gorilla ist eine Karte der Art Diener aus der ersten Edition. Durch den Schildträger und den hohen Werten ist Gorilla eine Karte, welche auch zurückschlägt.",
@@ -275,6 +300,7 @@
         "type": 3
     },
     {
+        "id": 26,
         "name": "Hirsch",
         "img": "../../assets/cards/hirsch.png",
         "description": "Hirsch ist eine Karte der Art Diener aus der ersten Edition. Durch ihre ausgeglichenen Werte ist sie für alles gewappnet.",
@@ -286,6 +312,7 @@
         "type": 0
     },
     {
+        "id": 27,
         "name": "Honigbiene",
         "img": "../../assets/cards/honigbiene.png",
         "description": "Honigbiene ist eine Karte der Art Diener aus der ersten Edition. Durch ihren Effekt wird sie Schlag für Schlag stärker.",
@@ -297,6 +324,7 @@
         "type": 0
     },
     {
+        "id": 28,
         "name": "Hungerhorn",
         "img": "../../assets/cards/hungerhorn.png",
         "description": "Hungerhorn ist eine Karte der Art Diener aus der ersten Edition. Durch ihren hohen Angriff kann diese Karte früh im Spiel eine starke Waffe sein.",
@@ -308,6 +336,7 @@
         "type": 0
     },
     {
+        "id": 29,
         "name": "Hungrige Schlange",
         "img": "../../assets/cards/hungrige-schlange.png",
         "description": "Hungrige Schlange ist eine Karte der Art Diener aus der ersten Edition. Durch ihren Effekt kann sie grossen Schaden gegen Wildtier machen.",
@@ -319,6 +348,7 @@
         "type": 0
     },
     {
+        "id": 30,
         "name": "Hungriger Panda",
         "img": "../../assets/cards/hungriger-panda.png",
         "description": "Hungriger Panda ist eine Karte der Art Diener aus der ersten Edition. Durch ihre niedrigen Kosten und ihr Schildträger ist sie die ideale Karte für die ersten Runden.",
@@ -330,6 +360,7 @@
         "type": 3
     },
     {
+        "id": 31,
         "name": "Launisches Huhn",
         "img": "../../assets/cards/launisches-huhn.png",
         "description": "Launisches Huhn ist eine Karte der Art Diener aus der zweiten Edition. Durch ihre niedrigen Kosten ist diese Karte ideal für die ersten Runden geeignet.",
@@ -341,6 +372,7 @@
         "type": 0
     },
     {
+        "id": 32,
         "name": "Legendary Eagle",
         "img": "../../assets/cards/legendary-eagle.png",
         "description": "Legendary Eagle ist eine Karte der Art Diener aus der ersten Edition. Durch ihren hohen Angriff ist diese Karte das Beispiel für eine Glaskanone.",
@@ -352,6 +384,7 @@
         "type": 0
     },
     {
+        "id": 33,
         "name": "Lemur",
         "img": "../../assets/cards/lemur.png",
         "description": "Lemur ist eine Karte der Art Diener aus der ersten Edition. Durch ihren Effekt herrscht für eine Zeit Ruhe auf dem Feld.",
@@ -363,6 +396,7 @@
         "type": 0
     },
     {
+        "id": 34,
         "name": "Leopard",
         "img": "../../assets/cards/leopard.png",
         "description": "Leopard ist eine Karte der Art Diener aus der ersten Edition. Durch ihren hohen Angriff kann sie früh im Spiel Zeichen setzen.",
@@ -374,6 +408,7 @@
         "type": 0
     },
     {
+        "id": 35,
         "name": "Lynx",
         "img": "../../assets/cards/lynx.png",
         "description": "Lynx ist eine Karte der Art Diener aus der ersten Edition. Durch ihre ausgeglichenen Werte ist sie für jede Kampfsituation bestens gewappnet.",
@@ -385,6 +420,7 @@
         "type": 0
     },
     {
+        "id": 36,
         "name": "Netter Hai",
         "img": "../../assets/cards/netter-hai.png",
         "description": "Netter Hai ist eine Karte der Art Diener aus der ersten Edition. Durch die hohen Werte ist er eine sehr brauchbare Karte.",
@@ -396,6 +432,7 @@
         "type": 0
     },
     {
+        "id": 37,
         "name": "Panda",
         "img": "../../assets/cards/panda.png",
         "description": "Panda ist eine Karte der Art Diener aus der ersten Edition. Durch ausgeglichene Werte ist diese Karte vielseitig einsetzbar.",
@@ -407,6 +444,7 @@
         "type": 0
     },
     {
+        "id": 38,
         "name": "Pied",
         "img": "../../assets/cards/pied.png",
         "description": "Pied ist eine Karte der Art Diener aus der ersten Edition. Durch ihren Effekt kann sie eine grosse Hilfe gegen andere Diener sein.",
@@ -418,6 +456,7 @@
         "type": 0
     },
     {
+        "id": 39,
         "name": "Ping-Uin",
         "img": "../../assets/cards/pinguin.png",
         "description": "Ping-Uin ist eine Karte der Art Diener aus der ersten Edition. Durch seinen Effekt kann er starke Gegner aus dem Weg räumen.",
@@ -429,6 +468,7 @@
         "type": 0
     },
     {
+        "id": 40,
         "name": "Prof. Eule",
         "img": "../../assets/cards/prof-eule.png",
         "description": "Prof. Eule ist eine Karte der Art Diener aus der ersten Edition. Durch ihren Effekt kann der Spieler für weniger Kristalle seine Karten auf das Feld bringen.",
@@ -440,6 +480,7 @@
         "type": 0
     },
     {
+        "id": 41,
         "name": "Reh Armee",
         "img": "../../assets/cards/reh-armee.png",
         "description": "Reh Armee ist eine Karte der Art Diener aus der ersten Edition. Durch ihren Effekt überleben Wildtiere länger.",
@@ -451,6 +492,7 @@
         "type": 0
     },
     {
+        "id": 42,
         "name": "Roter Panda",
         "img": "../../assets/cards/roter-panda.png",
         "description": "Roter Panda ist eine Karte der Art Diener aus der ersten Edition. Durch seinen Effekt kann er nicht angegriffen werden und überlebt so über lange Zeit.",
@@ -462,6 +504,7 @@
         "type": 0
     },
     {
+        "id": 43,
         "name": "Schwarzzüngler",
         "img": "../../assets/cards/schwarzzuengler.png",
         "description": "Schwarzzüngler ist eine Karte der Art Diener aus der ersten Edition. Durch ihren Effekt kann sie selbst starke Diener besiegen.",
@@ -473,6 +516,7 @@
         "type": 0
     },
     {
+        "id": 44,
         "name": "Sternenzerstörer",
         "img": "../../assets/cards/sternenzerstoerer.png",
         "description": "Sternenzerstörer ist eine Karte der Art Diener aus der ersten Edition. Durch ihre hohen Werte ist sie einer der besten Karten im Spiel. Sie lässt sich ideal mit Karten wie Magisches Buch oder Ritual der Stärke kombinieren.",
@@ -484,6 +528,7 @@
         "type": 0
     },
     {
+        "id": 45,
         "name": "Übergewichtige Katze",
         "img": "../../assets/cards/uebergewichtige-katze.png",
         "description": "Übergewichtige Katze ist eine Karte der Art Diener aus der ersten Edition. Durch ihren hohen Schildwert ist die Karte schwer zu besiegen.",
@@ -495,6 +540,7 @@
         "type": 0
     },
     {
+        "id": 46,
         "name": "Unbekanntes Flugobjekt",
         "img": "../../assets/cards/unbekanntes-flugobjekt.png",
         "description": "Unbekanntes Flugobjekt ist eine Karte der Art Diener aus der ersten Edition. Durch ihre ausgeglichenen Werte ist sie für jede Kampfsituation bestens gewappnet.",
@@ -506,6 +552,7 @@
         "type": 0
     },
     {
+        "id": 47,
         "name": "Was Das?",
         "img": "../../assets/cards/was-das.png",
         "description": "Was Das? ist eine Karte der Art Diener aus der ersten Edition. Durch ihren Effekt kann sie einen starken Diener aus dem Weg räumen.",
@@ -517,6 +564,7 @@
         "type": 0
     },
     {
+        "id": 48,
         "name": "Waschbär",
         "img": "../../assets/cards/waschbaer.png",
         "description": "Waschbär ist eine Karte der Art Diener aus der ersten Edition. Durch ihren Effekt kann er Schilde umgehen.",
@@ -528,6 +576,7 @@
         "type": 0
     },
     {
+        "id": 49,
         "name": "Weisser Todesbeisser",
         "img": "../../assets/cards/weisser-todesbeisser.png",
         "description": "Weisser Todesbeisser ist eine Karte der Art Diener aus der ersten Edition. Durch seinen hohen Angriff kann er viel austeilen.",
@@ -539,6 +588,7 @@
         "type": 0
     },
     {
+        "id": 50,
         "name": "Weisses Geflügel",
         "img": "../../assets/cards/weisses-gefluegel.png",
         "description": "Weisses Geflügel ist eine Karte der Art Diener aus der ersten Edition. Durch seinen Effekt hält sie über lange Zeit auf dem Feld aus.",
@@ -550,6 +600,7 @@
         "type": 0
     },
     {
+        "id": 51,
         "name": "Wilder Tiger",
         "img": "../../assets/cards/wilder-tiger.png",
         "description": "Wilder Tiger ist eine Karte der Art Diener aus der ersten Edition. Durch seinen Ansturm kann er sehr früh ins Spielgeschehen eingreifen.",
@@ -561,6 +612,7 @@
         "type": 0
     },
     {
+        "id": 52,
         "name": "Zimmerspinne",
         "img": "../../assets/cards/zimmerspinne.png",
         "description": "Zimmerspinne ist eine Karte der Art Diener aus der erste Edition. Durch ihren Effekt wird sie mit jedem Angriff stärker, als sie sonst schon ist.",
@@ -572,6 +624,7 @@
         "type": 0
     },
     {
+        "id": 53,
         "name": "Fliegende Kamera",
         "img": "../../assets/cards/fliegende-kamera.png",
         "description": "Fliegende Kamera ist eine Karte der Art Diener aus der zweiten Edition. Sie ist eine der drei Diener, welche keine Wildtiere sind. Dies schützt sie vor vor den mehrfachen Schaden Effekten gegen Wildtiere. Der Effekt dieser Karte und der niedrige Kristall-Wert machen diese Karte zu einem wertvollen Spion.",
@@ -583,6 +636,7 @@
         "type": 0
     },
     {
+        "id": 54,
         "name": "Gans",
         "img": "../../assets/cards/gans.png",
         "description": "Gans ist eine Karte der Art Diener aus der zweiten Edition. Durch seinen Effekt und seine Leben ist er sehr gut als Unterstützung geeignet.",
@@ -594,6 +648,7 @@
         "type": 0
     },
     {
+        "id": 55,
         "name": "Gestörte Eule",
         "img": "../../assets/cards/gestoerte-eule.png",
         "description": "Gestörte Eule ist eine Karte der Art Diener aus der zweiten Edition. Ihr Effekt macht sie für das gesamte Spiel sehr brauchbar.",
@@ -605,6 +660,7 @@
         "type": 0
     },
     {
+        "id": 56,
         "name": "Gifttrank",
         "img": "../../assets/cards/gifttrank.png",
         "description": "Gifttrank ist eine Karte der Art Zauber aus der zweiten Edition. Durch ihren Effekt kann man dem Gegner einen Strich durch die Rechnung machen und einen Diener stark schwächen.",
@@ -616,6 +672,7 @@
         "type": 2
     },
     {
+        "id": 57,
         "name": "Graue Grütze",
         "img": "../../assets/cards/graue-gruetze.png",
         "description": "Graue Grütze ist eine Karte der Art Zauber aus der zweiten Edition. Durch ihren Effekt lassen sich nicht nur Schildträger auf der befreundeten Seite stärken, sondern auch gegnerische Kämpfer schwächen.",
@@ -627,6 +684,7 @@
         "type": 2
     },
     {
+        "id": 58,
         "name": "Heinrich",
         "img": "../../assets/cards/heinrich.png",
         "description": "Heinrich ist eine Karte der Art Diener aus der zweiten Edition. Durch seinen Effekt und seine Werte ist die Karte sehr gut als Konter gegen starke Karten geeignet. Er ist der mittlere der drei Karten, welche keine Wildtiere sind.",
@@ -638,6 +696,7 @@
         "type": 0
     },
     {
+        "id": 59,
         "name": "Insekte",
         "img": "../../assets/cards/insekte.png",
         "description": "Insekte ist eine Karte der Art Diener aus der zweiten Edition. Durch ihren Nebeneffekt Schildträger muss entweder diese Karte oder ein anderer Schildträger angegriffen werden. Dadurch ist der Spieler vor Attacken geschützt. Durch ihren hohen Schildwert ist sie ausserdem zu Beginn des Spieles schwer zu besiegen.",
@@ -649,6 +708,7 @@
         "type": 3
     },
     {
+        "id": 60,
         "name": "Kristall",
         "img": "../../assets/cards/kristall.png",
         "description": "Kristall ist eine Karte der Art Zauber aus der zweiten Edition. Durch seinen Effekt kann man sich umsonst einen temporären Kristall geben.",
@@ -660,6 +720,7 @@
         "type": 2
     },
     {
+        "id": 61,
         "name": "Lebenstrank",
         "img": "../../assets/cards/lebenstrank.png",
         "description": "Lebenstrank ist eine Karte der Art Zauber aus der zweiten Edition. Durch ihren Effekt lassen sich Schildträger sehr gut aufwerten.",
@@ -671,6 +732,7 @@
         "type": 2
     },
     {
+        "id": 62,
         "name": "Multipaket",
         "img": "../../assets/cards/multipaket.png",
         "description": "Multipaket ist eine Karte der Art Zauber aus der zweiten Edition. Sie stärkt alle Werte eines befreundeten Dieners und schwächt den Gegner.",
@@ -682,6 +744,7 @@
         "type": 2
     },
     {
+        "id": 63,
         "name": "M-Wiederbelebung",
         "img": "../../assets/cards/m-wiederbelebung.png",
         "description": "M-Wiederbelebung ist eine Karte der Art Zauber aus der zweiten Edition. Durch ihren Effekt kann sie einen gefallenen Krieger wieder holen.",
@@ -693,6 +756,7 @@
         "type": 2
     },
     {
+        "id": 64,
         "name": "Naturgewalt",
         "img": "../../assets/cards/naturgewalt.png",
         "description": "Naturgewalt ist eine Karte der Art Zauber aus der zweiten Edition. Durch sie lassen sich mehrere Karten auf einmal stärken.",
@@ -704,6 +768,7 @@
         "type": 2
     },
     {
+        "id": 65,
         "name": "Regenbogenviech",
         "img": "../../assets/cards/regenbogenviech.png",
         "description": "Regenbogenviech ist eine Karte der Art Diener aus der zweiten Edition. Ihr hoher Schild macht sie zu einer fast unschlagbaren Waffe.",
@@ -715,6 +780,7 @@
         "type": 0
     },
     {
+        "id": 66,
         "name": "Ritual der Stärkung",
         "img": "../../assets/cards/ritual-der-staerkung.png",
         "description": "Ritual der Stärkung ist eine Karte der Art Zauber aus der zweiten Edition. Durch ihren Effekt kann sie Diener direkt zu Beginn eines Spieles extrem stärken.",
@@ -726,6 +792,7 @@
         "type": 2
     },
     {
+        "id": 67,
         "name": "Schild und Schwert",
         "img": "../../assets/cards/schild-schwert.png",
         "description": "Schild und Schwert ist eine Karte der Art Zauber aus der zweiten Edition. Durch ihren Effekt kann sie zwei Werte gleichzeitig steigern.",
@@ -737,6 +804,7 @@
         "type": 2
     },
     {
+        "id": 68,
         "name": "Schild",
         "img": "../../assets/cards/schild.png",
         "description": "Schild ist eine Karte der Art Zauber aus der zweiten Edition. Durch ihren Effekt lassen sich Schildträger einfach und billig stärken.",
@@ -748,6 +816,7 @@
         "type": 2
     },
     {
+        "id": 69,
         "name": "Schönheit",
         "img": "../../assets/cards/schoenheit.png",
         "description": "Schönheit ist eine Karte der Art Diener aus der zweiten Edition. Durch seinen Effekt ist seine Stärke abhängig von der Anzahl Diener auf dem Feld.",
@@ -759,6 +828,7 @@
         "type": 0
     },
     {
+        "id": 70,
         "name": "Speedy Echsales",
         "img": "../../assets/cards/speedy-echsales.png",
         "description": "Speedy Echsales ist eine Karte der Art Diener aus der zweiten Edition. Durch den Ansturm und die Fähigkeit, zwei mal pro Zug angreifen zu können, ist diese Karte extrem stark und schnell brauchbar.",
@@ -770,6 +840,7 @@
         "type": 0
     },
     {
+        "id": 71,
         "name": "S-Wiederbelebung",
         "img": "../../assets/cards/s-wiederbelebung.png",
         "description": "S-Wiederbelebung ist eine Karte der Art Zauber aus der zweiten Edition. Durch ihren Effekt kann sie einen gefallenen Krieger wieder holen.",
@@ -781,6 +852,7 @@
         "type": 2
     },
     {
+        "id": 72,
         "name": "Agent Hase",
         "img": "../../assets/cards/agent-hase.png",
         "description": "Agent Hase ist eine Karte der Art Diener aus der zweiten Edition. Durch seinen Effekt holt sich Agent Hase mit Glück eine starke Unterstützung auf das Feld.",
@@ -792,6 +864,7 @@
         "type": 0
     },
     {
+        "id": 73,
         "name": "L-Wiederbelebung",
         "img": "../../assets/cards/l-wiederbelebung.png",
         "description": "L-Wiederbelebung ist eine Karte der Art Zauber aus der zweiten Edition. Durch ihren Effekt kann sie einen gefallenen Krieger wieder holen.",
@@ -803,6 +876,7 @@
         "type": 2
     },
     {
+        "id": 74,
         "name": "Mad Cat",
         "img": "../../assets/cards/mad-cat.png",
         "description": "Mad Cat ist eine Karte der Art Diener aus der zweiten Edition. Durch ihren Effekt und ihren Angriff ist sie sehr gut sowohl als Unterstützung als auch als Angreifer geeignet.",
@@ -814,6 +888,7 @@
         "type": 0
     },
     {
+        "id": 75,
         "name": "Magisches Buch",
         "img": "../../assets/cards/magisches-buch.png",
         "description": "Magisches Buch ist eine Karte der Art Zauber aus der zweiten Edition. Durch ihren Effekt lassen sich Karten auf das Feld bringen, die eigentlich noch nicht auf dem Feld sein sollten.",
@@ -825,6 +900,7 @@
         "type": 2
     },
     {
+        "id": 76,
         "name": "Wollknäuel",
         "img": "../../assets/cards/wollknaeuel.png",
         "description": "Wollknäuel ist eine Karte der Art Diener aus der zweiten Edition. Diese Karte kann nur durch den Partner Katze herbeigerufen werden.",
@@ -836,6 +912,7 @@
         "type": 3
     },
     {
+        "id": 77,
         "name": "Angriffskäfer",
         "img": "../../assets/cards/angriffskaefer.png",
         "description": "Angriffskäfer ist eine Karte der Art Partner aus der zweiten Edition. Durch seinen Effekt kann der Spieler schnelle Angriffe ausführen.",
@@ -847,6 +924,7 @@
         "type": 1
     },
     {
+        "id": 78,
         "name": "Delphin",
         "img": "../../assets/cards/delphin.png",
         "description": "Delphin ist eine Karte der Art Partner aus der zweiten Edition. Durch seinen Effekt lässt sich entweder ein befreundeter Diener stärken oder einen feindlichen Diener schwächen.",
@@ -858,6 +936,7 @@
         "type": 1
     },
     {
+        "id": 79,
         "name": "Dr. Echse",
         "img": "../../assets/cards/dr-echse.png",
         "description": "Dr. Echse ist eine Karte der Art Diener aus der zweiten Edition. Durch seinen Effekt lässt sich entweder ein befreundeter Diener stärken.",
@@ -869,6 +948,7 @@
         "type": 0
     },
     {
+        "id": 80,
         "name": "Eule",
         "img": "../../assets/cards/eule.png",
         "description": "Eule ist eine Karte der Art Partner aus der zweiten Edition. Durch ihren Effekt ist Kartennachschub garantiert.",
@@ -880,6 +960,7 @@
         "type": 1
     },
     {
+        "id": 81,
         "name": "Faulenzer",
         "img": "../../assets/cards/faulenzer.png",
         "description": "Faulenzer ist eine Karte der Art Partner aus der zweiten Edition. Durch seinen Effekt kann der Spieler dem Gegner das Kämpfen verbieten.",
@@ -891,6 +972,7 @@
         "type": 1
     },
     {
+        "id": 82,
         "name": "Grünes Ungeheuer",
         "img": "../../assets/cards/gruenes-ungeheuer.png",
         "description": "Grünes Ungeheuer ist eine Karte der Art Diener aus der zweiten Edition. Durch seinen Effekt lassen sich die eigenen Leben heilen.",
@@ -902,6 +984,7 @@
         "type": 1
     },
     {
+        "id": 83,
         "name": "Hund",
         "img": "../../assets/cards/hund.png",
         "description": "Hund ist eine Karte der Art Partner aus der zweiten Edition. Durch seinen Effekt kann der Spieler den Gegner direkt schwächen.",
@@ -913,6 +996,7 @@
         "type": 1
     },
     {
+        "id": 84,
         "name": "Katze",
         "img": "../../assets/cards/katze.png",
         "description": "Katze ist eine Karte der Art Partner aus der zweiten Edition. Durch ihren Effekt kann man eine Hilfe auf dem Feld herbeirufen.",
@@ -924,6 +1008,7 @@
         "type": 1
     },
     {
+        "id": 85,
         "name": "Marienkäfer",
         "img": "../../assets/cards/marienkaefer.png",
         "description": "Marienkäfer ist eine Karte der Art Partner aus der zweiten Edition. Durch seinen Effekt verliert man Leben, kann dafür aber billig eine Karte ziehen.",
@@ -935,6 +1020,7 @@
         "type": 1
     },
     {
+        "id": 86,
         "name": "Monsterchen",
         "img": "../../assets/cards/monsterchen.png",
         "description": "Monsterchen ist eine Karte der Art Partner aus der zweiten Edition. Durch ihren Effekt kann man einen Diener als Ziel auswählen. Einen Freundlichen als gute Verteidigung oder einen Gegnerischen, um ihn so schnell wie möglich loszuwerden.",
@@ -946,6 +1032,7 @@
         "type": 1
     },
     {
+        "id": 87,
         "name": "Ratte",
         "img": "../../assets/cards/ratte.png",
         "description": "Ratte ist eine Karte der Art Partner aus der zweiten Edition. Durch ihren Effekt lässt sich ein Diener heilen. Sehr gut in der Kombination mit Rückerstattung.",
@@ -957,6 +1044,7 @@
         "type": 1
     },
     {
+        "id": 88,
         "name": "Rotkehlanolis",
         "img": "../../assets/cards/rotkehlanolis.png",
         "description": "Rotkehlanolis ist eine Karte der Art Partner aus der zweiten Edition. Mit ihr kann man mehrere Male pro Zug einen Diener verstärken.",
@@ -968,6 +1056,7 @@
         "type": 1
     },
     {
+        "id": 89,
         "name": "Rückerstattung",
         "img": "../../assets/cards/rueckerstattung.png",
         "description": "Rückerstattung ist eine Karte der Art Partner aus der zweiten Edition. Mit ihr erhält man Rabatte auf andere Partner.",
@@ -979,6 +1068,7 @@
         "type": 1
     },
     {
+        "id": 90,
         "name": "Schlange",
         "img": "../../assets/cards/schlange.png",
         "description": "Schlange ist eine Karte der Art Partner aus der zweiten Edition. Durch ihren Effekt lassen sich unnötige Diener auf deiner Seite entfernen, aber auch gegnerische Diener schwächen.",
