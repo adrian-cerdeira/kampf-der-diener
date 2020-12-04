@@ -21,13 +21,13 @@ import { CardTypeComponent } from './card-type/card-type.component';
     ToolbarComponent,
     FooterComponent,
     SearchBoxComponent,
-    CardTypeComponent
+    CardTypeComponent,
   ],
   declarations: [
     ToolbarComponent,
     FooterComponent,
     SearchBoxComponent,
-    CardTypeComponent
+    CardTypeComponent,
   ],
 })
 export class SharedModule { }
