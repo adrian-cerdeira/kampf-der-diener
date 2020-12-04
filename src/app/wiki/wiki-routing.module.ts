@@ -7,11 +7,11 @@ import { CardDetailsComponent } from './card-details/card-details.component';
 const routes: Routes = [
   {
     path: '',
-    component: WikiComponent
+    component: WikiComponent,
   },
   {
     path: ':id',
-    component: CardDetailsComponent
+    component: CardDetailsComponent,
   },
 ];
 
