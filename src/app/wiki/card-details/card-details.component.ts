@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import { CardsService } from '../../cards/cards.service';
+import { UpdateService } from '../../shared/update.service';
 
 @Component({
   selector: 'app-card-details',
@@ -16,7 +17,10 @@ export class CardDetailsComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private cardService: CardsService,
-  ) { }
+    private updateService: UpdateService,
+  ) {
+    this.updateService.checkUpdate();
+  }
 
   ngOnInit(): void {
     const id = Number(this.route.snapshot.params.id);

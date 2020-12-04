@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { CardsService } from '../../cards/cards.service';
+import { UpdateService } from '../../shared/update.service';
 
 @Component({
   selector: 'app-wiki',
@@ -13,7 +14,10 @@ export class WikiComponent implements OnInit {
 
   constructor(
     private cardService: CardsService,
-  ) { }
+    private updateService: UpdateService,
+  ) {
+    this.updateService.checkUpdate();
+  }
 
   ngOnInit(): void {
     this.cards = this.cardService.getBasicsAll();

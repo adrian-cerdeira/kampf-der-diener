@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UpdateService } from '../../shared/update.service';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private updateService: UpdateService,
+  ) {
+    this.updateService.checkUpdate();
+  }
 
   ngOnInit(): void {
   }
