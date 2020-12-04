@@ -16,6 +16,7 @@ import { CardTypeComponent } from './card-type/card-type.component';
     ReactiveFormsModule,
   ],
   exports: [
+    RouterModule,
     FormsModule,
     ReactiveFormsModule,
     ToolbarComponent,
