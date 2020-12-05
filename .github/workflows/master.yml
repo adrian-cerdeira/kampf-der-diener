@@ -19,7 +19,6 @@ jobs:
           npm ci
       - name: Build
         run: |
-          npm run release
           npm run build-prod
 
       - name: Deploy to Firebase
