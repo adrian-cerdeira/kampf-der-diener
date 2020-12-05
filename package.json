@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "version": "npm --no-git-tag-version version patch",
     "build": "ng build",
     "build-prod": "ng build --prod",
     "test": "ng test",
