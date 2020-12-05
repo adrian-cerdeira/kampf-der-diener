@@ -3,6 +3,7 @@
     <div class="container has-text-centered">
       <h1 class="title">
         {{card.id}} {{card.name}}
+        <br />
         <app-card-type [type]="card.type"></app-card-type>
       </h1>
       <app-card-details-info [card]="card" [cardImageUrl]="cardImageUrl"></app-card-details-info>
