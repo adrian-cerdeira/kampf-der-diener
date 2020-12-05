@@ -5,7 +5,7 @@
         {{card.id}} {{card.name}}
         <app-card-type [type]="card.type"></app-card-type>
       </h1>
-      <app-card-details-info [card]="card"></app-card-details-info>
+      <app-card-details-info [card]="card" [cardImageUrl]="cardImageUrl"></app-card-details-info>
       <nav class="pagination">
         <ng-container *ngIf="!previousCard">
           <a [routerLink]="['/wiki']" class="pagination-next">

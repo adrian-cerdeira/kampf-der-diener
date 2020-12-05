@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/database';
+import { AngularFireStorage } from '@angular/fire/storage';
 
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -12,6 +13,7 @@ export class CardsService {
 
   constructor(
     private db: AngularFireDatabase,
+    private storage: AngularFireStorage,
   ) {
     this.dbConnection = this.getConnection();
   }
@@ -29,7 +31,6 @@ export class CardsService {
           return {
             id: c.id,
             name: c.name,
-            img: c.img,
             description: c.description,
             effects: c.effects,
             attack: c.attack,
@@ -47,6 +48,10 @@ export class CardsService {
     return this.dbConnection.valueChanges().pipe(
       map((cards: any) => cards.find((c: any) => c.id === id))
     )
+  }
+
+  getImg(name: string): Observable<any> {
+    return this.storage.ref(`cards/${name}`).getDownloadURL();
   }
 
   private getConnection(config?: any): any {

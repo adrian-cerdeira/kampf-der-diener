@@ -7,6 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class CardDetailsInfoComponent implements OnInit {
   @Input() card: any;
+  @Input() cardImageUrl: any;
 
   constructor() { }
 

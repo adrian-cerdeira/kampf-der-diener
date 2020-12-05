@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFireStorageModule } from '@angular/fire/storage';
 
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
@@ -23,6 +24,7 @@ import { LoadingBarRouterModule } from '@ngx-loading-bar/router';
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
+    AngularFireStorageModule,
     HttpClientModule,
     LoadingBarModule,
     LoadingBarRouterModule,
