@@ -23,7 +23,7 @@ export class CardsService {
   getBasicsAll(): Observable<any> {
     return this.dbConnection.valueChanges().pipe(
       map((cards: any) => cards
-        .sort((a: any, b: any) => a.id - b.id)
+        // .sort((a: any, b: any) => a.id - b.id)
         .map((c: any) => {
 
           return {
