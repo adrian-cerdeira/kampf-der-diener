@@ -7,6 +7,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - CSS Framework [Bulma](https://github.com/jgthms/bulma)
 - Navbar mit [Luxbar](https://github.com/balzss/luxbar)
 - Fonts mit [FontAwesome](https://fontawesome.com/start)
+- Databse Connection, Image Storgage und Hosting mit [Firebase](https://firebase.google.com/?gclid=CjwKCAiA_Kz-BRAJEiwAhJNY77YTjGqSSgsSSOLwD1eIsQD6xitIdvYir1lJJ05fd7XDPENJV_G2FBoCe5gQAvD_BwE)
 
 ## [Documentation](docs/documentation.md)
 
