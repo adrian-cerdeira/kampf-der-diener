@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { RulesRoutingModule } from './rules-routing.module';
 import { SharedModule } from '../shared/shared.module';
+import { RulesRoutingModule } from './rules-routing.module';
+
 import { RulesComponent } from './rules/rules.component';
+import { RulesInfoComponent } from './rules-info/rules-info.component';
 
 
 @NgModule({
@@ -14,6 +16,7 @@ import { RulesComponent } from './rules/rules.component';
   ],
   declarations: [
     RulesComponent,
+    RulesInfoComponent,
   ],
 })
 export class RulesModule { }
