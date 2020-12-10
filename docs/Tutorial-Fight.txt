@@ -1,0 +1,107 @@
+---------------------------------------
+Ablauf Tutorial Kampf
+---------------------------------------
+Handkarten
+---------------------------------------
+
+Spieler:
+
+39 - Ping-Uin
+66 - Ritual der Stärkung
+44 - Sternenzerstörer
+14 - Bison Armee
+53 - Fliegende Kamera
+
+
+Bot:
+
+5  - Agent Schnecke
+9  - Dein Untergang?
+49 - Weisser Todesbeisser
+58 - Heinrich
+1  - Agent Eule
+
+---------------------------------------
+Parnter
+---------------------------------------
+
+Spieler:
+
+90 - Schlange
+89 - Rückerstattung
+
+
+Bot:
+
+86 - Monsterchen
+81 - Faulenzer
+
+---------------------------------------
+Zug 1 Bot
+---------------------------------------
+
+13 - Alpaka
+
+Setzen:
+5 - Agent Schnecke 
+
+-- Zug Ende
+
+---------------------------------------
+Zug 1 Spieler
+---------------------------------------
+
+59 - Insekte
+
+-- Zug Ende
+
+---------------------------------------
+Zug 2 Bot
+---------------------------------------
+
+45 - Übergewichtige Katze
+
+Angriff:
+5 - Agent Schnecke >> Spieler (-1 Leben -> 14 Leben)
+
+-- Zug Ende
+
+---------------------------------------
+Zug 2 Spieler
+---------------------------------------
+
+31 - Launisches Huhn
+
+Partner:
+90 - Schlange >> 5 - Agent Schnecke (-1 Leben -> 0 Leben)
+Rückerstattung >> + 1 Kristall
+
+Setzen:
+31 - Launisches Huhn
+
+-- Zug Ende
+
+---------------------------------------
+Zug 3 Bot
+---------------------------------------
+
+41 - Reh Armee
+
+-- Zug Ende
+
+---------------------------------------
+Zug 3 Spieler
+---------------------------------------
+
+61 - Lebenstrank
+
+Aktivieren:
+66 -Ritual der Stärkung
+44 -Sternenzerstörer -> 31 - Launisches Huhn (+15 +9 +10 -> 16 10 10)
+
+Angriff:
+31 - Launisches Huhn >> Spieler ( -16 Leben -> 0 Leben )
+
+---------------------------------------
+Spieler Gewinnt
+---------------------------------------
