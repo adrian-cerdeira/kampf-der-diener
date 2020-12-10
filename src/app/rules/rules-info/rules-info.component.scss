@@ -1,0 +1,8 @@
+@import "../../../vars.scss";
+
+@media(min-width: $size-sm) {
+  .section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
