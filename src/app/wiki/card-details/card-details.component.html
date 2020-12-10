@@ -8,11 +8,6 @@
       </h1>
       <app-card-details-info [card]="card" [cardImageUrl]="cardImageUrl"></app-card-details-info>
       <nav class="pagination">
-        <ng-container *ngIf="!previousCard">
-          <a [routerLink]="['/wiki']" class="pagination-next">
-            Zurück zur Übersicht
-          </a>
-        </ng-container>
         <ng-container *ngIf="previousCard">
           <a href="/wiki/{{previousCard.id}}" class="pagination-previous">
             {{ previousCard.id }}
@@ -25,11 +20,9 @@
             {{ nextCard.name }}
           </a>
         </ng-container>
-        <ng-container *ngIf="!nextCard">
-          <a [routerLink]="['/wiki']" class="pagination-next">
-            Zurück zur Übersicht
-          </a>
-        </ng-container>
+        <a [routerLink]="['/wiki']" class="pagination-next">
+          Zurück zur Übersicht
+        </a>
       </nav>
     </div>
   </section>
