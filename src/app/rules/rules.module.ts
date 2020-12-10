@@ -12,6 +12,8 @@ import { RulesComponent } from './rules/rules.component';
     SharedModule,
     RulesRoutingModule,
   ],
-  declarations: [RulesComponent],
+  declarations: [
+    RulesComponent,
+  ],
 })
 export class RulesModule { }
