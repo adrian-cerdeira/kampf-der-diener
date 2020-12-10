@@ -6,6 +6,7 @@ import { RulesRoutingModule } from './rules-routing.module';
 
 import { RulesComponent } from './rules/rules.component';
 import { RulesInfoComponent } from './rules-info/rules-info.component';
+import { RulesMenuComponent } from './rules-menu/rules-menu.component';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { RulesInfoComponent } from './rules-info/rules-info.component';
   declarations: [
     RulesComponent,
     RulesInfoComponent,
+    RulesMenuComponent,
   ],
 })
 export class RulesModule { }

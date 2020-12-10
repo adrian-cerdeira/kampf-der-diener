@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { UpdateService } from '../../shared/update.service';
+
 @Component({
   selector: 'app-rules',
   templateUrl: './rules.component.html',
@@ -7,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RulesComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private updateService: UpdateService,
+  ) {
+    this.updateService.checkUpdate();
+  }
 
   ngOnInit(): void {
   }
