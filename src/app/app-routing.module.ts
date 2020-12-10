@@ -15,6 +15,10 @@ const routes: Routes = [
     path: 'wiki',
     loadChildren: () => import('./wiki/wiki.module').then(m => m.WikiModule),
   },
+  {
+    path: 'rules',
+    loadChildren: () => import('./rules/rules.module').then(m => m.RulesModule),
+  },
 ];
 
 @NgModule({
