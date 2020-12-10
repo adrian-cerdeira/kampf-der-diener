@@ -1,4 +1,7 @@
-.sticky {
-  position: sticky;
-  top: 3rem;
+:host {
+  position: fixed;
+
+  .menu {
+    font-size: small !important;
+  }
 }
