@@ -20,7 +20,9 @@ jobs:
       - name: Build
         run: |
           npm run build-prod
-
+      - name: Test Format
+        run: |
+          npm run lint
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:
