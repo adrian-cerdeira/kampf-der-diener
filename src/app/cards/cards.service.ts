@@ -38,16 +38,16 @@ export class CardsService {
             shield: c.shield,
             crystal: c.crystal,
             type: c.type,
-          }
+          };
 
         })
-      ))
+      ));
   }
 
   getById(id: number): Observable<any> {
     return this.dbConnection.valueChanges().pipe(
       map((cards: any) => cards.find((c: any) => c.id === id))
-    )
+    );
   }
 
   getImg(name: string): Observable<any> {

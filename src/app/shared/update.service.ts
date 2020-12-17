@@ -12,7 +12,7 @@ export class UpdateService {
     private snackbar: MatSnackBar,
   ) { }
 
-  checkUpdate() {
+  checkUpdate(): void {
     this.swUpdate.available.subscribe(() => {
       this.snackbar.open('Update verügbar', 'Aktualisieren')
         .onAction()
