@@ -23,6 +23,9 @@ jobs:
       - name: Test Format
         run: |
           npm run lint
+      - name: Test Performance with Lighthouse
+        run: |
+          npm run lint
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:
