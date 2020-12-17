@@ -13,7 +13,7 @@ const chromeLauncher = require('chrome-launcher');
     onlyCategories: ['performance'],
     port: chrome.port
   };
-  const runnerResult = await lighthouse('https://example.com', options);
+  const runnerResult = await lighthouse('https://kampf-der-diener.web.app/', options);
 
   // `.report` is the HTML report as a string
   const reportHtml = runnerResult.report;
