@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-wiki-filter',
@@ -6,14 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./wiki-filter.component.scss']
 })
 export class WikiFilterComponent implements OnInit {
+  @Output() filteredByValue = new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  filterByValue(select: any) {
-    console.log(select);
+  filterByValue(selectOption: any, searchValue: any): void {
+    this.filteredByValue.emit({
+      selectOption,
+      searchValue
+    });
   }
 
 }

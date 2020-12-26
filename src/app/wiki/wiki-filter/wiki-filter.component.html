@@ -3,7 +3,7 @@
     <div class="field">
       <div class="control">
         <div class="select is-rounded">
-          <select #selectAttribute>
+          <select #selectAttribute (change)="filterByValue(selectAttribute.value, searchValue.value)">
             <option value="crystal">
               Kristalle
             </option>
@@ -24,7 +24,8 @@
   <div class="column">
     <div class="field">
       <div class="control">
-        <input class="input" type="number" placeholder="Nach Werten filtern...." />
+        <input #searchValue class="input" type="number"
+          (keyup)="filterByValue(selectAttribute.value, searchValue.value)" placeholder="Nach Werten filtern...." />
       </div>
     </div>
   </div>

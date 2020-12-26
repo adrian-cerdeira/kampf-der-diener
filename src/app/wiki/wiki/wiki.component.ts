@@ -31,4 +31,10 @@ export class WikiComponent implements OnInit {
       .filter((c: { name: string; }) => c.name.toUpperCase().indexOf(searchTerm.toUpperCase()) > -1);
   }
 
+  filterChanges(event: any): void {
+    const { selectOption, searchValue } = event;
+    this.filteredCards = this.cards
+      .filter((c: any) => c[selectOption] == searchValue);
+  }
+
 }
