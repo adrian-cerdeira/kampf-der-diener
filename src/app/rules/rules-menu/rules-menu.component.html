@@ -5,121 +5,31 @@
     </p>
     <ul id="menu" class="menu-list">
       <li>
-        <a (click)="navigateToAnchor('spielprinzip')">Das Spielprinzip</a>
+        <a (click)="showPage('gameplay')">Das Spielprinzip</a>
       </li>
       <li>
-        <a (click)="navigateToAnchor('standardregeln')">Standardregeln</a>
+        <a (click)="showPage('default')">Standardregeln</a>
       </li>
       <li>
-        <a (click)="navigateToAnchor('spielmoden')">
+        <a (click)="showPage('gamemodes')">
           Spielmoden
         </a>
-
-        <ul>
-          <li>
-            <a (click)="navigateToAnchor('1gegen1')">
-              1 gegen 1
-            </a>
-          </li>
-          <li>
-            <a (click)="navigateToAnchor('2gegen2')">
-              2 gegen 2
-            </a>
-          </li>
-        </ul>
       </li>
       <li>
-        <a (click)="navigateToAnchor('spiel')">
+        <a (click)="showPage('game')">
           Das Spiel
         </a>
-
-        <ul>
-          <li>
-            <a (click)="navigateToAnchor('spielvorbereitung')">
-              Spielvorbereitung
-            </a>
-          </li>
-          <li>
-            <a (click)="navigateToAnchor('spielzug')">
-              Ein Spielzug
-            </a>
-          </li>
-          <li>
-            <a (click)="navigateToAnchor('spielende')">
-              Spielende
-            </a>
-          </li>
-        </ul>
       </li>
       <li>
-        <a (click)="navigateToAnchor('general-rules')">
+        <a (click)="showPage('general')">
           Allgemeine Regeln
         </a>
-
-        <ul>
-          <li>
-            <a (click)="navigateToAnchor('karteneffekte')">
-              Karteneffekte
-            </a>
-          </li>
-          <li>
-            <a (click)="navigateToAnchor('spezielle-effekte')">
-              Spezielle Effekte
-            </a>
-
-            <ul>
-              <li>
-                <a (click)="navigateToAnchor('ansturm')">
-                  Ansturm
-                </a>
-              </li>
-              <li>
-                <a (click)="navigateToAnchor('schildtraeger')">
-                  Schildträger
-                </a>
-              </li>
-              <li>
-                <a (click)="navigateToAnchor('wutanfall')">
-                  Wutanfall
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a (click)="navigateToAnchor('werte')">
-              Werte
-            </a>
-
-            <ul>
-              <li>
-                <a (click)="navigateToAnchor('kristalle')">
-                  Kristalle
-                </a>
-              </li>
-              <li>
-                <a (click)="navigateToAnchor('angriff')">
-                  Angriff
-                </a>
-              </li>
-              <li>
-                <a (click)="navigateToAnchor('leben')">
-                  Leben
-                </a>
-              </li>
-              <li>
-                <a (click)="navigateToAnchor('schild')">
-                  Schild
-                </a>
-              </li>
-            </ul>
-          </li>
-        </ul>
       </li>
       <li>
-        <a (click)="navigateToAnchor('derangriff')">Der Angriff</a>
+        <a (click)="showPage('attack')">Der Angriff</a>
       </li>
       <li>
-        <a (click)="navigateToAnchor('partnerkarten')">Partnerkarten</a>
+        <a (click)="showPage('partner')">Partnerkarten</a>
       </li>
     </ul>
   </div>
