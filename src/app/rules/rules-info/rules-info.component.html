@@ -1,7 +1,7 @@
-<app-rules-info-gameplay></app-rules-info-gameplay>
-<app-rules-info-default></app-rules-info-default>
-<app-rules-info-gamemodes></app-rules-info-gamemodes>
-<app-rules-info-game></app-rules-info-game>
-<app-rules-info-general></app-rules-info-general>
-<app-rules-info-attack></app-rules-info-attack>
-<app-rules-info-partner></app-rules-info-partner>
+<app-rules-info-gameplay *ngIf="page === 'gameplay'"></app-rules-info-gameplay>
+<app-rules-info-default *ngIf="page === 'default'"></app-rules-info-default>
+<app-rules-info-gamemodes *ngIf="page === 'gamemodes'"></app-rules-info-gamemodes>
+<app-rules-info-game *ngIf="page === 'game'"></app-rules-info-game>
+<app-rules-info-general *ngIf="page === 'general'"></app-rules-info-general>
+<app-rules-info-attack *ngIf="page === 'attack'"></app-rules-info-attack>
+<app-rules-info-partner *ngIf="page === 'partner'"></app-rules-info-partner>

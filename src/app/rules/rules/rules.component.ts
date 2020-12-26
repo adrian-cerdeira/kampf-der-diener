@@ -8,6 +8,7 @@ import { UpdateService } from '../../shared/update.service';
   styleUrls: ['./rules.component.scss']
 })
 export class RulesComponent implements OnInit {
+  page = 'gameplay';
 
   constructor(
     private updateService: UpdateService,
@@ -16,6 +17,10 @@ export class RulesComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  show(pageName: string): void {
+    this.page = pageName;
   }
 
 }

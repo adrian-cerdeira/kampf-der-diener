@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-rules-menu',
@@ -7,16 +6,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./rules-menu.component.scss']
 })
 export class RulesMenuComponent implements OnInit {
+  @Output() showedPage = new EventEmitter();
 
-  constructor(
-    private router: Router,
-  ) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
 
-  navigateToAnchor(fragment: string): void {
-    this.router.navigate(['/rules'], { fragment });
+  showPage(name: string): void {
+    this.showedPage.emit(name);
   }
 
 }
