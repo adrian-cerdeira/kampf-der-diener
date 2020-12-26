@@ -12,8 +12,8 @@ export class WikiFilterComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  filterByValue() {
-    
+  filterByValue(select: any) {
+    console.log(select);
   }
 
 }
