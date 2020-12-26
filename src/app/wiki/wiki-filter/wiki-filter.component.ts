@@ -12,4 +12,8 @@ export class WikiFilterComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  filterByValue() {
+    
+  }
+
 }
