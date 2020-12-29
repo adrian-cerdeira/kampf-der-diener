@@ -18,3 +18,5 @@ Als Zusatz (falls zeitvorhanden) sollten folgenden Inhalten in der Seite aufgeli
 Als Grundlage diente uns die alte [Abschlussarbeit der 3. Sekundarstufe](assets/old-project-2017.zip).
 
 ## [Mockups](mockups/mockups.md)
+
+## [Projektumfeld](project-environment/project-environment.md)
