@@ -27,5 +27,6 @@
 | 26.12.2020 | 2           | Regeln Seite redesignt                                                                                                                                |
 | 29.12.2020 | 3           | Projektumfeld (System) des Projektes dokumentiert                                                                                                     |
 | 01.01.2021 | 1.5         | Arbeitsjournal nachgeschrieben                                                                                                                        |
+| 01.01.2021 | 1.5         | Reflexion des Projekts geschrieben                                                                                                                    |
 
 ## TODO Mario Forrer
