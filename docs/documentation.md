@@ -1,6 +1,8 @@
 # Documentation
 
-## Info
+> Dokumentation des IDE ist unter [CONTRIBUTING.md](CONTRIBUTING.md) vorhanden.
+
+## 1. Aufgabenstellung
 
 Webseitenauftritt vom Kartenspiel **Kampf der Diener** erstellen.
 Diese Webseite sollte folgenden **pflicht** Inhalten beinhalten:  
@@ -17,6 +19,8 @@ Als Zusatz (falls zeitvorhanden) sollten folgenden Inhalten in der Seite aufgeli
 
 Als Grundlage diente uns die alte [Abschlussarbeit der 3. Sekundarstufe](assets/old-project-2017.zip).
 
-## [Mockups](mockups/mockups.md)
+## [2. Projektumfeld](project-environment/project-environment.md)
 
-## [Projektumfeld](project-environment/project-environment.md)
+## [3. Mockups](mockups/mockups.md)
+
+## [4. Arbeitsjournal](work-journal/work-journal.md)
