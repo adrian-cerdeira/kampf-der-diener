@@ -12,12 +12,12 @@ Hier eine grafische Darstellung der Angular Architektur:
 
 Ausserdem erläutern wir kurz, die einzelnen Teile der Angular Architektur:
 
-- **Module:** In Angular sind Apps modular aufgebaut. Mit Module werden Komponenten und Templates untegeordnet.
+- **Module:** In Angular sind Apps modular aufgebaut. Mit Module werden Komponenten und Templates untergeordnet.
 - **Template:** Ist das HTML der Komponente.
 - **Metadata:** Grundinformationen der App.
 - **Component**: Komponenten sind die einzelnen Seiten der App. Die HTML, CSS oder SCSS, Test und Typescript beinhalten.
 - **Services**: In Services können Daten durch zum Beispiel HTTP Client aufgerufen werden.
-- **Directive**: Mit Direktiven können repetiven Anweisungen definiert werden. Die im Template wiederverwenden werden können.
+- **Directive**: Mit Direktiven können wiederholende Anweisungen definiert werden. Die im Template wiederverwenden werden können.
 
 #### PWA
 
