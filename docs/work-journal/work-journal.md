@@ -28,5 +28,6 @@
 | 29.12.2020 | 3           | Projektumfeld (System) des Projektes dokumentiert                                                                                                     |
 | 01.01.2021 | 1.5         | Arbeitsjournal nachgeschrieben                                                                                                                        |
 | 01.01.2021 | 1.5         | Reflexion des Projekts geschrieben                                                                                                                    |
+| 01.01.2021 | 0.5         | Aufgabenstellung in Kurzfassung umgeschrieben                                                                                                         |
 
 ## TODO Mario Forrer
