@@ -4,6 +4,7 @@
 
 - [Git](https://git-scm.com/)
 - [Node](https://nodejs.org/en/)
+- [Angular CLI](https://cli.angular.io/)
 
 ## IDE
 
