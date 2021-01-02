@@ -42,5 +42,31 @@ export class Player {
     return this.hitpoints;
   }
 
+  getHitpoints(): number { return this.hitpoints };
+  setHitpoints(hitpoints: number): void { this.hitpoints = hitpoints };
+
+  getMaxHitpoints(): number { return this.maxHitpoints };
+  setMaxHitpoints(maxHitpoints: number): void { this.maxHitpoints = maxHitpoints };
+
+  getCrystals(): number { return this.crystals };
+  setCrystals(crystals: number): void { this.crystals = crystals };
+
+  getTurn(): number { return this.turn };
+  setTurn(turn: number): void { this.turn = turn };
+
+  getHandCards(): any { return this.handCards };
+  setHandCards(handCards: any): void { this.handCards = handCards };
+
+  getDienerSlots(): any { return this.dienerSlots };
+  setDienerSlots(dienerSlots: any): void { this.dienerSlots = dienerSlots };
+
+  getSpellSlots(): any { return this.spellSlots };
+  setSpellSlots(spellSlots: any): void { this.spellSlots = spellSlots };
+
+  getPartnerSlots(): any { return this.partnerSlots };
+  setPartnerSlots(partnerSlots: any): void { this.partnerSlots = partnerSlots };
+
+  getGraveyard(): any { return this.graveyard };
+  setGraveyard(graveyard: any): void { this.graveyard = graveyard };
 
 }
