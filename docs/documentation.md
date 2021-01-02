@@ -1,37 +1,48 @@
-# Dokumentation
+# Documentation
 
-Webseite + Shop + Spiel von Spiel der [Abschlussarbeit der 3. Sekundarstufe](old-project-2017.zip) erstellen.
+> Dokumentation des IDE ist unter [CONTRIBUTING.md](CONTRIBUTING.md) vorhanden.
 
-## Mockups Desktop Version
+## 1. Kurzfassung
 
-### Home
+## Ausgangssituation
 
-![Mockup Home Desktop](Mockups/d-home.png)
+Webseitenauftritt vom Kartenspiel **Kampf der Diener** erstellen.
+Diese Webseite sollte folgenden **pflicht** Inhalten beinhalten:  
 
-### Regeln
+- **Home:** Informationen zum Spiel kurz und bündig.
+- **Rules:** Regeln des Spiel kurz und einfach erklärt.
+- **Wiki:** Auflistung der einzelnen Karten des Spiels mit Suchen etc.
+- **Tutorial:** Ein Tutorial, wo man das Spiel spielend kennenlernt.
 
-![Mockup Rules Desktop](Mockups/d-regeln.png)
+Als Zusatz (falls zeitvorhanden) sollten folgenden Inhalten in der Seite aufgelistet werden:
 
-### Wiki
+- **Shop:** Einkaufen von Merch, einzelne Karten und Kartensets.
+- **Play:** Spielen des Spiels entweder per App oder in der Seite direkt. Autorisierung ist notwendig!
 
-![Mockup Wiki Desktop](Mockups/d-wiki.png)
+Als Grundlage diente uns die alte [Abschlussarbeit der 3. Sekundarstufe](assets/old-project-2017.zip).
 
-### Spielen
+## Umsetzung
 
-![Mockup Play Desktop](Mockups/d-spielen.png)
+Die Umsetzung verlief in der Projektmethode IPERKA.
+Mit Fokussierung zuerst an den einzelnen Seiten und zum Schluss am Spiel.
+Parallel wurde an Performance und Redesigns der Seite gearbeitet.
+Auch der Code wurde, falls notwendig, refactort und neu geschrieben.
 
-## Mockups Mobile Version
+## Ergebnis
 
-Das Kartenspiel soll nicht Responsive sein. Deswegen gibt es auch kein Mockup für die Seite Spielen.
+Das Ergebnis ist eine Web Applikation die vor allem in der Informationsdarstellung der einzelnen Kartenn brilliert.
+Durch PWA muss diese nicht installiert oder irgendwie kompliziert eingerichtet werden.
+Auch das Tutorial ermöglicht neuen Spieler das kennenlernen und Einsteigen dieses Spiels.
+Das Ergebnis steht unter <https://kampf-der-diener.web.app/> zur Verfügung.
 
-### Home
+## [2. Projektmethode](project-method/project-method.md)
 
-![Mockup Home Mobile](Mockups/m-home.png)
+## [3. Projektumfeld](project-environment/project-environment.md)
 
-### Regeln
+## [4. Mockups](mockups/mockups.md)
 
-![Mockup Regeln Mobile](Mockups/m-regeln.png)
+## [5. Testkonzept](testing-concept/testing-concept.md)
 
-### Wiki
+## [6. Arbeitsjournal](work-journal/work-journal.md)
 
-![Mockup Regeln Mobile](Mockups/m-wiki.png)
+## [7. Reflexion](reflection/reflection.md)
