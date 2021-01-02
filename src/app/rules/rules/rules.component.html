@@ -1,0 +1,12 @@
+<section class="section main-content">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-four-fifths">
+        <app-rules-info [page]="page"></app-rules-info>
+      </div>
+      <div class="column">
+        <app-rules-menu (showedPage)="show($event)"></app-rules-menu>
+      </div>
+    </div>
+  </div>
+</section>

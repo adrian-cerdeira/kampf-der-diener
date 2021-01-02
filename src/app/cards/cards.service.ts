@@ -25,7 +25,6 @@ export class CardsService {
   getBasicsAll(): Observable<any> {
     return this.dbConnection.valueChanges().pipe(
       map((cards: any) => cards
-        // .sort((a: any, b: any) => a.id - b.id)
         .map((c: any) => {
 
           return {
@@ -38,16 +37,16 @@ export class CardsService {
             shield: c.shield,
             crystal: c.crystal,
             type: c.type,
-          }
+          };
 
         })
-      ))
+      ));
   }
 
   getById(id: number): Observable<any> {
     return this.dbConnection.valueChanges().pipe(
       map((cards: any) => cards.find((c: any) => c.id === id))
-    )
+    );
   }
 
   getImg(name: string): Observable<any> {

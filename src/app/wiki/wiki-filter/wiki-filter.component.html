@@ -1,0 +1,32 @@
+<div class="is-flex is-flex-wrap-wrap">
+  <div class="column is-one-fifth">
+    <div class="field">
+      <div class="control">
+        <div class="select is-rounded">
+          <select #selectAttribute (change)="filterByValue(selectAttribute.value, searchValue.value)">
+            <option value="crystal">
+              Kristalle
+            </option>
+            <option value="attack">
+              Angriff
+            </option>
+            <option value="life">
+              Leben
+            </option>
+            <option value="shield">
+              Schild
+            </option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="field">
+      <div class="control">
+        <input #searchValue class="input" type="number"
+          (keyup)="filterByValue(selectAttribute.value, searchValue.value)" placeholder="Werten filtern ...." />
+      </div>
+    </div>
+  </div>
+</div>
