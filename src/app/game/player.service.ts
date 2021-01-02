@@ -1,3 +1,4 @@
+import { newArray } from '@angular/compiler/src/util';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -8,6 +9,11 @@ export class Player {
   private maxHitpoints: number
   private crystals: number
   private turn: number
+  private handcards = []
+  private dienerSlots = new Array(5)
+  private spellSlots = new Array (1)
+  private partnerSlots = new Array (2)
+  private graveyard = []
 
   constructor(hitpoints: number) {
     this.hitpoints = hitpoints;
@@ -39,5 +45,6 @@ export class Player {
     this.hitpoints = this.hitpoints + healing;
     return this.hitpoints;
   }
+
 
 }
