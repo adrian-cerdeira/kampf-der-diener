@@ -29,5 +29,6 @@
 | 01.01.2021 | 1.5         | Arbeitsjournal nachgeschrieben                                                                                                                        |
 | 01.01.2021 | 1.5         | Reflexion des Projekts geschrieben                                                                                                                    |
 | 01.01.2021 | 0.5         | Aufgabenstellung in Kurzfassung umgeschrieben                                                                                                         |
+| 02.01.2021 | 3           | Mit Mario Game Logik mit Service etc. vorbereitet und miteinander besprochen                                                                          |
 
 ## TODO Mario Forrer
