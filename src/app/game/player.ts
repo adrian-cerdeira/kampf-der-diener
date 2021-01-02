@@ -1,9 +1,3 @@
-import { newArray } from '@angular/compiler/src/util';
-import { Injectable } from '@angular/core';
-
-@Injectable({
-  providedIn: 'root'
-})
 export class Player {
   private readonly MAX_CRYSTALYS = 10;
   private hitpoints: number;
