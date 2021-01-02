@@ -27,6 +27,7 @@ export class Player {
   }
 
   takeDamage(damage: number): number {
+    this.hitpoints = this.hitpoints - damage;
     return this.hitpoints - damage;
   }
 
@@ -35,6 +36,8 @@ export class Player {
       return this.hitpoints = this.maxHitpoints;
     }
 
-    return this.hitpoints + healing
+    this.hitpoints = this.hitpoints + healing;
+    return this.hitpoints;
   }
+
 }
