@@ -7,7 +7,7 @@
 ## Ausgangssituation
 
 Webseitenauftritt vom Kartenspiel **Kampf der Diener** erstellen.
-Diese Webseite sollte folgenden **pflicht** Inhalten beinhalten:  
+Diese Webseite sollte folgenden **Pflicht** Inhalten beinhalten:  
 
 - **Home:** Informationen zum Spiel kurz und bündig.
 - **Rules:** Regeln des Spiel kurz und einfach erklärt.
@@ -30,9 +30,9 @@ Auch der Code wurde, falls notwendig, refactort und neu geschrieben.
 
 ## Ergebnis
 
-Das Ergebnis ist eine Web Applikation die vor allem in der Informationsdarstellung der einzelnen Kartenn brilliert.
+Das Ergebnis ist eine Web Applikation, die vor allem in der Informationsdarstellung der einzelnen Karten brilliert.
 Durch PWA muss diese nicht installiert oder irgendwie kompliziert eingerichtet werden.
-Auch das Tutorial ermöglicht neuen Spieler das kennenlernen und Einsteigen dieses Spiels.
+Auch das Tutorial ermöglicht neuen Spieler das Kennenlernen und Einsteigen dieses Spiels.
 Das Ergebnis steht unter <https://kampf-der-diener.web.app/> zur Verfügung.
 
 ## [2. Projektmethode](project-method/project-method.md)
