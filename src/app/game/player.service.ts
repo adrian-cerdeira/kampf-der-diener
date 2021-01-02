@@ -1,3 +1,4 @@
+import { IfStmt } from '@angular/compiler';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -17,10 +18,24 @@ export class PlayerService {
    }
    
    nextTurn(): number {
-    this.crystals++;
+    if (this.crystals <= 9) {
+      this.crystals++;      
+    }
     this.turn++;
     return this.crystals;
    }
 
+   takeDamage(damage: number): number {
+     
+    this.hitpoints = this.hitpoints - damage;
+    return this.hitpoints; 
+   }
 
+   healHitpoints(healing: number): number {
+    this.hitpoints = this.hitpoints + healing;
+    if (this.hitpoints > this.maxHitpoints) {
+      this.hitpoints = this.maxHitpoints;
+    }
+    return this.hitpoints
+   } 
 }
