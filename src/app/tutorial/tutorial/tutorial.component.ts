@@ -14,10 +14,10 @@ export class TutorialComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    const playerACard = cards.find(c => c.id === 1);
-    const playerBCard = cards.find(c => c.id === 2);
+    // const playerACard = cards.find(c => c.id === 1);
+    // const playerBCard = cards.find(c => c.id === 2);
 
-    console.log(this.gameService.getCards(playerACard, playerBCard));
+    // console.log(this.gameService.getCards(playerACard, playerBCard));
   }
 
 }
