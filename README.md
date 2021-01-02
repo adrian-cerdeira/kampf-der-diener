@@ -1,5 +1,7 @@
 # Kampf Der Diener
 
+> Webseite steht unter <https://kampf-der-diener.web.app/> zur Verfügung.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.0.
 
 ## Tools
