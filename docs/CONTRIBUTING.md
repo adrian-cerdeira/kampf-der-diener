@@ -44,6 +44,10 @@ Wir empfehlen [VS Code](https://code.visualstudio.com/), aber jede andere Art vo
 
     npm start
 
+## Start Test
+
+    npm run test
+
 ## Test Lint
 
     npm run lint
