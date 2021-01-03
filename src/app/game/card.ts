@@ -9,8 +9,6 @@ export class Card {
   private type: number;
 
   constructor(card: any) {
-    // TODO Mario
-    // this.name = card.name;
     this.id = card.id;
     this.cost = card.crystal;
     this.attack = card.attack;

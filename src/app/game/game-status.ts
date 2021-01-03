@@ -1,6 +1,9 @@
 export enum GameStatus {
     Started = 0,
-    Stopped = 1,
-    Finished = 2,
-    Surrended = 3,
+    turnPlayerA = 1,
+    turnPlayerB = 2,
+    Stopped = 3,
+    PlayerAWon = 4,
+    PlayerBWon = 5,
+    Surrended = 6,
 }
