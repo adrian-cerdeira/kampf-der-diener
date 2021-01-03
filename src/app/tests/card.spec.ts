@@ -2,75 +2,71 @@ import { Card } from "../cards/card";
 import cards from '../cards/cards.json';
 
 // Straight Jasmine testing without Angular's testing support
-describe('card', () => {
+describe('Testing card class', () => {
     const testCardFromJson = cards.find(c => c.id === 1);
     let card: Card;
 
     beforeEach(() => { card = new Card(testCardFromJson); });
 
-    it('getId of card', () => {
+    it('Get Id of card', () => {
         expect(card.getId()).toBe(1);
     });
 
-    it('getNormalCost (crystal amount) of card', () => {
+    it('Get normal cost (crystal amount) of card', () => {
         expect(card.getCost()).toBe(4);
     });
 
-    it('getCost of current played card', () => {
+    it('Get current cost of played card', () => {
         card.setCost(2)
         expect(card.getCost()).toBe(2);
     });
 
-    it('setCost of card', () => {
+    it('Set cost (crystal amount) of card', () => {
         card.setCost(2)
         expect(card.getCost()).toBe(2);
     });
 
-    it('getAttack of card', () => {
+    it('Get attack of card', () => {
         expect(card.getAttack()).toBe(10);
     });
 
-    it('setAttack of card', () => {
+    it('Set specific attack of card', () => {
         card.setAttack(5);
         expect(card.getAttack()).toBe(5);
     });
 
-    it('getShield of card', () => {
+    it('Get shield of card', () => {
         expect(card.getShield()).toBe(0);
     });
 
-    it('setShield of card', () => {
+    it('Set specific shield of card', () => {
         card.setShield(5);
         expect(card.getShield()).toBe(5);
     });
 
-    it('getShield of card', () => {
-        expect(card.getShield()).toBe(0);
-    });
-
-    it('getType of card', () => {
+    it('Get type of card', () => {
         expect(card.getType()).toBe(0);
     });
 
-    it('setType of card', () => {
+    it('Set new type to card', () => {
         card.setType(1);
         expect(card.getType()).toBe(1);
     });
 
-    it('getHitpoints of card', () => {
+    it('Get current hitpoints (amount life) of card', () => {
         expect(card.getHitpoints()).toBe(1);
     });
 
-    it('setHitpoints of card', () => {
+    it('Set hitpoints by damage of card', () => {
         card.setHitpoints(5);
         expect(card.getHitpoints()).toBe(5);
     });
 
-    it('getMaxHitpoints of card', () => {
+    it('Get max. hitpoints (max. amount life) of card', () => {
         expect(card.getMaxHitpoints()).toBe(1);
     });
 
-    it('setMaxHitpoints of card', () => {
+    it('Set max. hitpoints (set max. amount life) of card', () => {
         card.setMaxHitpoints(7);
         expect(card.getMaxHitpoints()).toBe(7);
     });
