@@ -1,5 +1,5 @@
-import { Game } from "../game/game";
-import { Player } from "../game/player";
+import { Game } from '../game/game';
+import { Player } from '../game/player';
 
 // Straight Jasmine testing without Angular's testing support
 describe('Testing player class', () => {

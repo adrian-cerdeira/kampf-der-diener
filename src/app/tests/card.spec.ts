@@ -1,12 +1,22 @@
-import { Card } from "../cards/card";
+import { Card } from '../cards/card';
+import { Player } from '../game/player';
+import { Game } from '../game/game';
+
 import cards from '../cards/cards.json';
 
 // Straight Jasmine testing without Angular's testing support
 describe('Testing card class', () => {
     const testCardFromJson = cards.find(c => c.id === 1);
     let card: Card;
+    let player: Player;
+    let game: Game;
+    const startingHitPoints = 15;
 
-    beforeEach(() => { card = new Card(testCardFromJson); });
+    beforeEach(() => {
+        game = new Game(startingHitPoints);
+        player = new Player(startingHitPoints, game);
+        card = new Card(testCardFromJson, player);
+    });
 
     it('Get Id of card', () => {
         expect(card.getId()).toBe(1);
@@ -17,13 +27,13 @@ describe('Testing card class', () => {
     });
 
     it('Get current cost of played card', () => {
-        card.setCost(2)
+        card.setCost(2);
         expect(card.getCost()).toBe(2);
     });
 
     it('Set cost (crystal amount) of card', () => {
-        card.setCost(2)
-        expect(card.getCost()).toBe(2);
+        card.setCost(6);
+        expect(card.getCost()).toBe(6);
     });
 
     it('Get attack of card', () => {
