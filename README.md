@@ -13,6 +13,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - Formmatierungs Test mit [TsLint](https://github.com/palantir/tslint)
 - Performance Test mit [Lighthouse](https://github.com/GoogleChrome/lighthouse)
 - Versionierung der Seite mit [standard-version](https://github.com/conventional-changelog/standard-version), siehe [CHANGELOG.md](CHANGELOG.md)
+- Klassen Test mit [Karma](https://karma-runner.github.io/latest/index.html)
 
 ## [Documentation](docs/documentation.md)
 
