@@ -8,16 +8,18 @@ import { Player } from './player';
 })
 
 export class Game {
-  // private playerA: Player;
-  // private playerB: Player;
-  // private status: GameStatus;
+  public readonly MAX_CRYSTALYS = 10;
+  private startingHitpoints: number = 15;
+  private playerA: Player;
+  private playerB: Player;
+  private status: GameStatus;
 
-  constructor(
-    // private moveService: MoveService,
-  ) {
-    // this.playerA = this.createPlayer();
-    // this.playerB = this.createPlayer();
-    // this.status = GameStatus.Started;
+
+  constructor( startingHitpoints: number) {
+    this.startingHitpoints = startingHitpoints;
+    this.playerA = this.createPlayer();
+    this.playerB = this.createPlayer();
+    this.status = GameStatus.Started;
   }
 
   createGame(): any {
@@ -33,6 +35,6 @@ export class Game {
   }
 
   private createPlayer() {
-    return new Player(15);
+    return new Player(this.startingHitpoints, this);
   }
 }

@@ -1,5 +1,7 @@
+import { Game } from "./game";
+
 export class Player {
-  private readonly MAX_CRYSTALYS = 10;
+  private service: Game;
   private hitpoints: number;
   private maxHitpoints: number;
   private crystals: number;
@@ -10,7 +12,8 @@ export class Player {
   private partnerSlots = new Array(2);
   private graveyard = [];
 
-  constructor(hitpoints: number) {
+  constructor(hitpoints: number, service: Game) {
+    this.service = service;
     this.hitpoints = hitpoints;
     this.maxHitpoints = hitpoints;
     this.crystals = 0;
@@ -18,7 +21,7 @@ export class Player {
   }
 
   nextTurn(): number {
-    if (this.crystals < this.MAX_CRYSTALYS) {
+    if (this.crystals < this.service.MAX_CRYSTALYS) {
       this.crystals++;
     }
 
