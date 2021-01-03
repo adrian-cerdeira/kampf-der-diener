@@ -1,3 +1,4 @@
+import { CardLocation } from "../cards/cards.service";
 import { Player } from "./player";
 
 export class Card {
@@ -10,6 +11,7 @@ export class Card {
   private maxHitpoints: number;
   private type: number;
   private player: Player;
+  private location: CardLocation;
 
   constructor(card: any, player: Player) {
     this.id = card.id;
@@ -21,6 +23,7 @@ export class Card {
     this.maxHitpoints = card.life;
     this.type = card.type;
     this.player = player;
+    this.location = CardLocation.undefined;
   }
 
   getId(): number { return this.id };
