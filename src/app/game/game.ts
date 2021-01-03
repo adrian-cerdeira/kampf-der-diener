@@ -37,4 +37,9 @@ export class Game {
   private createPlayer() {
     return new Player(this.startingHitpoints, this);
   }
+
+  public drawRandomStartingCard(): void{
+    
+  } 
+
 }
