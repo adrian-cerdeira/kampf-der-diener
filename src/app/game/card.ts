@@ -1,7 +1,7 @@
 export class Card {
   private id: number;
   private cost: number;
-  private currentCost: number | undefined;
+  private currentCost: number;
   private attack: number;
   private shield: number;
   private hitpoints: number;
@@ -11,6 +11,7 @@ export class Card {
   constructor(card: any) {
     this.id = card.id;
     this.cost = card.crystal;
+    this.currentCost = card.crystal;
     this.attack = card.attack;
     this.shield = card.shield;
     this.hitpoints = card.life;
@@ -20,7 +21,7 @@ export class Card {
 
   getId(): number { return this.id };
 
-  getCost(): number | undefined { return this.currentCost };
+  getCost(): number { return this.currentCost };
   getNormalCost(): number { return this.cost };
   setCost(cost: number): void { this.currentCost = cost };
 
