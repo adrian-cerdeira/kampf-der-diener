@@ -1,14 +1,13 @@
 import { Injectable } from '@angular/core';
 import { GameStatus } from './game-status';
 
-import { MoveService } from './move.service';
 import { Player } from './player';
 
 @Injectable({
   providedIn: 'root',
 })
 
-export class GameService {
+export class Game {
   // private playerA: Player;
   // private playerB: Player;
   // private status: GameStatus;

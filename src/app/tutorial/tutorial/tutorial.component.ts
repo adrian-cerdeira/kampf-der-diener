@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import cards from '../../cards/cards.json';
-import { GameService } from 'src/app/game/game.service';
 
 @Component({
   selector: 'app-tutorial',
@@ -10,7 +9,6 @@ import { GameService } from 'src/app/game/game.service';
 export class TutorialComponent implements OnInit {
 
   constructor(
-    private gameService: GameService,
   ) { }
 
   ngOnInit(): void {
