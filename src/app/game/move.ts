@@ -17,9 +17,8 @@ export class Move {
     return [attackingCard, defendingCard];
   }
 
-  attackOnPlayer(attackingCard: Card, player: Player): Player {
+  attackOnPlayer(attackingCard: Card, player: Player): void {
     player.takeDamage(attackingCard.getAttack());
-    return player;
   }
 
 }

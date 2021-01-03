@@ -58,3 +58,16 @@ export class CardsService {
   }
 
 }
+
+export enum CardLocation {
+  inDeckPlayerA = 0,
+  inDeckPlayerB = 1,
+  inHandPlayerA = 2,
+  inHandPLayerB = 3,
+  DienerPlayerA = 4,
+  DienerPlayerB = 5,
+  ZauberPlayerA = 6,
+  ZauberPlayerB = 7,
+  FriedhofPlayerA = 8,
+  FriedhofPlayerB = 9,
+}
