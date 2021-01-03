@@ -1,7 +1,7 @@
 export class Card {
   private id: number;
   private cost: number;
-  private currentCost: number;
+  private currentCost: number | undefined;
   private attack: number;
   private shield: number;
   private hitpoints: number;
@@ -20,8 +20,8 @@ export class Card {
 
   getId(): number { return this.id };
 
-  getCost(): number { return this.currentCost };
-  getNormalCost(): number { return this.cost};
+  getCost(): number | undefined { return this.currentCost };
+  getNormalCost(): number { return this.cost };
   setCost(cost: number): void { this.currentCost = cost };
 
   getAttack(): number { return this.attack };
@@ -36,7 +36,7 @@ export class Card {
   getHitpoints(): number { return this.hitpoints };
   setHitpoints(hitpoints: number): void { this.hitpoints = hitpoints };
 
-  getMaxHitpoints(): number { return this.hitpoints }; 
+  getMaxHitpoints(): number { return this.hitpoints };
   setMaxHitpoints(hitpoints: number): void { this.maxHitpoints = hitpoints };
 
 }
