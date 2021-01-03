@@ -37,7 +37,7 @@ export class Card {
   getHitpoints(): number { return this.hitpoints };
   setHitpoints(hitpoints: number): void { this.hitpoints = hitpoints };
 
-  getMaxHitpoints(): number { return this.hitpoints };
+  getMaxHitpoints(): number { return this.maxHitpoints };
   setMaxHitpoints(hitpoints: number): void { this.maxHitpoints = hitpoints };
 
 }
