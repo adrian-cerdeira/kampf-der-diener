@@ -1,114 +1,12 @@
 <section class="section has-background-white has-text-black">
     <div class="container has-text-centered">
         <h1 class="title has-text-black">Kampf der Diener</h1>
+        <app-game-board [player]="'OPP'"></app-game-board>
         <div class="columns">
-            <div class="column" >
-                OPP Spell Slot 1
-            </div>
-            <div class="column">
-                OPP Spell Slot 2
-            </div>
-            <div class="column">
-                OPP Spell Slot 3
-            </div>
-            <div class="column">
-                OPP Spell Slot 4
-            </div>
-            <div class="column">
-                OPP Spell Slot 5
-            </div>
-            <div class="column">
-                Empty Space
-            </div>
-            <div class="column">
-                OPP Partner Slot 1
-            </div>
-            <div class="column">
-                OPP Partner Slot 2
-            </div>
-        </div>
-        <div class="columns">
-            <div class="column" >
-                OPP Diener Slot 1
-            </div>
-            <div class="column">
-                OPP Diener Slot 2
-            </div>
-            <div class="column">
-                OPP Diener Slot 3
-            </div>
-            <div class="column">
-                OPP Diener Slot 4
-            </div>
-            <div class="column">
-                OPP Diener Slot 5
-            </div>
-            <div class="column">
-                Empty Space
-            </div>
-            <div class="column">
-                OPP Graveyard
-            </div>
-            <div class="column">
-                OPP Deck Slot
-            </div>
-        </div>
-        <div class="columns">
-            <div class="column" >
+            <div class="column bordered">
                 Mid
             </div>
         </div>
-        <div class="columns">
-            <div class="column" >
-                PLA Diener Slot 1
-            </div>
-            <div class="column">
-                PLA Diener Slot 2
-            </div>
-            <div class="column">
-                PLA Diener Slot 3
-            </div>
-            <div class="column">
-                PLA Diener Slot 4
-            </div>
-            <div class="column">
-                PLA Diener Slot 5
-            </div>
-            <div class="column">
-                Empty Space
-            </div>
-            <div class="column">
-                PLA Graveyard
-            </div>
-            <div class="column">
-                PLA Deck Slot
-            </div>
-        </div>
-        <div class="columns">
-            <div class="column" >
-                PLA Spell Slot 1
-            </div>
-            <div class="column">
-                PLA Spell Slot 2
-            </div>
-            <div class="column">
-                PLA Spell Slot 3
-            </div>
-            <div class="column">
-                PLA Spell Slot 4
-            </div>
-            <div class="column">
-                PLA Spell Slot 5
-            </div>
-            <div class="column">
-                Empty Space
-            </div>
-            <div class="column">
-                PLA Partner Slot 1
-            </div>
-            <div class="column">
-                PLA Partner Slot 2
-            </div>
-        </div>
+        <app-game-board [player]="'PLA'"></app-game-board>
     </div>
 </section>
