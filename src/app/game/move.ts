@@ -12,14 +12,16 @@ export class Move {
   constructor(
   ) { }
 
-  getCard(id: number): Card {
-    const card = new Card(cards.find((c: any) => c.id === id))
-    return card;
+  getCard(id: number, player: Player): Card {
+    const card = cards.find((c: any) => c.id === id);
+
+    return new Card(card, player);
   }
 
   battleBetweenCards(attackingCard: Card, defendingCard: Card): any {
     defendingCard.setHitpoints(defendingCard.getHitpoints() - (attackingCard.getAttack() - defendingCard.getShield()));
     attackingCard.setHitpoints(attackingCard.getHitpoints() - (defendingCard.getAttack() - attackingCard.getShield()));
+
     return [attackingCard, defendingCard];
   }
 
