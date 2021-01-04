@@ -2,6 +2,8 @@ import { Card } from '../cards/card';
 import { Player } from '../game/player';
 import { Game } from '../game/game';
 
+import { CardLocation } from '../cards/card-location';
+
 import cards from '../cards/cards.json';
 
 // Straight Jasmine testing without Angular's testing support
@@ -28,11 +30,13 @@ describe('Testing card class', () => {
 
     it('Get current cost of played card', () => {
         card.setCost(2);
+
         expect(card.getCost()).toBe(2);
     });
 
     it('Set cost (crystal amount) of card', () => {
         card.setCost(6);
+
         expect(card.getCost()).toBe(6);
     });
 
@@ -42,6 +46,7 @@ describe('Testing card class', () => {
 
     it('Set specific attack of card', () => {
         card.setAttack(5);
+
         expect(card.getAttack()).toBe(5);
     });
 
@@ -51,6 +56,7 @@ describe('Testing card class', () => {
 
     it('Set specific shield of card', () => {
         card.setShield(5);
+
         expect(card.getShield()).toBe(5);
     });
 
@@ -60,6 +66,7 @@ describe('Testing card class', () => {
 
     it('Set new type to card', () => {
         card.setType(1);
+
         expect(card.getType()).toBe(1);
     });
 
@@ -69,6 +76,7 @@ describe('Testing card class', () => {
 
     it('Set hitpoints by damage of card', () => {
         card.setHitpoints(5);
+
         expect(card.getHitpoints()).toBe(5);
     });
 
@@ -78,6 +86,11 @@ describe('Testing card class', () => {
 
     it('Set max. hitpoints (set max. amount life) of card', () => {
         card.setMaxHitpoints(7);
+
         expect(card.getMaxHitpoints()).toBe(7);
+    });
+
+    it('Get position (in board) of card', () => {
+        expect(card.getLocation()).toBe(CardLocation.undefined);
     });
 });

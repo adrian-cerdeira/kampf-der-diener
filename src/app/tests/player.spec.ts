@@ -1,5 +1,8 @@
+import { Card } from '../cards/card';
 import { Game } from '../game/game';
 import { Player } from '../game/player';
+
+import cards from '../cards/cards.json';
 
 // Straight Jasmine testing without Angular's testing support
 describe('Testing player class', () => {
@@ -14,22 +17,26 @@ describe('Testing player class', () => {
 
     it('Get current hitpoints (amount of life) of a player', () => {
         player.setHitpoints(10);
+
         expect(player.getHitpoints()).toBe(10);
     });
 
     it('Set current hitpoints (amount of life) of a player', () => {
         player.setHitpoints(8);
+
         expect(player.getHitpoints()).toBe(8);
     });
 
     it('Take damage to player', () => {
         player.takeDamage(10);
+
         expect(player.getHitpoints()).toBe(5);
     });
 
     it('Heal player', () => {
         player.takeDamage(10);
         player.healHitpoints(5);
+
         expect(player.getHitpoints()).toBe(10);
     });
 
@@ -39,48 +46,64 @@ describe('Testing player class', () => {
 
     it('Set max. hitpoints (amount of life) of a player', () => {
         player.setMaxHitpoints(30);
+
         expect(player.getMaxHitpoints()).toBe(30);
     });
 
     it('Get current crystals of a player', () => {
         player.nextTurn();
+
         expect(player.getCrystals()).toBe(1);
     });
 
     it('Set current crystals of a player', () => {
         player.setCrystals(5);
+
         expect(player.getCrystals()).toBe(5);
     });
 
     it('Get current turn of a player', () => {
         player.nextTurn();
+
         expect(player.getTurn()).toBe(1);
     });
 
     it('Set current turn of a player', () => {
         player.setTurn(5);
         player.nextTurn();
+
         expect(player.getTurn()).toBe(6);
     });
 
     it('Set next turn of a player', () => {
         player.setTurn(8);
         player.nextTurn();
+
         expect(player.getTurn()).toBe(9);
     });
 
     it('Get handcards of a player', () => {
         const handCards = [1, 2, 3, 4, 5];
+
         player.setHandCards(handCards);
 
         expect(player.getHandCards()).toBe(handCards);
     });
 
-    it('Set handcards of a player', () => {
+    it('Set specific amount of handcards of a player', () => {
         const handCards = [1, 2, 3];
+
         player.setHandCards(handCards);
 
         expect(player.getHandCards()).toBe(handCards);
+    });
+
+    it('Add handcards to player', () => {
+        const card = new Card(cards.find(c => c.id === 1), player);
+
+        player.addHandCard(card);
+
+        expect(player.getHandCards().length).toBe(1);
     });
 
     it('Get amount of dienerslots of a player', () => {
@@ -89,6 +112,7 @@ describe('Testing player class', () => {
 
     it('Set amount of dienerslots of a player', () => {
         const dienerSlots = [1, 2, 3];
+
         player.setDienerSlots(dienerSlots);
 
         expect(player.getDienerSlots().length).toBe(3);
@@ -100,6 +124,7 @@ describe('Testing player class', () => {
 
     it('Set amount of spellslots of a player', () => {
         const spellSlots = [1, 2, 3];
+
         player.setSpellSlots(spellSlots);
 
         expect(player.getSpellSlots().length).toBe(3);
@@ -111,6 +136,7 @@ describe('Testing player class', () => {
 
     it('Get amount of partnerslots of a player', () => {
         const partnerSlots = [1, 2];
+
         player.setPartnerSlots(partnerSlots);
 
         expect(player.getPartnerSlots().length).toBe(2);
@@ -118,6 +144,7 @@ describe('Testing player class', () => {
 
     it('Get dead cards in graveyard of a player', () => {
         const graveyard = [1, 2, 3, 4, 5];
+
         player.setGraveyard(graveyard);
 
         expect(player.getGraveyard()).toBe(graveyard);
@@ -125,6 +152,7 @@ describe('Testing player class', () => {
 
     it('Set dead cards in graveyard of a player', () => {
         const graveyard = [1];
+
         player.setGraveyard(graveyard);
 
         expect(player.getGraveyard()).toBe(graveyard);
