@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Card } from '../cards/card';
 import { CardLocation } from '../cards/card-location';
 import { GameStatus } from './game-status';
 import { Move } from './move';
@@ -63,8 +64,6 @@ export class Game {
     card.setLocation(CardLocation.inHand);
   }
 
-
-
   public generateRandomCardId(): number{
     let randnum = 1;
     randnum = this.getRandomInt(this.AMMOUNT_OF_CARDS);
@@ -73,4 +72,9 @@ export class Game {
     }
     return randnum;
   }
+
+  public placeCard(card: Card, player: Player){
+    
+  }
+
 }
