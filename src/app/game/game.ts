@@ -52,15 +52,15 @@ export class Game {
 
   public drawRandomStartingCards(player: Player): void{
     for( let cardnum = 0; cardnum <= 4; cardnum++){
-      let cardId = this.generateRandomCardId();
-      let card = this.moves.getCard(cardId, player);
-      player.setHandCards(card);
-      card.setLocation(CardLocation.inHand);
+      this.drawCard(player);
     }
   }
 
   public drawCard(player: Player): void{
-
+    let cardId = this.generateRandomCardId();
+    let card = this.moves.getCard(cardId, player);
+    player.setHandCards(card);
+    card.setLocation(CardLocation.inHand);
   }
 
 
