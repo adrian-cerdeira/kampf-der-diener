@@ -93,4 +93,10 @@ describe('Testing card class', () => {
     it('Get position (in board) of card', () => {
         expect(card.getLocation()).toBe(CardLocation.undefined);
     });
+
+    it('Set position (in board) of card', () => {
+        card.setLocation(CardLocation.inHand);
+
+        expect(card.getLocation()).toBe(CardLocation.inHand);
+    });
 });
