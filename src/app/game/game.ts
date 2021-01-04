@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
+import { CardLocation } from '../cards/card-location';
 import { GameStatus } from './game-status';
+import { Move } from './move';
 
 import { Player } from './player';
 
@@ -16,12 +18,14 @@ export class Game {
   private playerA: Player;
   private playerB: Player;
   private status: GameStatus;
+  private moves: Move;
 
 
   constructor(startingHitpoints: number) {
     this.startingHitpoints = startingHitpoints;
     this.playerA = this.createPlayer();
     this.playerB = this.createPlayer();
+    this.moves = new Move();
     this.status = GameStatus.Started;
   }
 
@@ -37,16 +41,24 @@ export class Game {
     };
   }
 
-  getCards(playerACard: any, playerBCard: any): any {
-    // return this.moveService.whoWins(playerACard, playerBCard);
+  getStartingCards(playerA: Player, playerB: Player): any {
+    this.drawRandomStartingCards(playerA);
+    this.drawRandomStartingCards(playerB);
   }
 
   private createPlayer(): Player {
     return new Player(this.startingHitpoints, this);
   }
 
-  public drawRandomStartingCards(): void{
+  public drawRandomStartingCards(player: Player): void{
+    for( let cardnum = 0; cardnum <= 4; cardnum++){
+      let cardId = this.generateRandomCardId();
+      let card = this.moves.getCard(cardId, player);
+      player.setHandCards(card);
+    }
   }
+
+
 
   public generateRandomCardId(): number{
     let randnum = 1;

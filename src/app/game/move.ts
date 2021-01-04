@@ -12,8 +12,8 @@ export class Move {
   constructor(
   ) { }
 
-  getCard(id: number): Card {
-    const card = new Card(cards.find((c: any) => c.id === id))
+  getCard(id: number, player: Player): Card {
+    const card = new Card(cards.find((c: any) => c.id === id), player)
     return card;
   }
 

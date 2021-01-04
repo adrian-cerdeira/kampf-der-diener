@@ -1,3 +1,4 @@
+import { Card } from '../cards/card';
 import { Game } from './game';
 
 export class Player {
@@ -6,11 +7,11 @@ export class Player {
   private maxHitpoints: number;
   private crystals: number;
   private turn: number;
-  private handCards = [];
-  private dienerSlots = new Array(5);
-  private spellSlots = new Array(1);
-  private partnerSlots = new Array(2);
-  private graveyard = [];
+  private handCards: Card[] = new Array();
+  private dienerSlots: Card[] = new Array(5);
+  private spellSlots: Card[] = new Array(1);
+  private partnerSlots: Card[] = new Array(2);
+  private graveyard: Card[] = new Array();
 
   constructor(hitpoints: number, service: Game) {
     this.service = service;
@@ -44,6 +45,12 @@ export class Player {
 
     return this.hitpoints;
   }
+
+  addHandCard(newCard: Card): void {
+    this.handCards.push(newCard);
+  }
+
+
 
   getHitpoints(): number { return this.hitpoints; }
   setHitpoints(hitpoints: number): void { this.hitpoints = hitpoints; }

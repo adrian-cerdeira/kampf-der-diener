@@ -47,4 +47,7 @@ export class Card {
   getMaxHitpoints(): number { return this.maxHitpoints; }
   setMaxHitpoints(hitpoints: number): void { this.maxHitpoints = hitpoints; }
 
+  getLocation(): CardLocation { return this.location; }
+  setLocation(location: CardLocation): void { this.location = location; }
+
 }
