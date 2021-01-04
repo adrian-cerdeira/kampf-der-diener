@@ -18,3 +18,8 @@ body {
   margin-top: 3rem; // Abstand für Toolbar
   margin-bottom: 5rem; // Abstand für Footer
 }
+
+/*** Column ***/
+.column.bordered {
+  border: 0.1rem grey solid
+}

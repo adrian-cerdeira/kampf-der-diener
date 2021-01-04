@@ -20,6 +20,7 @@ export class Move {
   battleBetweenCards(attackingCard: Card, defendingCard: Card): any {
     defendingCard.setHitpoints(defendingCard.getHitpoints() - (attackingCard.getAttack() - defendingCard.getShield()));
     attackingCard.setHitpoints(attackingCard.getHitpoints() - (defendingCard.getAttack() - attackingCard.getShield()));
+
     return [attackingCard, defendingCard];
   }
 
