@@ -55,7 +55,12 @@ export class Game {
       let cardId = this.generateRandomCardId();
       let card = this.moves.getCard(cardId, player);
       player.setHandCards(card);
+      card.setLocation(CardLocation.inHand);
     }
+  }
+
+  public drawCard(player: Player): void{
+
   }
 
 
