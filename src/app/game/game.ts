@@ -85,6 +85,15 @@ export class Game {
     
   }
 
+  public cardAttacksPlayer(attacker: Card, player: Player){
+
+  }
+
+  public searchCard(cardArray: Card[]): number{
+    return 0;
+  }
+
+
   getPlayerA(): Player { return this.playerA; }
   setPlayerA(playerA: Player): void { this.playerA = playerA; }
 
