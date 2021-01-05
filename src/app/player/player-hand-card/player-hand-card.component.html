@@ -1,3 +1,9 @@
 <div class="column">
-    {{card?.getId()}}
+    <div class="card">
+        <div class="card-image">
+            <figure class="image">
+                <img src="{{card?.getId() | cardImgUrl | async}}" alt="Hand Card {{card?.getId()}}">
+            </figure>
+        </div>
+    </div>
 </div>
