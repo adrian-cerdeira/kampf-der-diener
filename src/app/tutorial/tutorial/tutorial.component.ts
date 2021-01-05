@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Game } from 'src/app/game/game';
 import cards from '../../cards/cards.json';
 
 @Component({
@@ -7,16 +8,30 @@ import cards from '../../cards/cards.json';
   styleUrls: ['./tutorial.component.scss']
 })
 export class TutorialComponent implements OnInit {
+  private game: any;
   isPlayerAfterMid = true;
-
+  
   constructor(
   ) { }
 
   ngOnInit(): void {
-    // const playerACard = cards.find(c => c.id === 1);
-    // const playerBCard = cards.find(c => c.id === 2);
 
-    // console.log(this.gameService.getCards(playerACard, playerBCard));
+  // Prep
+
+    this.game = new Game();
+
+    let cardsPlayerA = [39, 66, 44, 14, 53];
+    let cardsPlayerB = [5, 9, 49, 58, 1];
+
+    this.game.getScriptedStartingCards(cardsPlayerA, cardsPlayerB);
+
+  // Turn 1 Bot
+
+    this.game.drawCard(this.game.getPlayerB(), 13);
+
+    this.game.placeCard(this.game.getPlayerB(), 5);
+
+
+
   }
-
 }

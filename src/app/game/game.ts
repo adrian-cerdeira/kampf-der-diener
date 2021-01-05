@@ -22,8 +22,7 @@ export class Game {
   private moves: Move;
 
 
-  constructor(startingHitpoints: number) {
-    this.startingHitpoints = startingHitpoints;
+  constructor() {
     this.playerA = this.createPlayer();
     this.playerB = this.createPlayer();
     this.moves = new Move();
@@ -42,9 +41,18 @@ export class Game {
     };
   }
 
-  getStartingCards(playerA: Player, playerB: Player): any {
-    this.drawRandomStartingCards(playerA);
-    this.drawRandomStartingCards(playerB);
+  getStartingCards() {
+    this.drawRandomStartingCards(this.playerA);
+    this.drawRandomStartingCards(this.playerB);
+  }
+
+  getScriptedStartingCards (pACards: number[], pBCards: number[] ) {
+    pACards.forEach(element => {
+      this.drawCard(this.playerA, element);
+    });
+    pBCards.forEach(element => {
+      this.drawCard(this.playerB, element);
+    });
   }
 
   private createPlayer(): Player {
@@ -53,12 +61,12 @@ export class Game {
 
   public drawRandomStartingCards(player: Player): void{
     for( let cardnum = 0; cardnum <= 4; cardnum++){
-      this.drawCard(player);
+      let cardId = this.generateRandomCardId();
+      this.drawCard(player, cardId);
     }
   }
 
-  public drawCard(player: Player): void{
-    let cardId = this.generateRandomCardId();
+  public drawCard(player: Player, cardId: number): void{
     let card = this.moves.getCard(cardId, player);
     player.setHandCards(card);
     card.setLocation(CardLocation.inHand);
@@ -73,8 +81,14 @@ export class Game {
     return randnum;
   }
 
-  public placeCard(card: Card, player: Player){
+  public placeCard(player: Player, cardID: number){
     
   }
+
+  getPlayerA(): Player { return this.playerA; }
+  setPlayerA(playerA: Player): void { this.playerA = playerA; }
+
+  getPlayerB(): Player { return this.playerB; }
+  setPlayerB(playerB: Player): void { this.playerB = playerB; }
 
 }
