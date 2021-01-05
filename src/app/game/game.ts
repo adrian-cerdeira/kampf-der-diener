@@ -89,8 +89,8 @@ export class Game {
 
   }
 
-  public searchCard(cardArray: Card[]): number{
-    return 0;
+  public searchCard(cardArray: Card[], id: number): number{
+    return this.moves.searchCard(cardArray, id);
   }
 
 
