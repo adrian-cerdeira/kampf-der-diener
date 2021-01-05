@@ -7,6 +7,7 @@ import cards from '../../cards/cards.json';
   styleUrls: ['./tutorial.component.scss']
 })
 export class TutorialComponent implements OnInit {
+  isPlayerAfterMid = true;
 
   constructor(
   ) { }
