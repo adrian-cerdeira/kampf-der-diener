@@ -1,6 +1,6 @@
 import { Card } from '../cards/card';
 import { Game } from '../game/game';
-import { Player } from '../game/player';
+import { Player } from '../player/player';
 
 import cards from '../cards/cards.json';
 

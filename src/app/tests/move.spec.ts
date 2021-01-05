@@ -1,6 +1,6 @@
 import { Game } from '../game/game';
 import { Move } from '../game/move';
-import { Player } from '../game/player';
+import { Player } from '../player/player';
 
 import cards from '../cards/cards.json';
 import { Card } from '../cards/card';

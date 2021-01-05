@@ -4,7 +4,7 @@ import { CardLocation } from '../cards/card-location';
 import { GameStatus } from './game-status';
 import { Move } from './move';
 
-import { Player } from './player';
+import { Player } from '../player/player';
 
 @Injectable({
   providedIn: 'root',
