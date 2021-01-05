@@ -47,12 +47,9 @@ export class TutorialComponent implements OnInit {
     this.player = this.game.getPlayerA();
     this.player.name = 'Spieler 1';
     this.playerBot = this.game.getPlayerB();
-    console.log(this.player, this.playerBot);
     this.playerBot.name = 'Bot Hai';
-    this.player.setHandCards([39, 66, 44, 14, 53]);
-    this.playerBot.setHandCards([5, 9, 49, 58, 1]);
 
-    this.game.getScriptedStartingCards(this.player.getHandCards(), this.playerBot.getHandCards());
+    this.game.getScriptedStartingCards([39, 66, 44, 14, 53], [5, 9, 49, 58, 1]);
   }
 
 }

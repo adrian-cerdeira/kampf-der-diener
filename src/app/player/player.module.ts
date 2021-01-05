@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PlayerHandCardsComponent } from './player-hand-cards/player-hand-cards.component';
 import { SharedModule } from '../shared/shared.module';
+import { PlayerHandCardComponent } from './player-hand-card/player-hand-card.component';
 
 @NgModule({
   imports: [
@@ -10,6 +11,7 @@ import { SharedModule } from '../shared/shared.module';
   ],
   declarations: [
     PlayerHandCardsComponent,
+    PlayerHandCardComponent,
   ],
   exports: [
     PlayerHandCardsComponent,

@@ -1,1 +1,5 @@
-<p>player-hand-cards works!</p>
+<div class="columns">
+    <ng-container *ngFor="let card of player?.getHandCards()">
+        <app-player-hand-card [card]="card"></app-player-hand-card>
+    </ng-container>
+</div>
