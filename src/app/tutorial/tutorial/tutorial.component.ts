@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Game } from 'src/app/game/game';
-import cards from '../../cards/cards.json';
+
+import { Game } from '../../game/game';
 
 @Component({
   selector: 'app-tutorial',
@@ -16,6 +16,10 @@ export class TutorialComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    const localStorageIsStarted = window.localStorage.getItem('isStarted') === 'true'
+      ? true
+      : false;
+    this.isStarted = localStorageIsStarted;
     // // Turn 1 Bot
     // this.game.drawCard(this.game.getPlayerB(), 13);
 
@@ -30,6 +34,7 @@ export class TutorialComponent implements OnInit {
 
   start(): void {
     this.isStarted = true;
+    window.localStorage.setItem('isStarted', 'true');
 
     this.game = new Game();
     const cardsPlayerA = [39, 66, 44, 14, 53];
