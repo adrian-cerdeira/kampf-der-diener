@@ -50,8 +50,6 @@ export class Player {
     this.handCards.push(newCard);
   }
 
-
-
   getHitpoints(): number { return this.hitpoints; }
   setHitpoints(hitpoints: number): void { this.hitpoints = hitpoints; }
 
