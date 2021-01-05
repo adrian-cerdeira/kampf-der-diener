@@ -1,12 +1,24 @@
 <section class="section has-background-white has-text-black">
     <div class="container has-text-centered">
-        <h1 class="title has-text-black">Kampf der Diener</h1>
-        <app-game-board [player]="'OPP'"></app-game-board>
-        <div class="columns">
-            <div class="column bordered">
-                Mid
+        <div class="notification is-info is-hidden-desktop">
+            <i class="fas fa-exclamation-circle"></i>
+            Tutorial steht für die Mobile Anwender nocht nicht zur Verfügung!
+            <br />
+            <br />
+            Dies ist in Arbeit.
+            <br />
+            Danke fürs Verständnis.
+        </div>
+        <div class="columns is-hidden-mobile">
+            <div class="column">
+                <app-game-board [player]="'OPP'" [shouldChangePosition]="!isPlayerAfterMid"></app-game-board>
+                <div class="columns">
+                    <div class="column bordered">
+                        Mid
+                    </div>
+                </div>
+                <app-game-board [player]="'PLA'" [shouldChangePosition]="isPlayerAfterMid"></app-game-board>
             </div>
         </div>
-        <app-game-board [player]="'PLA'"></app-game-board>
     </div>
 </section>

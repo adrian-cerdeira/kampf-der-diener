@@ -7,6 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class GameBoardComponent implements OnInit {
   @Input() player: any;
+  @Input() shouldChangePosition: boolean | undefined;
 
   constructor() { }
 

@@ -9,6 +9,8 @@ import cards from '../../cards/cards.json';
 })
 export class TutorialComponent implements OnInit {
   private game: any;
+  isPlayerAfterMid = true;
+  
   constructor(
   ) { }
 
