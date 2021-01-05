@@ -6,13 +6,13 @@
                     <app-player-hand-cards></app-player-hand-cards>
                 </div>
                 <div class="column is-full">
-                    <app-game-board [player]="'OPP'" [shouldChangePosition]="!isPlayerAfterMid"></app-game-board>
+                    <app-game-board [player]="playerBot" [shouldChangePosition]="!isPlayerAfterMid"></app-game-board>
                     <div class="columns">
                         <div class="column bordered">
                             Mid
                         </div>
                     </div>
-                    <app-game-board [player]="'PLA'" [shouldChangePosition]="isPlayerAfterMid"></app-game-board>
+                    <app-game-board [player]="player" [shouldChangePosition]="isPlayerAfterMid"></app-game-board>
                 </div>
                 <div class="column is-full">
                     <app-player-hand-cards></app-player-hand-cards>

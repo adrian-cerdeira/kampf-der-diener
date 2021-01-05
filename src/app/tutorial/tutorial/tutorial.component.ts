@@ -9,6 +9,8 @@ import { Game } from '../../game/game';
 })
 export class TutorialComponent implements OnInit {
   game: any;
+  playerBot: any;
+  player: any;
   isStarted = false;
   isPlayerAfterMid = true;
 
@@ -20,6 +22,10 @@ export class TutorialComponent implements OnInit {
       ? true
       : false;
     this.isStarted = localStorageIsStarted;
+
+    if (this.isStarted) {
+      this.start();
+    }
     // // Turn 1 Bot
     // this.game.drawCard(this.game.getPlayerB(), 13);
 
@@ -37,9 +43,16 @@ export class TutorialComponent implements OnInit {
     window.localStorage.setItem('isStarted', 'true');
 
     this.game = new Game();
-    const cardsPlayerA = [39, 66, 44, 14, 53];
-    const cardsPlayerB = [5, 9, 49, 58, 1];
-    this.game.getScriptedStartingCards(cardsPlayerA, cardsPlayerB);
+
+    this.player = this.game.getPlayerA();
+    this.player.name = 'Spieler 1';
+    this.playerBot = this.game.getPlayerB();
+    console.log(this.player, this.playerBot);
+    this.playerBot.name = 'Bot Hai';
+    this.player.setHandCards([39, 66, 44, 14, 53]);
+    this.playerBot.setHandCards([5, 9, 49, 58, 1]);
+
+    this.game.getScriptedStartingCards(this.player.getHandCards(), this.playerBot.getHandCards());
   }
 
 }
