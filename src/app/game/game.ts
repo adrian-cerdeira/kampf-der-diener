@@ -81,8 +81,14 @@ export class Game {
     return randnum;
   }
 
-  public placeCard(card: Card, player: Player){
+  public placeCard(player: Player, cardID: number){
     
   }
+
+  getPlayerA(): Player { return this.playerA; }
+  setPlayerA(playerA: Player): void { this.playerA = playerA; }
+
+  getPlayerB(): Player { return this.playerB; }
+  setPlayerB(playerB: Player): void { this.playerB = playerB; }
 
 }

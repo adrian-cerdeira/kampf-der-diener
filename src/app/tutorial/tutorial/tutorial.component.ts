@@ -18,16 +18,16 @@ export class TutorialComponent implements OnInit {
 
     this.game = new Game();
 
-
-
     let cardsPlayerA = [39, 66, 44, 14, 53];
     let cardsPlayerB = [5, 9, 49, 58, 1];
 
     this.game.getScriptedStartingCards(cardsPlayerA, cardsPlayerB);
 
+  // Turn 1 Bot
 
+    this.game.drawCard(this.game.getPlayerB(), 13);
 
-    
+    this.game.placeCard(this.game.getPlayerB, 5);
 
 
 
