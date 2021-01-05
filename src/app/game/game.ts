@@ -21,7 +21,6 @@ export class Game {
   private status: GameStatus;
   private moves: Move;
 
-
   constructor() {
     this.playerA = this.createPlayer();
     this.playerB = this.createPlayer();
@@ -29,7 +28,7 @@ export class Game {
     this.status = GameStatus.Started;
   }
 
-  public getRandomInt(max: number): number{
+  public getRandomInt(max: number): number {
     return (Math.floor(Math.random() * Math.floor(max))) + 1;
   }
 
@@ -46,33 +45,30 @@ export class Game {
     this.drawRandomStartingCards(this.playerB);
   }
 
-  getScriptedStartingCards (pACards: number[], pBCards: number[] ) {
+  getScriptedStartingCards(pACards: number[], pBCards: number[]) {
     pACards.forEach(element => {
       this.drawCard(this.playerA, element);
     });
+
     pBCards.forEach(element => {
       this.drawCard(this.playerB, element);
     });
   }
 
-  private createPlayer(): Player {
-    return new Player(this.startingHitpoints, this);
-  }
-
-  public drawRandomStartingCards(player: Player): void{
-    for( let cardnum = 0; cardnum <= 4; cardnum++){
+  drawRandomStartingCards(player: Player): void {
+    for (let cardnum = 0; cardnum <= 4; cardnum++) {
       let cardId = this.generateRandomCardId();
       this.drawCard(player, cardId);
     }
   }
 
-  public drawCard(player: Player, cardId: number): void{
+  drawCard(player: Player, cardId: number): void {
     let card = this.moves.getCard(cardId, player);
-    player.setHandCards(card);
+    player.addHandCard(card);
     card.setLocation(CardLocation.inHand);
   }
 
-  public generateRandomCardId(): number{
+  generateRandomCardId(): number {
     let randnum = 1;
     randnum = this.getRandomInt(this.AMMOUNT_OF_CARDS);
     if (this.BANNED_CARDS.includes(randnum)) {
@@ -81,18 +77,21 @@ export class Game {
     return randnum;
   }
 
-  public placeCard(player: Player, cardID: number){
-    
-  }
-
-  public cardAttacksPlayer(attacker: Card, player: Player){
+  placeCard(player: Player, cardID: number) {
 
   }
 
-  public searchCard(cardArray: Card[]): number{
+  cardAttacksPlayer(attacker: Card, player: Player) {
+
+  }
+
+  searchCard(cardArray: Card[]): number {
     return 0;
   }
 
+  private createPlayer(): Player {
+    return new Player(this.startingHitpoints, this);
+  }
 
   getPlayerA(): Player { return this.playerA; }
   setPlayerA(playerA: Player): void { this.playerA = playerA; }
