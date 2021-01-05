@@ -31,6 +31,13 @@ export class TutorialComponent implements OnInit {
 
     this.game.placeCard(this.game.getPlayerB(), 5);
 
+  // Turn 1 Player
+
+    this.game.drawCard(this.game.getPlayerA(), 59);
+
+  // Turn 2 Bot
+
+    this.game.drawCard(this.game.getPlayerB(), 45);
 
 
   }
