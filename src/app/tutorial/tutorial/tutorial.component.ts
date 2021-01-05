@@ -46,7 +46,11 @@ export class TutorialComponent implements OnInit {
 
     this.player = this.game.getPlayerA();
     this.player.name = 'Spieler 1';
+    this.player.backgroundColor = '#FF0000';
+    this.player.fontColor = '#FFFFFF';
     this.playerBot = this.game.getPlayerB();
+    this.playerBot.backgroundColor = '#000000';
+    this.playerBot.fontColor = '#FFFFFF';
     this.playerBot.name = 'Bot Hai';
 
     this.game.getScriptedStartingCards([39, 66, 44, 14, 53], [5, 9, 49, 58, 1]);
