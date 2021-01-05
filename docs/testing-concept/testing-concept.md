@@ -35,4 +35,4 @@ TODO MARIO noch
 
 ## Start Testing
 
-> Siehe [CONTRIBUTING.md](CONTRIBUTING.md) bei Abschnitt **Start Test**.
+> Siehe [CONTRIBUTING.md](../CONTRIBUTING.md) bei Abschnitt **Start Test**.
