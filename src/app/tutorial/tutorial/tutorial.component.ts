@@ -8,7 +8,8 @@ import cards from '../../cards/cards.json';
   styleUrls: ['./tutorial.component.scss']
 })
 export class TutorialComponent implements OnInit {
-  private game: any;
+  game: any;
+  isStarted = false;
   isPlayerAfterMid = true;
 
   constructor(
