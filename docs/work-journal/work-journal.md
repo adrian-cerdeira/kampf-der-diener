@@ -32,5 +32,6 @@
 | 02.01.2021 | 3           | Mit Mario Game Logik mit Service etc. vorbereitet und miteinander besprochen                                                                          |
 | 03.01.2021 | 1.5         | Testing von Card und Player Klasse erstellt                                                                                                           |
 | 03.01.2021 | 0.75        | Testkonzept mit TODO für Mario geschrieben                                                                                                            |
+| 04.01.2021 | 2           | Tests von Player + Card verbessert und Move Klassen Test erstellt                                                                                     |
 
 ## TODO Mario Forrer
