@@ -39,7 +39,9 @@ export class TutorialComponent implements OnInit {
 
     this.game.drawCard(this.game.getPlayerB(), 45);
 
-    this.game.searchCard(this.game.getPlayerB().getHandCards(), 5);
+    let cardPos = this.game.searchCard(this.game.getPlayerB().getHandCards(), 5);
+
+    this.game.placeCard(this.game.getPlayerB, cardPos);
 
 
   }
