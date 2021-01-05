@@ -22,21 +22,6 @@ Bot:
 1  - Agent Eule
 
 ---------------------------------------
-Parnter
----------------------------------------
-
-Spieler:
-
-90 - Schlange
-89 - Rückerstattung
-
-
-Bot:
-
-86 - Monsterchen
-81 - Faulenzer
-
----------------------------------------
 Zug 1 Bot
 ---------------------------------------
 
@@ -70,14 +55,10 @@ Angriff:
 Zug 2 Spieler
 ---------------------------------------
 
-31 - Launisches Huhn
-
-Partner:
-90 - Schlange >> 5 - Agent Schnecke (-1 Leben -> 0 Leben)
-Rückerstattung >> + 1 Kristall
+65 - Regenbogenviech
 
 Setzen:
-31 - Launisches Huhn
+65 - Regenbogenviech
 
 -- Zug Ende
 
@@ -86,6 +67,10 @@ Zug 3 Bot
 ---------------------------------------
 
 41 - Reh Armee
+
+Angriff:
+5 - Agent Schnecke >> 65 - Regenbogenviech (-> Dead Agent Schnecke, -> -0 Regenbogenviech)
+
 
 -- Zug Ende
 
@@ -97,10 +82,10 @@ Zug 3 Spieler
 
 Aktivieren:
 66 -Ritual der Stärkung
-44 -Sternenzerstörer -> 31 - Launisches Huhn (+15 +9 +10 -> 16 10 10)
+44 -Sternenzerstörer -> 65 - Regenbogenviech (+15 +9 +10 -> 16 10 19)
 
 Angriff:
-31 - Launisches Huhn >> Spieler ( -16 Leben -> 0 Leben )
+65 - Regenbogenviech >> Spieler ( -16 Leben -> 0 Leben )
 
 ---------------------------------------
 Spieler Gewinnt
