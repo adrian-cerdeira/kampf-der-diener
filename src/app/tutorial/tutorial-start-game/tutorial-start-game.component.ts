@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-tutorial-start-game',
@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tutorial-start-game.component.scss']
 })
 export class TutorialStartGameComponent implements OnInit {
+  @Output() started = new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  start() {
+    this.started.emit();
   }
 
 }
