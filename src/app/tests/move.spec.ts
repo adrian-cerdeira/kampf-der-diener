@@ -14,7 +14,7 @@ describe('Testing card class', () => {
 
     beforeEach(() => {
         move = new Move();
-        game = new Game(startingHitPoints);
+        game = new Game();
         player = new Player(startingHitPoints, game);
     });
 

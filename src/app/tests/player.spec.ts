@@ -11,7 +11,7 @@ describe('Testing player class', () => {
     const startingHitPoints = 15;
 
     beforeEach(() => {
-        game = new Game(startingHitPoints);
+        game = new Game();
         player = new Player(startingHitPoints, game);
     });
 
