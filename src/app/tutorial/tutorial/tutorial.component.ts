@@ -27,7 +27,7 @@ export class TutorialComponent implements OnInit {
     if (this.isStarted) {
       this.start();
     }
-    
+
     // Turn 1 Bot
     // this.game.drawCard(this.game.getPlayerB(), 13);
 
@@ -47,8 +47,11 @@ export class TutorialComponent implements OnInit {
     // Turn 2 Bot
     // this.game.drawCard(this.game.getPlayerB(), 45);
 
+    // let cardPos = this.game.searchCard(this.game.getPlayerB().getDienerSlots(), 5);
 
+    // this.game.cardAttacksPlayer(this.game.getPlayerA(), cardPos);
 
+  
 
 
   }
