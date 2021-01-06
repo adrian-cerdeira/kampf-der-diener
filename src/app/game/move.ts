@@ -43,8 +43,9 @@ export class Move {
     handcards.splice(arrayIndex, 1);
   }
 
-  sendCardToGrave(card: Card, ){
-
+  sendCardToGrave( graveyard: Card[], field: Card[], arrayIndex: number ){
+    graveyard.push(field[arrayIndex]);
+    field.splice(arrayIndex, 1);
   }
 
 }

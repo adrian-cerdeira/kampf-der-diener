@@ -5,6 +5,7 @@ import { GameStatus } from './game-status';
 import { Move } from './move';
 
 import { Player } from '../player/player';
+import { IfStmt } from '@angular/compiler';
 
 @Injectable({
   providedIn: 'root',
@@ -93,7 +94,25 @@ export class Game {
   }
 
   cardAttacksCard(attacker: Card, defender: Card) {
-    
+    this.moves.battleBetweenCards(attacker, defender);
+
+    if (attacker.getHitpoints() <= 0) {
+      this.sendDienerToGrave(attacker);
+    } else if (defender.getHitpoints() <= 0)  {
+      this.sendDienerToGrave(defender);
+    }
+  }
+
+  public sendDienerToGrave(card: Card){
+    let player = card.getPlayer();
+    let index = this.searchCard(player.getDienerSlots(), card.getId());
+    this.moves.sendCardToGrave(player.getGraveyard(), player.getDienerSlots(), index);
+  }
+
+  public sendSpellToGrave(card: Card){
+    let player = card.getPlayer();
+    let index = this.searchCard(player.getSpellSlots(), card.getId());
+    this.moves.sendCardToGrave(player.getGraveyard(), player.getSpellSlots(), index);
   }
 
   public searchCard(cardArray: Card[], id: number): number{

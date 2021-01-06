@@ -50,4 +50,7 @@ export class Card {
   getLocation(): CardLocation { return this.location; }
   setLocation(location: CardLocation): void { this.location = location; }
 
+  getPlayer(): Player {return this.player; }
+  setPlayer(player: Player): void { this.player = player; }
+
 }
