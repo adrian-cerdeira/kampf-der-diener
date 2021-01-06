@@ -78,26 +78,56 @@ export class TutorialComponent implements OnInit {
         break;
       case 2:
         this.modal = this.createDialog({
-          title: 'Tutorial',
+          title: 'Spielen',
           content: `
-          <h1 class="title">Willkommen zu Kampf der Diener</h1>
+          <h1 class="title">Dein Spielzug</h1>
           <p class="has-text-left">
-            In diesem Tutorial werden Sie das Spiel kennenlernen.
-            <br />
-            Schritt für Schritt werden Sie an das Spiel spielerisch herangeführt.
-            <br />
-            Falls technische Schwierigkeiten passieren, erstellen Sie bitte ein Ticket auf 
-            <a href="https://github.com/adrian-cerdeira/kampf-der-diener/issues/new">
-            <i class="fab fa-github"></i>
-            Github - Kampf der Diener Issues
-            </a>
-            .
-            <br />
-            <br />
-            Danke fürs Feedback und viel Spass.
+          Ziehe eine Karte und behalte Sie.
           </p>
           `,
           index: 2,
+          isActive: true,
+        });
+        break;
+      case 3:
+        this.modal = this.createDialog({
+          title: 'Spielen',
+          content: `
+            <h1 class="title">Verteidige dich</h1>
+            <p class="has-text-left">
+              Ziehe eine Karte und spiele die Karte <strong>Regenbogenviech</strong>, um keinen Schaden zu erleiden.
+            </p>
+            `,
+          index: 3,
+          isActive: true,
+        });
+        break;
+      case 4:
+        this.modal = this.createDialog({
+          title: 'Spielen',
+          content: `
+              <h1 class="title">Besiege dein Gegner</h1>
+              <p class="has-text-left">
+                Der Gegner hat dich angegriffen, nutze den <strong>Lebenstrank</strong> und die <strong>Ritual der Stärkung</strong>,
+                um den <strong>Sternenzerstörer</strong> zu nutzen, damit das <strong>Regenbogenviech</strong> den Gegner angreifen kann.
+              </p>
+              `,
+          index: 4,
+          isActive: true,
+        });
+        break;
+      case 5:
+        this.modal = this.createDialog({
+          title: 'Ende',
+          content: `
+                <h1 class="title">Gewonnen</h1>
+                <p class="has-text-left">
+                  Du hast dein Gegner besiegt!
+                  <br />
+                  Das Tutorial hast du erfolgreich abgeschlossen.
+                </p>
+                `,
+          index: 5,
           isActive: true,
         });
         break;
@@ -106,7 +136,7 @@ export class TutorialComponent implements OnInit {
 
   private getStartDialog(): any {
     return {
-      title: 'Start Tutorial',
+      title: 'Start',
       content: `
       <h1 class="title">Willkommen zu Kampf der Diener</h1>
       <p class="has-text-left">
@@ -114,7 +144,7 @@ export class TutorialComponent implements OnInit {
         <br />
         Schritt für Schritt werden Sie an das Spiel spielerisch herangeführt.
         <br />
-        Falls technische Schwierigkeiten passieren, erstellen Sie bitte ein Ticket auf 
+        Falls technische Schwierigkeiten passiert sind, erstellen Sie bitte ein Ticket auf 
         <a href="https://github.com/adrian-cerdeira/kampf-der-diener/issues/new">
         <i class="fab fa-github"></i>
         Github - Kampf der Diener Issues
