@@ -1,5 +1,5 @@
 <div class="player-stats columns" [style.background]="player?.backgroundColor" [style.color]="player?.fontColor">
-    <div class="column is-four-fifths">
+    <div class="column is-half">
         <h1 [style.color]="player?.fontColor" class="title has-text-left">{{player?.name}}</h1>
     </div>
     <div class="column columns">
@@ -14,6 +14,17 @@
                 <img src="assets/custom-icons/crystal-blue.svg" width="30" height="30" />
                 {{player?.crystals}}/{{player?.service.MAX_CRYSTALYS}}
             </h2>
+        </div>
+        <div class="column">
+            <h2 [style.color]="player?.fontColor" class="title">
+                <i class="fas fa-cross"></i>
+                {{player?.graveyard.length}}
+            </h2>
+        </div>
+        <div class="column">
+            <button class="button">
+                Karte ziehen
+            </button>
         </div>
     </div>
 </div>
