@@ -66,9 +66,21 @@ export class TutorialComponent implements OnInit {
     // Turn 3 Player
     // this.game.drawCard(this.game.getPlayerA(), 61);
 
-    // Methode Effektaktivierung
+    // let cardPos = this.game.searchCard(this.game.getPlayerA().getHandCards(), 66);
+    // this.game.placeSpell(this.game.getPlayerA(), cardPos); 
 
-    // let playerADiener = this.game.getPlayerA().getHandSlots();
+    // let playerADiener = this.game.getPlayerA().getDienerSlots();
+    // let playerAHand = this.game.getPLayerA().getHandCards();
+    // let receivingCardPos = this.game.searchCard(playerADiener, 65);
+    // let donatingCardPos = this.game.searchCard(playerAHand, 44);
+    // this.game.getEffects().effectCard66(playerADiener[receivingCardPos],playerAHand[donatingCardPos]);
+    // let spellPos = this.game.searchCard(this.game.getPlayerA().getSpellSlots(), 66);
+    // let playerASpells = this.game.getPlayerA().getSpellSlots();
+    // this.game.sendDienerToGrave(playerAHand[donatingCardPos]);
+    // this.game.sendSpellToGrave(playerASpells[spellPos]);
+
+
+    // let playerADiener = this.game.getPlayerA().getDienerSlots();
     // let cardPos = this.game.searchCard(playerADiener, 65);
 
     // this.game.cardAttacksPlayer(playerADiener[cardPos], this.game.getPlayerB());
