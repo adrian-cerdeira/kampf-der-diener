@@ -86,7 +86,10 @@ export class Game {
   }
 
   cardAttacksPlayer(attacker: Card, player: Player) {
-
+    this.moves.attackOnPlayer(attacker, player);
+    if(player.getHitpoints() <= 0){
+      this.otherPlayerWins(player)
+    }
   }
 
   cardAttacksCard(attacker: Card, defender: Card) {
@@ -101,10 +104,20 @@ export class Game {
     return new Player(this.startingHitpoints, this);
   }
 
+  playerWins(winningPlayer: Player){
+
+  }
+
+  otherPlayerWins(losingPlayer: Player){
+
+  }
+
   getPlayerA(): Player { return this.playerA; }
   setPlayerA(playerA: Player): void { this.playerA = playerA; }
 
   getPlayerB(): Player { return this.playerB; }
   setPlayerB(playerB: Player): void { this.playerB = playerB; }
+
+
 
 }

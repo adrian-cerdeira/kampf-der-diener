@@ -79,7 +79,7 @@ export class TutorialComponent implements OnInit {
 
     // Methode Effektaktivierung
 
-    // let playerADiener = this.game.getPlayerA().getDienerSlots();
+    // let playerADiener = this.game.getPlayerA().getHandSlots();
     // let cardPos = this.game.searchCard(playerADiener, 65);
 
     // this.game.cardAttacksPlayer(playerADiener[cardPos], this.game.getPlayerB());
