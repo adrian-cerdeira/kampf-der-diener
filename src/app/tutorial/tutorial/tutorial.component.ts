@@ -27,25 +27,28 @@ export class TutorialComponent implements OnInit {
     if (this.isStarted) {
       this.start();
     }
-    // // Turn 1 Bot
+
+    // Turn 1 Bot
     // this.game.drawCard(this.game.getPlayerB(), 13);
 
-    // this.game.placeCard(this.game.getPlayerB(), 5);
+    // Search for card to place
+    // let cardPos = this.game.searchCard(this.game.getPlayerB().getHandCards(), 5);
 
-    // // Turn 1 Player
+    // Place card
+    // this.game.placeCard(this.game.getPlayerB(), cardPos); 
+
+
+
+    // Turn 1 Player
     // this.game.drawCard(this.game.getPlayerA(), 59);
+
 
     // Turn 2 Bot
     // this.game.drawCard(this.game.getPlayerB(), 45);
 
-    // Search for card to place
+    // let cardPos = this.game.searchCard(this.game.getPlayerB().getDienerSlots(), 5);
 
-    // let cardPos = this.game.searchCard(this.game.getPlayerB().getHandCards(), 5);
-
-    // Place card
-
-    // this.game.placeCard(this.game.getPlayerB, cardPos);
-
+    // this.game.cardAttacksPlayer(this.game.getPlayerA(), cardPos);
 
   }
 
