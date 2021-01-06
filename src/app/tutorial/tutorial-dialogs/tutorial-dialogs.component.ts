@@ -22,4 +22,8 @@ export class TutorialDialogsComponent implements OnInit {
     this.showed.emit(this.modal.index - 1);
   }
 
+  restart() {
+    window.location.reload();
+  }
+
 }

@@ -8,8 +8,11 @@
             <div [innerHTML]="modal.content"></div>
         </section>
         <footer class="modal-card-foot">
-            <button *ngIf="modal.index !== 1" class="button" (click)="last()">Zurück</button>
-            <button class="button is-info next" (click)="next()">Weiter ({{modal.index}}/5)</button>
+            <button *ngIf="modal.index > 1 && modal.index !== 5" class="button" (click)="last()">Zurück</button>
+            <button *ngIf="modal.index !== 5" class="button is-info next" (click)="next()">
+                Weiter({{modal.index}}/5)
+            </button>
+            <button *ngIf="modal.index === 5" (click)="restart()" class="button is-info next">Neustarten</button>
         </footer>
     </div>
 </div>
