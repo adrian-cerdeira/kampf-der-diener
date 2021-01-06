@@ -46,9 +46,39 @@ export class TutorialComponent implements OnInit {
     // Turn 2 Bot
     // this.game.drawCard(this.game.getPlayerB(), 45);
 
-    // let cardPos = this.game.searchCard(this.game.getPlayerB().getDienerSlots(), 5);
+    // let playerBDiener = this.game.getPlayerB().getDienerSlots();
+    // let cardPosB = this.game.searchCard(playerBDiener, 5);
 
-    // this.game.cardAttacksPlayer(this.game.getPlayerA(), cardPos);
+    // this.game.cardAttacksPlayer(playerBDiener[cardPosB], this.game.getPlayerA());
+
+  
+    // Turn 2 Player
+    // this.game.drawCard(this.game.getPlayerA(), 65);
+
+    // let cardPos = this.game.searchCard(this.game.getPlayerA().getHandCards(), 65);
+
+    // this.game.placeCard(this.game.getPlayerA(), cardPos); 
+
+
+    // Turn 3 Bot
+    // this.game.drawCard(this.game.getPlayerB(), 41);
+
+    // let playerADiener = this.game.getPlayerA().getDienerSlots();
+    // let playerBDiener = this.game.getPlayerB().getDienerSlots();
+    // let cardPosB = this.game.searchCard(playerBDiener, 5);
+    // let cardPosA = this.game.searchCard(playerADiener, 65);
+
+    //this.game.cardAttacksCard(playerBDiener[cardPosB], playerADiener[cardPosA]);
+
+    // Turn 3 Player
+    // this.game.drawCard(this.game.getPlayerA(), 61);
+
+    // Methode Effektaktivierung
+
+    // let playerADiener = this.game.getPlayerA().getDienerSlots();
+    // let cardPos = this.game.searchCard(playerADiener, 65);
+
+    // this.game.cardAttacksPlayer(playerADiener[cardPos], this.game.getPlayerB());
 
   }
 
