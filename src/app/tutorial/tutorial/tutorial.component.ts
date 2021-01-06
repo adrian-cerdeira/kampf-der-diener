@@ -57,6 +57,18 @@ export class TutorialComponent implements OnInit {
     // let cardPos = this.game.searchCard(this.game.getPlayerA().getHandCards(), 65);
 
     // this.game.placeCard(this.game.getPlayerA(), cardPos); 
+
+    // Turn 3 Bot
+    // this.game.drawCard(this.game.getPlayerB(), 41);
+
+    // let playerADiener = this.game.getPlayerA().getDienerSlots();
+    // let playerBDiener = this.game.getPlayerB().getDienerSlots();
+    // let cardPosB = this.game.searchCard(playerBDiener, 5);
+    // let cardPosA = this.game.searchCard(playerADiener, 65);
+
+    //this.game.cardAttacksCard(playerBDiener[cardPosB], playerADiener[cardPosA]);
+
+
   }
 
   start(): void {
