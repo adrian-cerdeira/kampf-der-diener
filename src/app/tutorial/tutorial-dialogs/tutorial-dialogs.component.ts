@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-tutorial-dialogs',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tutorial-dialogs.component.scss']
 })
 export class TutorialDialogsComponent implements OnInit {
+  @Input() modal: any;
 
   constructor() { }
 
