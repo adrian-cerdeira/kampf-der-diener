@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-tutorial-dialogs',
@@ -7,10 +7,19 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class TutorialDialogsComponent implements OnInit {
   @Input() modal: any;
+  @Output() showed = new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  next() {
+    this.showed.emit(this.modal.index + 1);
+  }
+
+  last() {
+    this.showed.emit(this.modal.index - 1);
   }
 
 }
