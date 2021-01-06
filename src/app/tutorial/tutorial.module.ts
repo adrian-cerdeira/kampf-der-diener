@@ -10,6 +10,7 @@ import { TutorialRoutingModule } from './tutorial-routing.module';
 
 import { TutorialComponent } from './tutorial/tutorial.component';
 import { TutorialStartGameComponent } from './tutorial-start-game/tutorial-start-game.component';
+import { TutorialDialogsComponent } from './tutorial-dialogs/tutorial-dialogs.component';
 
 @NgModule({
   imports: [
@@ -22,6 +23,7 @@ import { TutorialStartGameComponent } from './tutorial-start-game/tutorial-start
   declarations: [
     TutorialComponent,
     TutorialStartGameComponent,
+    TutorialDialogsComponent,
   ],
 })
 export class TutorialModule { }
