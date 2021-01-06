@@ -1,8 +1,15 @@
 <div class="column">
-    <div class="card">
+    <div *ngIf="showCards" class="card">
         <div class="card-image">
             <figure class="image">
                 <img src="{{card?.getId() | cardImgUrl | async}}" alt="Hand Card {{card?.getId()}}">
+            </figure>
+        </div>
+    </div>
+    <div *ngIf="!showCards" class="card has-text-white">
+        <div class="card-image">
+            <figure class="image">
+                <img src="assets/icons/icon-384x384.png" />
             </figure>
         </div>
     </div>

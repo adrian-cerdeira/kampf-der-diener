@@ -3,7 +3,7 @@
         <div class="container has-text-centered">
             <div class="columns is-flex is-flex-wrap-wrap">
                 <div class="column is-full">
-                    <app-player [player]="playerBot"></app-player>
+                    <app-player [player]="playerBot" [showCards]="!isPlayerAfterMid"></app-player>
                 </div>
                 <div class="column is-full">
                     <app-game-board [player]="playerBot" [shouldChangePosition]="!isPlayerAfterMid"></app-game-board>
@@ -15,7 +15,7 @@
                     <app-game-board [player]="player" [shouldChangePosition]="isPlayerAfterMid"></app-game-board>
                 </div>
                 <div class="column is-full">
-                    <app-player [player]="player"></app-player>
+                    <app-player [player]="player" [showCards]="isPlayerAfterMid"></app-player>
                 </div>
             </div>
         </div>
