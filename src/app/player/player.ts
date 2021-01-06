@@ -8,7 +8,9 @@ export class Player {
   private crystals: number;
   private turn: number;
   private handCards: Card[] = new Array();
-  private dienerSlots: Card[] = new Array(5);
+  // private dienerSlots: Card[] = new Array(5);
+  // Workarround: Damit Slots nicht komsich aussehen
+  private dienerSlots: Card[] = new Array();
   private spellSlots: Card[] = new Array(1);
   private partnerSlots: Card[] = new Array(2);
   private graveyard: Card[] = new Array();

@@ -2,8 +2,6 @@ import { Injectable } from '@angular/core';
 import { Card } from '../cards/card';
 import { Player } from '../player/player';
 import cards from '../cards/cards.json';
-import { CardDetailsComponent } from '../wiki/card-details/card-details.component';
-import { NULL_EXPR } from '@angular/compiler/src/output/output_ast';
 
 @Injectable({
   providedIn: 'root',
