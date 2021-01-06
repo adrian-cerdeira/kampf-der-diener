@@ -15,11 +15,17 @@ export class TutorialDialogsComponent implements OnInit {
   }
 
   next() {
-    this.showed.emit(this.modal.index + 1);
+    this.showed.emit({
+      modalIndex: this.modal.index + 1,
+      isActive: false
+    });
   }
 
   last() {
-    this.showed.emit(this.modal.index - 1);
+    this.showed.emit({
+      modalIndex: this.modal.index - 1,
+      isActive: true
+    });
   }
 
   restart() {
