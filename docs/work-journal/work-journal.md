@@ -34,5 +34,6 @@
 | 03.01.2021 | 0.75        | Testkonzept mit TODO für Mario geschrieben                                                                                                            |
 | 04.01.2021 | 2           | Tests von Player + Card verbessert und Move Klassen Test erstellt                                                                                     |
 | 05.01.2021 | 5           | Logo fertig erstellt + Player Board für Tutorial erstellt                                                                                             |
+| 06.01.2021 | 6           | Darstellung der Diener Slots und Tutorial Dialoge vorbereitet, Ablauf des Tutorial begonnen                                                           |
 
 ## TODO Mario Forrer
