@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { SharedModule } from '../shared/shared.module';
 
 import { PlayerComponent } from './player/player.component';
+import { PlayerStatsComponent } from './player-stats/player-stats.component';
 import { PlayerHandCardsComponent } from './player-hand-cards/player-hand-cards.component';
 import { PlayerHandCardComponent } from './player-hand-card/player-hand-card.component';
 
@@ -14,6 +15,7 @@ import { PlayerHandCardComponent } from './player-hand-card/player-hand-card.com
   ],
   declarations: [
     PlayerComponent,
+    PlayerStatsComponent,
     PlayerHandCardsComponent,
     PlayerHandCardComponent,
   ],
