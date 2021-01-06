@@ -27,11 +27,9 @@ export class Move {
     return -1;
   }
 
-  battleBetweenCards(attackingCard: Card, defendingCard: Card): any {
+  battleBetweenCards(attackingCard: Card, defendingCard: Card) {
     defendingCard.setHitpoints(defendingCard.getHitpoints() - (attackingCard.getAttack() - defendingCard.getShield()));
     attackingCard.setHitpoints(attackingCard.getHitpoints() - (defendingCard.getAttack() - attackingCard.getShield()));
-
-    return [attackingCard, defendingCard];
   }
 
   attackOnPlayer(attackingCard: Card, player: Player): void {
@@ -41,6 +39,10 @@ export class Move {
   placeCard(handcards: Card[], field: Card[], arrayIndex: number){
     field.push(handcards[arrayIndex]);
     handcards.splice(arrayIndex, 1);
+  }
+
+  sendCardToGrave(card: Card, ){
+
   }
 
 }

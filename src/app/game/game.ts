@@ -93,7 +93,7 @@ export class Game {
   }
 
   cardAttacksCard(attacker: Card, defender: Card) {
-
+    
   }
 
   public searchCard(cardArray: Card[], id: number): number{
