@@ -6,7 +6,7 @@ import { Move } from './move';
 
 import { Player } from '../player/player';
 import { IfStmt } from '@angular/compiler';
-import { Effetcs } from './effects';
+import { Effects } from './effects';
 
 @Injectable({
   providedIn: 'root',
@@ -29,7 +29,7 @@ export class Game {
     this.playerB = this.createPlayer();
     this.moves = new Move();
     this.status = GameStatus.Started;
-    this.effects = new Effetcs();
+    this.effects = new Effects();
   }
 
   public getRandomInt(max: number): number {
