@@ -123,12 +123,12 @@ export class TutorialComponent implements OnInit {
           const newCardPosition = this.game.searchCard(this.playerBot.getHandCards(), 5);
           this.game.placeDiener(this.playerBot, newCardPosition);
 
-          setTimeout(() => {
-            this.showDialog({
-              modalIndex: 2,
-              showNext: true,
-            });
-          }, 3000);
+          // setTimeout(() => {
+          //   this.showDialog({
+          //     modalIndex: 2,
+          //     showNext: true,
+          //   });
+          // }, 3000);
         }
         break;
       case 3:

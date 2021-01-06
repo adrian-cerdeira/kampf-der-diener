@@ -1,5 +1,5 @@
-<div class="columns">
-    <ng-container *ngFor="let diener of player?.getDienerSlots(); index as i">
+<div class="columns is-flex is-flex-wrap-wrap">
+    <ng-container *ngFor="let diener of player?.dienerSlots; index as i">
         <div class="column is-one-fifth">
             <div *ngIf="diener" class="card">
                 <div class="card-image">
@@ -7,7 +7,8 @@
                         <img src="{{diener.id | cardImgUrl | async}}" alt="Hand Card {{diener.id}}">
                     </figure>
                 </div>
-                <div class="card-content">
+                <div class="card-content" [style.background]="player?.backgroundColor"
+                    [style.color]="player?.fontColor">
                     Diener Slot {{i + 1}}
                 </div>
             </div>
