@@ -132,6 +132,6 @@ export class Game {
   getPlayerB(): Player { return this.playerB; }
   setPlayerB(playerB: Player): void { this.playerB = playerB; }
 
-
+  getEffects(): Effects { return this.effects; }
 
 }
