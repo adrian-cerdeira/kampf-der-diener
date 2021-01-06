@@ -108,8 +108,10 @@ export class TutorialComponent implements OnInit {
             title: 'Spielen',
             content: `
           <h1 class="title">Dein Spielzug</h1>
-          <p class="has-text-left">
-          Ziehe eine Karte und behalte Sie.
+          <p>
+            Der Bot Hai spielte <strong>Agent Schnecke</strong>
+            <br />
+            Ziehe eine Karte und behalte Sie.
           </p>
           `,
             index: 2,
@@ -120,6 +122,13 @@ export class TutorialComponent implements OnInit {
           this.game.drawCard(this.playerBot, 13);
           const newCardPosition = this.game.searchCard(this.playerBot.getHandCards(), 5);
           this.game.placeDiener(this.playerBot, newCardPosition);
+
+          setTimeout(() => {
+            this.showDialog({
+              modalIndex: 2,
+              showNext: true,
+            });
+          }, 3000);
         }
         break;
       case 3:
