@@ -12,7 +12,7 @@ export class TutorialComponent implements OnInit {
   playerBot: any;
   player: any;
   isStarted = false;
-  isPlayerAfterMid = true;
+  isSecondPlayer = true;
 
   constructor(
   ) { }
@@ -61,7 +61,6 @@ export class TutorialComponent implements OnInit {
     this.playerBot.name = 'Bot Hai';
 
     this.game.getScriptedStartingCards([39, 66, 44, 14, 53], [5, 9, 49, 58, 1]);
-
   }
 
 }
