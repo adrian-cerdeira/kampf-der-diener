@@ -33,14 +33,6 @@ export class Game {
     return (Math.floor(Math.random() * Math.floor(max))) + 1;
   }
 
-  createGame(): any {
-    return {
-      // playerA: this.playerA,
-      // playerB: this.playerB,
-      // status: this.status,
-    };
-  }
-
   getStartingCards() {
     this.drawRandomStartingCards(this.playerA);
     this.drawRandomStartingCards(this.playerB);
