@@ -105,55 +105,68 @@ export class TutorialComponent implements OnInit {
     this.modal = this.createDialog(this.getStartDialog());
   }
 
-  showDialog(modalIndex: number): void {
+  showDialog(event: any): void {
+    const { modalIndex, showNext } = event;
+
     switch (modalIndex) {
       case 1:
         this.modal = this.createDialog(this.getStartDialog());
         break;
       case 2:
-        this.modal = this.createDialog({
-          title: 'Spielen',
-          content: `
+        this.modal.isActive = showNext;
+        if (showNext) {
+          this.modal = this.createDialog({
+            title: 'Spielen',
+            content: `
           <h1 class="title">Dein Spielzug</h1>
           <p class="has-text-left">
           Ziehe eine Karte und behalte Sie.
           </p>
           `,
-          index: 2,
-          isActive: true,
-        });
+            index: 2,
+            isActive: true,
+          });
+        }
         break;
       case 3:
-        this.modal = this.createDialog({
-          title: 'Spielen',
-          content: `
+        this.modal.isActive = showNext;
+        if (showNext) {
+          this.modal = this.createDialog({
+            title: 'Spielen',
+            content: `
             <h1 class="title">Verteidige dich</h1>
             <p class="has-text-left">
               Ziehe eine Karte und spiele die Karte <strong>Regenbogenviech</strong>, um keinen Schaden zu erleiden.
             </p>
             `,
-          index: 3,
-          isActive: true,
-        });
+            index: 3,
+            isActive: true,
+          });
+        }
         break;
       case 4:
-        this.modal = this.createDialog({
-          title: 'Spielen',
-          content: `
+        this.modal.isActive = showNext;
+        if (showNext) {
+          this.modal = this.createDialog({
+            title: 'Spielen',
+            content: `
               <h1 class="title">Besiege dein Gegner</h1>
               <p class="has-text-left">
                 Der Gegner hat dich angegriffen, nutze den <strong>Lebenstrank</strong> und die <strong>Ritual der Stärkung</strong>,
                 um den <strong>Sternenzerstörer</strong> zu nutzen, damit das <strong>Regenbogenviech</strong> den Gegner angreifen kann.
               </p>
               `,
-          index: 4,
-          isActive: true,
-        });
+            index: 4,
+            isActive: true,
+          });
+        }
         break;
       case 5:
-        this.modal = this.createDialog({
-          title: 'Ende',
-          content: `
+        this.modal.isActive = showNext;
+        if (showNext) {
+          this.modal = this.createDialog({
+            title: 'Ende',
+            content: `
                 <h1 class="title">Gewonnen</h1>
                 <p>
                   Du hast dein Gegner besiegt!
@@ -174,9 +187,10 @@ export class TutorialComponent implements OnInit {
                   Danke fürs Feedback!
                 </p>
                 `,
-          index: 5,
-          isActive: true,
-        });
+            index: 5,
+            isActive: true,
+          });
+        }
         break;
     }
   }
