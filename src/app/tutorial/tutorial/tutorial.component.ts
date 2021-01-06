@@ -52,8 +52,12 @@ export class TutorialComponent implements OnInit {
     // this.game.cardAttacksPlayer(this.game.getPlayerA(), cardPos);
 
   
+    // Turn 2 Player
+    // this.game.drawCard(this.game.getPlayerA(), 65);
 
+    // let cardPos = this.game.searchCard(this.game.getPlayerA().getHandCards(), 65);
 
+    // this.game.placeCard(this.game.getPlayerA(), cardPos); 
   }
 
   start(): void {
