@@ -30,7 +30,10 @@ describe('Testing card class', () => {
         const attackingCard = new Card(cards.find(c => c.id === 1), player);
         const defendingCard = new Card(cards.find(c => c.id === 2), enemyPlayer);
 
-        expect(move.battleBetweenCards(attackingCard, defendingCard).length).toBe(2);
+        move.battleBetweenCards(attackingCard, defendingCard);
+
+        expect(defendingCard.getHitpoints()).toBe(-5);
+        expect(attackingCard.getHitpoints()).toBe(0);
     });
 
     it('Attack on a player in a game', () => {

@@ -107,7 +107,7 @@ describe('Testing player class', () => {
     });
 
     it('Get amount of dienerslots of a player', () => {
-        expect(player.getDienerSlots().length).toBe(5);
+        expect(player.getDienerSlots().length).toBe(0);
     });
 
     it('Set amount of dienerslots of a player', () => {
@@ -119,7 +119,7 @@ describe('Testing player class', () => {
     });
 
     it('Get amount of spellslots of a player', () => {
-        expect(player.getSpellSlots().length).toBe(1);
+        expect(player.getSpellSlots().length).toBe(0);
     });
 
     it('Set amount of spellslots of a player', () => {
@@ -131,7 +131,7 @@ describe('Testing player class', () => {
     });
 
     it('Get amount of partnerslots of a player', () => {
-        expect(player.getPartnerSlots().length).toBe(2);
+        expect(player.getPartnerSlots().length).toBe(0);
     });
 
     it('Get amount of partnerslots of a player', () => {
