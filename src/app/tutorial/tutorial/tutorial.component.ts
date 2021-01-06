@@ -43,7 +43,6 @@ export class TutorialComponent implements OnInit {
     // this.game.drawCard(this.game.getPlayerA(), 59);
 
 
-
     // Turn 2 Bot
     // this.game.drawCard(this.game.getPlayerB(), 45);
 
@@ -76,7 +75,44 @@ export class TutorialComponent implements OnInit {
     this.playerBot.name = 'Bot Hai';
 
     this.game.getScriptedStartingCards([39, 66, 44, 14, 53], [5, 9, 49, 58, 1]);
-    this.modal = {
+    this.modal = this.createDialog(this.getStartDialog());
+  }
+
+  showDialog(modalIndex: number): void {
+    switch (modalIndex) {
+      case 1:
+        this.modal = this.createDialog(this.getStartDialog());
+        break;
+      case 2:
+        this.modal = this.createDialog({
+          title: 'Tutorial',
+          content: `
+          <h1 class="title">Willkommen zu Kampf der Diener</h1>
+          <p class="has-text-left">
+            In diesem Tutorial werden Sie das Spiel kennenlernen.
+            <br />
+            Schritt für Schritt werden Sie an das Spiel spielerisch herangeführt.
+            <br />
+            Falls technische Schwierigkeiten passieren, erstellen Sie bitte ein Ticket auf 
+            <a href="https://github.com/adrian-cerdeira/kampf-der-diener/issues/new">
+            <i class="fab fa-github"></i>
+            Github - Kampf der Diener Issues
+            </a>
+            .
+            <br />
+            <br />
+            Danke fürs Feedback und viel Spass.
+          </p>
+          `,
+          index: 2,
+          isActive: true,
+        });
+        break;
+    }
+  }
+
+  private getStartDialog(): any {
+    return {
       title: 'Start Tutorial',
       content: `
       <h1 class="title">Willkommen zu Kampf der Diener</h1>
@@ -98,6 +134,15 @@ export class TutorialComponent implements OnInit {
       `,
       index: 1,
       isActive: true,
+    }
+  }
+
+  private createDialog(modal: any): any {
+    return {
+      title: modal.title,
+      content: modal.content,
+      index: modal.index,
+      isActive: modal.isActive,
     }
   }
 
