@@ -8,6 +8,7 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { SearchBoxComponent } from './search-box/search-box.component';
 import { CardTypeComponent } from './card-type/card-type.component';
+import { CardImgUrlPipe } from './card-img-url.pipe';
 
 @NgModule({
   imports: [
@@ -26,12 +27,14 @@ import { CardTypeComponent } from './card-type/card-type.component';
     FooterComponent,
     SearchBoxComponent,
     CardTypeComponent,
+    CardImgUrlPipe,
   ],
   declarations: [
     ToolbarComponent,
     FooterComponent,
     SearchBoxComponent,
     CardTypeComponent,
+    CardImgUrlPipe,
   ],
 })
 export class SharedModule { }

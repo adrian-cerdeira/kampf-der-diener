@@ -1,24 +1,26 @@
-<section class="section has-background-white has-text-black">
-    <div class="container has-text-centered">
-        <div class="notification is-info is-hidden-desktop">
-            <i class="fas fa-exclamation-circle"></i>
-            Tutorial steht für die Mobile Anwender nocht nicht zur Verfügung!
-            <br />
-            <br />
-            Dies ist in Arbeit.
-            <br />
-            Danke fürs Verständnis.
-        </div>
-        <div class="columns is-hidden-mobile">
-            <div class="column">
-                <app-game-board [player]="'OPP'" [shouldChangePosition]="!isPlayerAfterMid"></app-game-board>
-                <div class="columns">
-                    <div class="column bordered">
-                        Mid
-                    </div>
+<ng-container *ngIf="isStarted; else startGame">
+    <section class="section has-background-white has-text-black">
+        <div class="container has-text-centered">
+            <div class="columns is-flex is-flex-wrap-wrap">
+                <div class="column is-full">
+                    <app-player [player]="playerBot"></app-player>
                 </div>
-                <app-game-board [player]="'PLA'" [shouldChangePosition]="isPlayerAfterMid"></app-game-board>
+                <div class="column is-full">
+                    <app-game-board [player]="playerBot" [shouldChangePosition]="!isPlayerAfterMid"></app-game-board>
+                    <div class="columns">
+                        <div class="column bordered">
+                            Mid
+                        </div>
+                    </div>
+                    <app-game-board [player]="player" [shouldChangePosition]="isPlayerAfterMid"></app-game-board>
+                </div>
+                <div class="column is-full">
+                    <app-player [player]="player"></app-player>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+</ng-container>
+<ng-template #startGame>
+    <app-tutorial-start-game (started)="start()"></app-tutorial-start-game>
+</ng-template>

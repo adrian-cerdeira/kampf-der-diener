@@ -1,5 +1,5 @@
 import { Card } from '../cards/card';
-import { Player } from '../game/player';
+import { Player } from '../player/player';
 import { Game } from '../game/game';
 
 import { CardLocation } from '../cards/card-location';

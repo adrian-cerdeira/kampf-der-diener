@@ -33,5 +33,6 @@
 | 03.01.2021 | 1.5         | Testing von Card und Player Klasse erstellt                                                                                                           |
 | 03.01.2021 | 0.75        | Testkonzept mit TODO für Mario geschrieben                                                                                                            |
 | 04.01.2021 | 2           | Tests von Player + Card verbessert und Move Klassen Test erstellt                                                                                     |
+| 05.01.2021 | 5           | Logo fertig erstellt + Player Board für Tutorial erstellt                                                                                             |
 
 ## TODO Mario Forrer

@@ -19,6 +19,11 @@ body {
   margin-bottom: 5rem; // Abstand für Footer
 }
 
+.button {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
 /*** Column ***/
 .column.bordered {
   border: 0.1rem grey solid

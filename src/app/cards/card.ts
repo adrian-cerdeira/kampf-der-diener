@@ -1,5 +1,5 @@
 import { CardLocation } from './card-location';
-import { Player } from '../game/player';
+import { Player } from '../player/player';
 
 export class Card {
   private id: number;
