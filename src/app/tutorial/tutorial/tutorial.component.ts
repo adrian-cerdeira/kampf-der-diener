@@ -59,7 +59,7 @@ export class TutorialComponent implements OnInit {
 
     // this.game.placeCard(this.game.getPlayerA(), cardPos); 
 
-    
+
     // Turn 3 Bot
     // this.game.drawCard(this.game.getPlayerB(), 41);
 
@@ -70,6 +70,15 @@ export class TutorialComponent implements OnInit {
 
     //this.game.cardAttacksCard(playerBDiener[cardPosB], playerADiener[cardPosA]);
 
+    // Turn 3 Player
+    // this.game.drawCard(this.game.getPlayerA(), 61);
+
+    // Methode Effektaktivierung
+
+    // let playerADiener = this.game.getPlayerA().getDienerSlots();
+    // let cardPos = this.game.searchCard(playerADiener, 65);
+
+    // this.game.cardAttacksPlayer(playerADiener[cardPos], this.game.getPlayerB());
 
   }
 
