@@ -22,7 +22,7 @@ export class Game {
   private playerB: Player;
   private status: GameStatus;
   private moves: Move;
-  private effects: Effetcs;
+  private effects: Effects;
 
   constructor() {
     this.playerA = this.createPlayer();

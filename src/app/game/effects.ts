@@ -4,6 +4,6 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 
-export class Effetcs {
+export class Effects {
   // TODO Mario
 }
