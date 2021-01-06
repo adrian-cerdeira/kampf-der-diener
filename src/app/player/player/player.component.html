@@ -1,4 +1,5 @@
-<div class="columns" [style.background]="player?.backgroundColor" [style.color]="player?.fontColor">
+<app-player-hand-cards [player]="player" [showCards]="showCards"></app-player-hand-cards>
+<div class="player-stats columns" [style.background]="player?.backgroundColor" [style.color]="player?.fontColor">
     <div class="column is-four-fifths">
         <h1 [style.color]="player?.fontColor" class="title has-text-left">{{player?.name}}</h1>
     </div>
@@ -17,4 +18,3 @@
         </div>
     </div>
 </div>
-<app-player-hand-cards [player]="player" [showCards]="showCards"></app-player-hand-cards>
