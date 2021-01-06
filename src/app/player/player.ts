@@ -8,11 +8,13 @@ export class Player {
   private crystals: number;
   private turn: number;
   private handCards: Card[] = new Array();
-  // private dienerSlots: Card[] = new Array(5);
   // Workarround: Damit Slots nicht komsich aussehen
+  // private dienerSlots: Card[] = new Array(5);
   private dienerSlots: Card[] = new Array();
-  private spellSlots: Card[] = new Array(1);
-  private partnerSlots: Card[] = new Array(2);
+  // private spellSlots: Card[] = new Array(1);
+  private spellSlots: Card[] = new Array();
+  // private partnerSlots: Card[] = new Array(2);
+  private partnerSlots: Card[] = new Array(0);
   private graveyard: Card[] = new Array();
 
   constructor(hitpoints: number, service: Game) {
