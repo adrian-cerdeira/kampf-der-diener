@@ -77,8 +77,12 @@ export class Game {
     return randnum;
   }
 
-  placeCard(player: Player, cardID: number) {
+  placeDiener(player: Player, cardID: number) {
+    this.moves.placeCard(player.getHandCards(), player.getDienerSlots(), cardID);
+  }
 
+  placeSpell(player: Player, cardID: number) {
+    this.moves.placeCard(player.getHandCards(), player.getSpellSlots(), cardID);
   }
 
   cardAttacksPlayer(attacker: Card, player: Player) {

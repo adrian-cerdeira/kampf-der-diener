@@ -40,6 +40,9 @@ export class Move {
     player.takeDamage(attackingCard.getAttack());
   }
 
-  
+  placeCard(handcards: Card[], field: Card[], arrayIndex: number){
+    field.push(handcards[arrayIndex]);
+    handcards.splice(arrayIndex, 1);
+  }
 
 }
