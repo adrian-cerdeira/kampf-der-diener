@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+import { UpdateService } from '../../shared/update.service';
 import { Game } from '../../game/game';
 
 @Component({
@@ -16,7 +17,10 @@ export class TutorialComponent implements OnInit {
   isSecondPlayer = true;
 
   constructor(
-  ) { }
+    private updateService: UpdateService,
+  ) {
+    this.updateService.checkUpdate();
+  }
 
   ngOnInit(): void {
     const localStorageIsStarted = window.localStorage.getItem('isStarted') === 'true'
@@ -51,7 +55,7 @@ export class TutorialComponent implements OnInit {
 
     // this.game.cardAttacksPlayer(playerBDiener[cardPosB], this.game.getPlayerA());
 
-  
+
     // Turn 2 Player
     // this.game.drawCard(this.game.getPlayerA(), 65);
 
