@@ -25,7 +25,7 @@ describe('Testing card class', () => {
     });
 
     it('Get normal cost (crystal amount) of card', () => {
-        expect(card.getCost()).toBe(4);
+        expect(card.getNormalCost()).toBe(4);
     });
 
     it('Get current cost of played card', () => {
@@ -98,5 +98,16 @@ describe('Testing card class', () => {
         card.setLocation(CardLocation.inHand);
 
         expect(card.getLocation()).toBe(CardLocation.inHand);
+    });
+
+    it('Get player of card', () => {
+        expect(card.getPlayer()).toBe(player);
+    });
+
+    it('Set new player of card', () => {
+        const newPlayer = new Player(startingHitPoints, game);
+        card.setPlayer(newPlayer);
+
+        expect(card.getPlayer()).toBe(newPlayer);
     });
 });
