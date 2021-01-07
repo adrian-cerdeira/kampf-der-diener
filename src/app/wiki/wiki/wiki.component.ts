@@ -33,6 +33,7 @@ export class WikiComponent implements OnInit {
 
   filterChanges(event: any): void {
     const { selectOption, searchValue } = event;
+
     this.filteredCards = this.cards
       .filter((c: any) => c[selectOption] >= searchValue);
   }

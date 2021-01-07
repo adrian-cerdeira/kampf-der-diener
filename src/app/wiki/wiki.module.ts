@@ -5,6 +5,7 @@ import { SharedModule } from '../shared/shared.module';
 import { CardDetailsModule } from './card-details/card-details.module';
 
 import { WikiRoutingModule } from './wiki-routing.module';
+
 import { WikiComponent } from './wiki/wiki.component';
 import { WikiFilterComponent } from './wiki-filter/wiki-filter.component';
 import { WikiListComponent } from './wiki-list/wiki-list.component';
