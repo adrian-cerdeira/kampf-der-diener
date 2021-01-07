@@ -41,7 +41,6 @@ export class TutorialComponent implements OnInit {
     window.localStorage.setItem('isStarted', 'true');
 
     this.game = new Game();
-
     this.player = this.game.getPlayerA();
     this.player.name = 'Spieler 1';
     this.player.backgroundColor = '#FF0000';
@@ -50,7 +49,6 @@ export class TutorialComponent implements OnInit {
     this.playerBot.backgroundColor = '#000000';
     this.playerBot.fontColor = '#FFFFFF';
     this.playerBot.name = 'Bot Hai';
-
     this.game.getScriptedStartingCards([39, 66, 44, 14, 53], [5, 9, 49, 58, 1]);
     this.modal = this.modalService.create(this.modalService.getStartDialog());
   }
@@ -64,20 +62,9 @@ export class TutorialComponent implements OnInit {
         break;
       case 2:
         this.modal.isActive = showNext;
+
         if (showNext) {
-          this.modal = this.modalService.create({
-            title: 'Spielen',
-            content: `
-          <h1 class="title">Dein Spielzug</h1>
-          <p>
-            Der Bot Hai spielte <strong>Agent Schnecke</strong>
-            <br />
-            Ziehe eine Karte und behalte Sie.
-          </p>
-          `,
-            index: 2,
-            isActive: true,
-          });
+          this.modal = this.modalService.getSecondDialog();
         } else {
           // Turn 1 Bot
           this.game.newTurn(this.playerBot);
@@ -95,74 +82,23 @@ export class TutorialComponent implements OnInit {
         break;
       case 3:
         this.modal.isActive = showNext;
+
         if (showNext) {
-          this.modal = this.modalService.create({
-            title: 'Spielen',
-            content: `
-            <h1 class="title">Verteidige dich</h1>
-            <p class="has-text-left">
-              Der Bot Hai hat dich mit <strong>Agent Schnecke</strong> angegriffen.
-              <br />
-              Ziehe eine Karte und spiele das <strong>Regenbogenviech</strong>, um dich zu verteidigen.
-            </p>
-            `,
-            index: 3,
-            isActive: true,
-          });
+          this.modal = this.modalService.getThirdDialog();
         }
         break;
       case 4:
         this.modal.isActive = showNext;
+
         if (showNext) {
-          this.modal = this.modalService.create({
-            title: 'Spielen',
-            content: `
-              <h1 class="title">Besiege den Bot</h1>
-              <p class="has-text-left">
-                Der Bot hat dich angegriffen.
-                <br/>
-                1. Ziehe eine Karte und behalte Sie
-                <br/>
-                2. Setze <strong>Ritual der Stärkung</strong> ein
-                <br/>
-                3. Setze somit zusätzlich <strong>Sternenzerstörer</strong> ein,
-                damit das <strong>Regenbogenviech</strong> den Gegner mit verstärkten Attribute angreifen kann.
-              </p>
-              `,
-            index: 4,
-            isActive: true,
-          });
+          this.modal = this.modalService.getFourthDialog();
         }
         break;
       case 5:
         this.modal.isActive = showNext;
+
         if (showNext) {
-          this.modal = this.modalService.create({
-            title: 'Ende',
-            content: `
-                <h1 class="title">Gewonnen</h1>
-                <p>
-                  Du hast dein Gegner besiegt!
-                  <br />
-                  Das Tutorial hast du erfolgreich abgeschlossen.
-                </p>
-                <br />
-                <h2 class="title">Probleme</h2>
-                <p>
-                  Falls technische Schwierigkeiten passiert sind, erstellen Sie bitte ein Ticket auf
-                  <a href="https://github.com/adrian-cerdeira/kampf-der-diener/issues/new">
-                  <i class="fab fa-github"></i>
-                  Github - Kampf der Diener Issues
-                  </a>
-                  .
-                  <br />
-                  <br />
-                  Danke fürs Feedback!
-                </p>
-                `,
-            index: 5,
-            isActive: true,
-          });
+          this.modal = this.modalService.getLastDialog();
         }
         break;
     }
