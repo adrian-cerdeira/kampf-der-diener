@@ -37,7 +37,7 @@ export class Game {
   }
 
   public newTurn(player: Player) {
-    
+    player.nextTurn();
   }
 
   getStartingCards() {

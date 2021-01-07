@@ -25,14 +25,12 @@ export class Player {
     this.turn = 0;
   }
 
-  nextTurn(): number {
+  nextTurn(): void {
     if (this.crystals < this.service.MAX_CRYSTALYS) {
       this.crystals++;
     }
 
     this.turn++;
-
-    return this.crystals;
   }
 
   takeDamage(damage: number): number {
