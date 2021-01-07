@@ -16,7 +16,6 @@ export class TutorialComponent implements OnInit {
   playerBot: any;
   player: any;
   isStarted = false;
-  isSecondPlayer = true;
 
   constructor(
     private updateService: UpdateService,

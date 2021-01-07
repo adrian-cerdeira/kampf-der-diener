@@ -7,7 +7,6 @@ import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class PlayerHandCardsComponent implements OnInit {
   @Input() player: any;
-  @Input() showCards: boolean | undefined;
   @Output() played = new EventEmitter();
 
   constructor() { }

@@ -3,7 +3,7 @@
     <div class="container has-text-centered">
       <div class="columns is-flex is-flex-wrap-wrap">
         <div class="column is-full">
-          <app-player [player]="playerBot" [showCards]="!isSecondPlayer" (drawedCard)="drawCard(playerBot)"
+          <app-player [player]="playerBot" (drawedCard)="drawCard(playerBot)"
             (playedCard)="playCard($event, playerBot)">
           </app-player>
         </div>
@@ -16,8 +16,8 @@
           <app-game-board [player]="player"></app-game-board>
         </div>
         <div class="column is-full">
-          <app-player [player]="player" [showCards]="isSecondPlayer" (drawedCard)="drawCard(player)"
-            (playedCard)="playCard($event, player)"></app-player>
+          <app-player [player]="player" (drawedCard)="drawCard(player)" (playedCard)="playCard($event, player)">
+          </app-player>
         </div>
       </div>
       <app-tutorial-dialogs [modal]="modal" (showed)="showDialog($event)"></app-tutorial-dialogs>

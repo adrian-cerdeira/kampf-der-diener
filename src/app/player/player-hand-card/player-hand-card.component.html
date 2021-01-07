@@ -1,12 +1,12 @@
 <div class="column pointer" (click)="play()">
-    <div *ngIf="showCards" class="card">
+    <div *ngIf="isSecondPlayer" class="card">
         <div class="card-image">
             <figure class="image">
                 <img src="{{card?.id | cardImgUrl | async}}" alt="Hand Card {{card?.id}}">
             </figure>
         </div>
     </div>
-    <div *ngIf="!showCards" class="card has-text-white">
+    <div *ngIf="!isSecondPlayer" class="card has-text-white">
         <div class="card-image">
             <figure class="image">
                 <img src="assets/icons/icon-384x384.png" />
