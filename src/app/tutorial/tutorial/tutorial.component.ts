@@ -46,10 +46,12 @@ export class TutorialComponent implements OnInit {
     this.player.name = 'Spieler 1';
     this.player.backgroundColor = '#FF0000';
     this.player.fontColor = '#FFFFFF';
+    this.player.isSecondPlayer = true;
     this.playerBot = this.game.getPlayerB();
+    this.playerBot.name = 'Bot Hai';
     this.playerBot.backgroundColor = '#000000';
     this.playerBot.fontColor = '#FFFFFF';
-    this.playerBot.name = 'Bot Hai';
+    this.playerBot.isSecondPlayer = false;
     this.game.getScriptedStartingCards([39, 66, 44, 14, 53], [5, 9, 49, 58, 1]);
     this.modal = this.tutorialDialogsService.getStartDialog();
   }

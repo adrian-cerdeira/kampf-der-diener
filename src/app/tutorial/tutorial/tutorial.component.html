@@ -8,12 +8,12 @@
           </app-player>
         </div>
         <div class="column is-full">
-          <app-game-board [player]="playerBot" [shouldChangePosition]="!isSecondPlayer"></app-game-board>
+          <app-game-board [player]="playerBot"></app-game-board>
           <div class="columns">
             <div class="column has-background-grey">
             </div>
           </div>
-          <app-game-board [player]="player" [shouldChangePosition]="isSecondPlayer"></app-game-board>
+          <app-game-board [player]="player"></app-game-board>
         </div>
         <div class="column is-full">
           <app-player [player]="player" [showCards]="isSecondPlayer" (drawedCard)="drawCard(player)"
