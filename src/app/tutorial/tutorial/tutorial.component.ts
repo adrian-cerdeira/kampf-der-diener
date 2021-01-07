@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
-import { UpdateService } from '../../shared/update.service';
 import { Game } from '../../game/game';
+import { UpdateService } from '../../shared/update.service';
+import { ModalService } from '../../modal/modal.service';
 
 @Component({
   selector: 'app-tutorial',
@@ -18,6 +19,7 @@ export class TutorialComponent implements OnInit {
 
   constructor(
     private updateService: UpdateService,
+    private modalService: ModalService,
   ) {
     this.updateService.checkUpdate();
   }
@@ -50,7 +52,7 @@ export class TutorialComponent implements OnInit {
     this.playerBot.name = 'Bot Hai';
 
     this.game.getScriptedStartingCards([39, 66, 44, 14, 53], [5, 9, 49, 58, 1]);
-    this.modal = this.createDialog(this.getStartDialog());
+    this.modal = this.modalService.create(this.modalService.getStartDialog());
   }
 
   showDialog(event: any): void {
@@ -58,12 +60,12 @@ export class TutorialComponent implements OnInit {
 
     switch (modalIndex) {
       case 1:
-        this.modal = this.createDialog(this.getStartDialog());
+        this.modal = this.modalService.create(this.modalService.getStartDialog());
         break;
       case 2:
         this.modal.isActive = showNext;
         if (showNext) {
-          this.modal = this.createDialog({
+          this.modal = this.modalService.create({
             title: 'Spielen',
             content: `
           <h1 class="title">Dein Spielzug</h1>
@@ -94,7 +96,7 @@ export class TutorialComponent implements OnInit {
       case 3:
         this.modal.isActive = showNext;
         if (showNext) {
-          this.modal = this.createDialog({
+          this.modal = this.modalService.create({
             title: 'Spielen',
             content: `
             <h1 class="title">Verteidige dich</h1>
@@ -112,7 +114,7 @@ export class TutorialComponent implements OnInit {
       case 4:
         this.modal.isActive = showNext;
         if (showNext) {
-          this.modal = this.createDialog({
+          this.modal = this.modalService.create({
             title: 'Spielen',
             content: `
               <h1 class="title">Besiege den Bot</h1>
@@ -135,7 +137,7 @@ export class TutorialComponent implements OnInit {
       case 5:
         this.modal.isActive = showNext;
         if (showNext) {
-          this.modal = this.createDialog({
+          this.modal = this.modalService.create({
             title: 'Ende',
             content: `
                 <h1 class="title">Gewonnen</h1>
@@ -268,44 +270,6 @@ export class TutorialComponent implements OnInit {
         });
       }, 2000);
     }
-  }
-
-  private getStartDialog(): any {
-    return {
-      title: 'Start',
-      content: `
-      <h1 class="title">Willkommen zu Kampf der Diener</h1>
-      <p>
-        In diesem Tutorial werden Sie das Spiel kennenlernen.
-        <br />
-        Schritt für Schritt werden Sie an das Spiel spielerisch herangeführt.
-      </p>
-      <br />
-      <h2 class="title">Probleme</h2>
-      <p>
-        Falls technische Schwierigkeiten passiert sind, erstellen Sie bitte ein Ticket auf
-        <a href="https://github.com/adrian-cerdeira/kampf-der-diener/issues/new">
-        <i class="fab fa-github"></i>
-        Github - Kampf der Diener Issues
-        </a>
-        .
-        <br />
-        <br />
-        Danke fürs Feedback!
-      </p>
-      `,
-      index: 1,
-      isActive: true,
-    };
-  }
-
-  private createDialog(modal: any): any {
-    return {
-      title: modal.title,
-      content: modal.content,
-      index: modal.index,
-      isActive: modal.isActive,
-    };
   }
 
 }
