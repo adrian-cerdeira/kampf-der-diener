@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { CardType } from '../../card/card-type';
+import { CardType } from '../card-type';
 
 @Component({
   selector: 'app-card-type',

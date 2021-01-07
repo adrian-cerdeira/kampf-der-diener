@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { SharedModule } from '../shared/shared.module';
+import { CardModule } from '../card/card.module';
 import { CardDetailsModule } from './card-details/card-details.module';
 
 import { WikiRoutingModule } from './wiki-routing.module';
@@ -15,6 +16,7 @@ import { WikiListItemComponent } from './wiki-list-item/wiki-list-item.component
   imports: [
     CommonModule,
     SharedModule,
+    CardModule,
     CardDetailsModule,
     WikiRoutingModule,
   ],
