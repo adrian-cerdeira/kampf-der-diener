@@ -36,5 +36,6 @@
 | 05.01.2021 | 5           | Logo fertig erstellt + Player Board für Tutorial erstellt                                                                                             |
 | 06.01.2021 | 6           | Darstellung der Diener Slots und Tutorial Dialoge vorbereitet, Ablauf des Tutorial begonnen                                                           |
 | 07.01.2021 | 4           | Tutorial fertig erstellt und mit Refactoring gestartet                                                                                                |
+| 07.01.2021 | 5           | Komplettes Refactoring von Projekt umgesetzt und restliche Tests erstellt/korrigiert                                                                  |
 
 ## TODO Mario Forrer
