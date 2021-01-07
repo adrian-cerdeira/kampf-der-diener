@@ -10,17 +10,25 @@ html {
 
 body {
   font-family: 'Noto Sans JP', sans-serif;
-
   /* Responsive base font size */
   /* Inspired by: https://www.codementor.io/ricardozea/100-responsive-typography-system-using-a-modular-scale-s5rhft58g*/
   font-size: calc(1rem + .15vw);
-
-  margin-top: 3rem; // Abstand für Toolbar
-  margin-bottom: 5rem; // Abstand für Footer
+  margin-top: 3rem;
+  margin-bottom: 5rem;
 }
 
+/*** Typography ***/
 .pointer {
   cursor: pointer;
+}
+
+/*** Speical News ***/
+.special-news {
+  position: absolute;
+  top: 25%;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 /*** Column ***/
