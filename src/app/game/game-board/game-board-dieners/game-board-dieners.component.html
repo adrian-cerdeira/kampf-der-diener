@@ -7,9 +7,38 @@
                         <img src="{{diener.id | cardImgUrl | async}}" alt="Hand Card {{diener.id}}">
                     </figure>
                 </div>
-                <div class="card-content" [style.background]="player?.backgroundColor"
-                    [style.color]="player?.fontColor">
-                    Diener Slot {{i + 1}}
+                <div class="card-content" [style.background]="player?.backgroundColor">
+                    <div class="content" [style.color]="player?.fontColor">
+                        <div class="columns">
+                            <div class="column">
+                                Diener Slot {{i + 1}}
+                            </div>
+                        </div>
+                        <div class="columns">
+                            <div class="column">
+                                <img src="assets/custom-icons/crystal-white.svg" width="20" height="20" />
+                                {{diener?.currentCost}}
+                            </div>
+                            <div class="column">
+                                <ng-container *ngIf="diener?.attack >= 0">
+                                    <img src="assets/custom-icons/sword-white.svg" width="20" height="20" />
+                                    {{diener?.attack}}
+                                </ng-container>
+                            </div>
+                            <div class="column">
+                                <ng-container *ngIf="diener?.hitpoints">
+                                    <i class="fas fa-tint"></i>
+                                    {{diener?.hitpoints}}/{{diener?.maxHitpoints}}
+                                </ng-container>
+                            </div>
+                            <div class="column">
+                                <ng-container *ngIf="diener?.shield >= 0">
+                                    <i class="fas fa-shield-alt"></i>
+                                    {{diener?.shield}}
+                                </ng-container>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!-- TODO AC: Enable if Worrkarround of Player fixed -->
