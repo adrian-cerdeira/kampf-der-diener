@@ -13,7 +13,7 @@ export class TutorialStartGameComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  start() {
+  start(): void {
     this.started.emit();
   }
 

@@ -14,21 +14,21 @@ export class TutorialDialogsComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  next() {
+  next(): void {
     this.showed.emit({
       modalIndex: this.modal.index + 1,
       isActive: false
     });
   }
 
-  last() {
+  last(): void {
     this.showed.emit({
       modalIndex: this.modal.index - 1,
       isActive: true
     });
   }
 
-  restart() {
+  restart(): void {
     window.location.reload();
   }
 

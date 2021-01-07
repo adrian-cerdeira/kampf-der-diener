@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+
 import { Card } from '../cards/card';
 import { CardLocation } from '../cards/card-location';
 import { GameStatus } from './game-status';
@@ -35,16 +36,16 @@ export class Game {
     return (Math.floor(Math.random() * Math.floor(max))) + 1;
   }
 
-  public newTurn(player: Player) {
+  public newTurn(player: Player): void {
     player.nextTurn();
   }
 
-  getStartingCards() {
+  getStartingCards(): void {
     this.drawRandomStartingCards(this.playerA);
     this.drawRandomStartingCards(this.playerB);
   }
 
-  getScriptedStartingCards(pACards: number[], pBCards: number[]) {
+  getScriptedStartingCards(pACards: number[], pBCards: number[]): void {
     pACards.forEach(element => {
       this.drawCard(this.playerA, element);
     });
@@ -56,13 +57,13 @@ export class Game {
 
   drawRandomStartingCards(player: Player): void {
     for (let cardnum = 0; cardnum <= 4; cardnum++) {
-      let cardId = this.generateRandomCardId();
+      const cardId = this.generateRandomCardId();
       this.drawCard(player, cardId);
     }
   }
 
   drawCard(player: Player, cardId: number): void {
-    let card = this.moves.getCard(cardId, player);
+    const card = this.moves.getCard(cardId, player);
     player.addHandCard(card);
     card.setLocation(CardLocation.inHand);
   }
@@ -71,69 +72,69 @@ export class Game {
     let randnum = 1;
     randnum = this.getRandomInt(this.AMMOUNT_OF_CARDS);
     if (this.BANNED_CARDS.includes(randnum)) {
-      randnum = this.generateRandomCardId()
+      randnum = this.generateRandomCardId();
     }
     return randnum;
   }
 
-  placeDiener(player: Player, cardID: number) {
+  placeDiener(player: Player, cardID: number): void {
     if (this.cardCostValidation(player, player.getHandCards(), cardID)) {
-      this.moves.placeCard(player.getHandCards(), player.getDienerSlots(), cardID);     
+      this.moves.placeCard(player.getHandCards(), player.getDienerSlots(), cardID);
     }
 
   }
 
-  placeSpell(player: Player, cardID: number) {
-    if (this.cardCostValidation(player, player.getHandCards(), cardID)) { 
+  placeSpell(player: Player, cardID: number): void {
+    if (this.cardCostValidation(player, player.getHandCards(), cardID)) {
       this.moves.placeCard(player.getHandCards(), player.getSpellSlots(), cardID);
     }
   }
 
   cardCostValidation(player: Player, handCards: Card[], cardID: number): boolean {
-    let card = handCards[cardID];
-    if (card.getCost() <= player.getCurrentCrystals()){
+    const card = handCards[cardID];
+    if (card.getCost() <= player.getCurrentCrystals()) {
       player.setCurrentCrystals(player.getCurrentCrystals() - card.getCost());
       return true;
     }
     return false;
   }
 
-  cardAttacksPlayer(attacker: Card, player: Player) {
+  cardAttacksPlayer(attacker: Card, player: Player): void {
     this.moves.attackOnPlayer(attacker, player);
-    if(player.getHitpoints() <= 0){
+    if (player.getHitpoints() <= 0) {
       this.playerWins();
     }
   }
 
-  cardAttacksCard(attacker: Card, defender: Card) {
+  cardAttacksCard(attacker: Card, defender: Card): void {
     this.moves.battleBetweenCards(attacker, defender);
 
     if (attacker.getHitpoints() <= 0) {
       this.sendDienerToGrave(attacker);
-    } else if (defender.getHitpoints() <= 0)  {
+    } else if (defender.getHitpoints() <= 0) {
       this.sendDienerToGrave(defender);
     }
   }
 
-  public sendDienerToGrave(card: Card){
-    let player = card.getPlayer();
-    let index = this.searchCard(player.getDienerSlots(), card.getId());
+  public sendDienerToGrave(card: Card): void {
+    const player = card.getPlayer();
+    const index = this.searchCard(player.getDienerSlots(), card.getId());
     this.moves.sendCardToGrave(player.getGraveyard(), player.getDienerSlots(), index);
   }
 
-  public sendHandcardToGrave(card: Card){
-    let player =card.getPlayer();
-    let index = this.searchCard(player.getHandCards(), card.getId());
+  public sendHandcardToGrave(card: Card): void {
+    const player = card.getPlayer();
+    const index = this.searchCard(player.getHandCards(), card.getId());
     this.moves.sendCardToGrave(player.getGraveyard(), player.getHandCards(), index);
   }
 
-  public sendSpellToGrave(card: Card){
-    let player = card.getPlayer();
-    let index = this.searchCard(player.getSpellSlots(), card.getId());
+  public sendSpellToGrave(card: Card): void {
+    const player = card.getPlayer();
+    const index = this.searchCard(player.getSpellSlots(), card.getId());
     this.moves.sendCardToGrave(player.getGraveyard(), player.getSpellSlots(), index);
   }
 
-  public searchCard(cardArray: Card[], id: number): number{
+  public searchCard(cardArray: Card[], id: number): number {
     return this.moves.searchCard(cardArray, id);
   }
 
@@ -141,13 +142,13 @@ export class Game {
     return new Player(this.startingHitpoints, this);
   }
 
-  playerWins(){
+  playerWins(): void {
     if (this.playerA.getHitpoints() <= 0) {
       this.status = GameStatus.PlayerBWon;
     } else if (this.playerB.getHitpoints() <= 0) {
       this.status = GameStatus.PlayerAWon;
     }
-  } 
+  }
 
   getPlayerA(): Player { return this.playerA; }
   setPlayerA(playerA: Player): void { this.playerA = playerA; }

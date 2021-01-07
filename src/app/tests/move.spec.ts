@@ -39,7 +39,7 @@ describe('Testing card class', () => {
     it('Attack on a player in a game', () => {
         const attackingCard = new Card(cards.find(c => c.id === 1), player);
 
-        move.attackOnPlayer(attackingCard, player)
+        move.attackOnPlayer(attackingCard, player);
 
         expect(player.getHitpoints()).toBe(5);
     });

@@ -64,7 +64,7 @@ export class Player {
   setCrystals(crystals: number): void { this.crystals = crystals; }
 
   getCurrentCrystals(): number { return this.currentCrystals; }
-  setCurrentCrystals(crystals: number) { this.currentCrystals = crystals; }
+  setCurrentCrystals(crystals: number): void { this.currentCrystals = crystals; }
 
   getTurn(): number { return this.turn; }
   setTurn(turn: number): void { this.turn = turn; }

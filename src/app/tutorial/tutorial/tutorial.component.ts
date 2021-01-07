@@ -123,7 +123,7 @@ export class TutorialComponent implements OnInit {
                 <br/>
                 2. Setze <strong>Ritual der Stärkung</strong> ein
                 <br/>
-                3. Setze somit zusätzlich <strong>Sternenzerstörer</strong> ein, 
+                3. Setze somit zusätzlich <strong>Sternenzerstörer</strong> ein,
                 damit das <strong>Regenbogenviech</strong> den Gegner mit verstärkten Attribute angreifen kann.
               </p>
               `,
@@ -147,7 +147,7 @@ export class TutorialComponent implements OnInit {
                 <br />
                 <h2 class="title">Probleme</h2>
                 <p>
-                  Falls technische Schwierigkeiten passiert sind, erstellen Sie bitte ein Ticket auf 
+                  Falls technische Schwierigkeiten passiert sind, erstellen Sie bitte ein Ticket auf
                   <a href="https://github.com/adrian-cerdeira/kampf-der-diener/issues/new">
                   <i class="fab fa-github"></i>
                   Github - Kampf der Diener Issues
@@ -283,7 +283,7 @@ export class TutorialComponent implements OnInit {
       <br />
       <h2 class="title">Probleme</h2>
       <p>
-        Falls technische Schwierigkeiten passiert sind, erstellen Sie bitte ein Ticket auf 
+        Falls technische Schwierigkeiten passiert sind, erstellen Sie bitte ein Ticket auf
         <a href="https://github.com/adrian-cerdeira/kampf-der-diener/issues/new">
         <i class="fab fa-github"></i>
         Github - Kampf der Diener Issues
@@ -296,7 +296,7 @@ export class TutorialComponent implements OnInit {
       `,
       index: 1,
       isActive: true,
-    }
+    };
   }
 
   private createDialog(modal: any): any {
@@ -305,7 +305,7 @@ export class TutorialComponent implements OnInit {
       content: modal.content,
       index: modal.index,
       isActive: modal.isActive,
-    }
+    };
   }
 
 }

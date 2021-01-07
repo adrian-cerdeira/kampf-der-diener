@@ -14,7 +14,7 @@ export class PlayerStatsComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  draw() {
+  draw(): void {
     this.drawed.emit();
   }
 

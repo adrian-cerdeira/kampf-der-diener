@@ -13,8 +13,8 @@ export class CardImgUrlPipe implements PipeTransform {
 
   transform(cardId: any, args?: any): any {
     return this.cardService.getById(cardId).pipe(
-      switchMap(card => this.cardService.getImg(card.img))
-    )
+      switchMap(card => this.cardService.getImg(card.img)),
+    );
   }
 
 }
