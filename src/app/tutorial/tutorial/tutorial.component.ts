@@ -32,23 +32,6 @@ export class TutorialComponent implements OnInit {
       this.start();
     }
 
-
-    // let playerADiener = this.game.getPlayerA().getDienerSlots();
-    // let playerAHand = this.game.getPLayerA().getHandCards();
-    // let receivingCardPos = this.game.searchCard(playerADiener, 65);
-    // let donatingCardPos = this.game.searchCard(playerAHand, 44);
-    // this.game.getEffects().effectCard66(playerADiener[receivingCardPos],playerAHand[donatingCardPos]);
-    // let spellPos = this.game.searchCard(this.game.getPlayerA().getSpellSlots(), 66);
-    // let playerASpells = this.game.getPlayerA().getSpellSlots();
-    // this.game.sendDienerToGrave(playerAHand[donatingCardPos]);
-    // this.game.sendSpellToGrave(playerASpells[spellPos]);
-
-
-    // let playerADiener = this.game.getPlayerA().getDienerSlots();
-    // let cardPos = this.game.searchCard(playerADiener, 65);
-
-    // this.game.cardAttacksPlayer(playerADiener[cardPos], this.game.getPlayerB());
-
   }
 
   start(): void {
@@ -95,6 +78,7 @@ export class TutorialComponent implements OnInit {
           });
         } else {
           // Turn 1 Bot
+          this.game.newTurn(this.playerBot);
           this.game.drawCard(this.playerBot, 13);
           const newCardPosition = this.game.searchCard(this.playerBot.getHandCards(), 5);
           this.game.placeDiener(this.playerBot, newCardPosition);
@@ -104,7 +88,7 @@ export class TutorialComponent implements OnInit {
               modalIndex: 2,
               showNext: true,
             });
-          }, 3000);
+          }, 2000);
         }
         break;
       case 3:
@@ -139,7 +123,7 @@ export class TutorialComponent implements OnInit {
                 <br/>
                 2. Setze <strong>Ritual der Stärkung</strong> ein
                 <br/>
-                3. Karte <strong>Sternenzerstörer</strong> wird zerstört, 
+                3. Setze somit zusätzlich <strong>Sternenzerstörer</strong> ein, 
                 damit das <strong>Regenbogenviech</strong> den Gegner mit verstärkten Attribute angreifen kann.
               </p>
               `,
@@ -187,10 +171,12 @@ export class TutorialComponent implements OnInit {
 
     if (isPlayer && this.modal.index === 2) {
       // Turn 1 Player
+      this.game.newTurn(this.player);
       this.game.drawCard(this.player, 59);
 
       setTimeout(() => {
         // Turn 2 Bot
+        this.game.newTurn(this.playerBot);
         this.game.drawCard(this.playerBot, 45);
 
         const playerBotDienerSlots = this.playerBot.getDienerSlots();
@@ -207,12 +193,14 @@ export class TutorialComponent implements OnInit {
 
     if (isPlayer && this.modal.index === 3) {
       // Turn 2 Player
+      this.game.newTurn(this.player);
       this.game.drawCard(this.player, 65);
     }
 
     if (isPlayer && this.modal.index === 4) {
       // Turn 3 Player
-      this.game.drawCard(this.game.player, 61);
+      this.game.newTurn(this.player);
+      this.game.drawCard(this.player, 61);
     }
 
   }
@@ -228,6 +216,7 @@ export class TutorialComponent implements OnInit {
 
       setTimeout(() => {
         // Turn 3 Bot
+        this.game.newTurn(this.playerBot);
         this.game.drawCard(this.playerBot, 41);
 
         const playerDiener = this.player.getDienerSlots();
@@ -244,11 +233,40 @@ export class TutorialComponent implements OnInit {
       }, 2000);
     }
 
-    if (isPlayer && card.id === 61 && this.modal.index === 4) {
+    if (isPlayer && card.id === 66 && this.modal.index === 4) {
       // Turn 3 Player
       const newPlayerCardPosition = this.game.searchCard(this.player.getHandCards(), 66);
 
       this.game.placeSpell(this.player, newPlayerCardPosition);
+    }
+
+    if (isPlayer && card.id === 44 && this.modal.index === 4) {
+      // Turn 3 Player
+      const playerDiener = this.player.getDienerSlots();
+      const playerHandCards = this.player.getHandCards();
+      const receivingNewCardPosition = this.game.searchCard(playerDiener, 65);
+      const donatingNewCardPosition = this.game.searchCard(playerHandCards, 44);
+
+      this.game.getEffects().effectCard66(playerDiener[receivingNewCardPosition], playerHandCards[donatingNewCardPosition]);
+
+      const playerSpells = this.player.getSpellSlots();
+      const newPlayerSpellsPosition = this.game.searchCard(playerSpells, 66);
+
+      this.game.sendHandcardToGrave(playerHandCards[donatingNewCardPosition]);
+      this.game.sendSpellToGrave(playerSpells[newPlayerSpellsPosition]);
+
+      const newCardPlayerPosition = this.game.searchCard(playerDiener, 65);
+      this.game.cardAttacksPlayer(playerDiener[newCardPlayerPosition], this.playerBot);
+
+      setTimeout(() => {
+        // Finish
+        this.game.playerWins();
+
+        this.showDialog({
+          modalIndex: 5,
+          showNext: true,
+        });
+      }, 2000);
     }
   }
 
