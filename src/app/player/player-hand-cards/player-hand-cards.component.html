@@ -1,5 +1,5 @@
 <div class="columns">
     <ng-container *ngFor="let card of player?.handCards">
-        <app-player-hand-card [card]="card" [showCards]="showCards"></app-player-hand-card>
+        <app-player-hand-card [card]="card" [showCards]="showCards" (played)="play($event)"></app-player-hand-card>
     </ng-container>
 </div>

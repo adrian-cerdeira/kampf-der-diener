@@ -33,28 +33,6 @@ export class TutorialComponent implements OnInit {
     }
 
 
-
-    // let cardPos = this.game.searchCard(this.game.getPlayerA().getHandCards(), 65);
-
-    // this.game.placeCard(this.game.getPlayerA(), cardPos); 
-
-
-    // Turn 3 Bot
-    // this.game.drawCard(this.game.getPlayerB(), 41);
-
-    // let playerADiener = this.game.getPlayerA().getDienerSlots();
-    // let playerBDiener = this.game.getPlayerB().getDienerSlots();
-    // let cardPosB = this.game.searchCard(playerBDiener, 5);
-    // let cardPosA = this.game.searchCard(playerADiener, 65);
-
-    //this.game.cardAttacksCard(playerBDiener[cardPosB], playerADiener[cardPosA]);
-
-    // Turn 3 Player
-    // this.game.drawCard(this.game.getPlayerA(), 61);
-
-    // let cardPos = this.game.searchCard(this.game.getPlayerA().getHandCards(), 66);
-    // this.game.placeSpell(this.game.getPlayerA(), cardPos); 
-
     // let playerADiener = this.game.getPlayerA().getDienerSlots();
     // let playerAHand = this.game.getPLayerA().getHandCards();
     // let receivingCardPos = this.game.searchCard(playerADiener, 65);
@@ -153,10 +131,16 @@ export class TutorialComponent implements OnInit {
           this.modal = this.createDialog({
             title: 'Spielen',
             content: `
-              <h1 class="title">Besiege dein Gegner</h1>
+              <h1 class="title">Besiege den Bot</h1>
               <p class="has-text-left">
-                Der Gegner hat dich angegriffen, nutze den <strong>Lebenstrank</strong> und die <strong>Ritual der Stärkung</strong>,
-                um den <strong>Sternenzerstörer</strong> zu nutzen, damit das <strong>Regenbogenviech</strong> den Gegner angreifen kann.
+                Der Bot hat dich angegriffen.
+                <br/>
+                1. Ziehe eine Karte und behalte Sie
+                <br/>
+                2. Setze <strong>Ritual der Stärkung</strong> ein
+                <br/>
+                3. Karte <strong>Sternenzerstörer</strong> wird zerstört, 
+                damit das <strong>Regenbogenviech</strong> den Gegner mit verstärkten Attribute angreifen kann.
               </p>
               `,
             index: 4,
@@ -226,6 +210,46 @@ export class TutorialComponent implements OnInit {
       this.game.drawCard(this.player, 65);
     }
 
+    if (isPlayer && this.modal.index === 4) {
+      // Turn 3 Player
+      this.game.drawCard(this.game.player, 61);
+    }
+
+  }
+
+  playCard(card: any, player: any): void {
+    const isPlayer = player.name === 'Spieler 1';
+
+    if (isPlayer && card.id === 65 && this.modal.index === 3) {
+      // Turn 2 Player
+      const newCardPlayerPosition = this.game.searchCard(this.player.getHandCards(), 65);
+
+      this.game.placeDiener(this.player, newCardPlayerPosition);
+
+      setTimeout(() => {
+        // Turn 3 Bot
+        this.game.drawCard(this.playerBot, 41);
+
+        const playerDiener = this.player.getDienerSlots();
+        const playerBotDiener = this.playerBot.getDienerSlots();
+        const newCardPositionBot = this.game.searchCard(playerBotDiener, 5);
+        const newCardPositionPlayer = this.game.searchCard(playerDiener, 65);
+
+        this.game.cardAttacksCard(playerBotDiener[newCardPositionBot], playerDiener[newCardPositionPlayer]);
+
+        this.showDialog({
+          modalIndex: 4,
+          showNext: true,
+        });
+      }, 2000);
+    }
+
+    if (isPlayer && card.id === 61 && this.modal.index === 4) {
+      // Turn 3 Player
+      const newPlayerCardPosition = this.game.searchCard(this.player.getHandCards(), 66);
+
+      this.game.placeSpell(this.player, newPlayerCardPosition);
+    }
   }
 
   private getStartDialog(): any {

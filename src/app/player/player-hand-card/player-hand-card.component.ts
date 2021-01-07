@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-player-hand-card',
@@ -8,10 +8,15 @@ import { Component, Input, OnInit } from '@angular/core';
 export class PlayerHandCardComponent implements OnInit {
   @Input() card: any;
   @Input() showCards: boolean | undefined;
+  @Output() played = new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  play(): void {
+    this.played.emit(this.card);
   }
 
 }
