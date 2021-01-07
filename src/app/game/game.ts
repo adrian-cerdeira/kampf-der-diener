@@ -36,6 +36,10 @@ export class Game {
     return (Math.floor(Math.random() * Math.floor(max))) + 1;
   }
 
+  public newTurn(player: Player) {
+    
+  }
+
   getStartingCards() {
     this.drawRandomStartingCards(this.playerA);
     this.drawRandomStartingCards(this.playerB);
