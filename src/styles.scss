@@ -19,7 +19,23 @@ body {
   margin-bottom: 5rem; // Abstand für Footer
 }
 
+.pointer {
+  cursor: pointer;
+}
+
+/*** Column ***/
+.column.bordered {
+  border: 0.1rem grey solid
+}
+
+/*** Buttons ***/
 .button {
   font-weight: bold;
   text-transform: uppercase;
+}
+
+/*** Images ***/
+.is-250x370 {
+  width: 250px;
+  height: 370px;
 }

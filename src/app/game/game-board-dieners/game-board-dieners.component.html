@@ -1,0 +1,28 @@
+<div class="columns">
+    <ng-container *ngFor="let diener of player?.dienerSlots; index as i">
+        <div class="column is-one-fifth">
+            <div *ngIf="diener" class="card">
+                <div class="card-image">
+                    <figure class="image is-250x370">
+                        <img src="{{diener.id | cardImgUrl | async}}" alt="Hand Card {{diener.id}}">
+                    </figure>
+                </div>
+                <div class="card-content" [style.background]="player?.backgroundColor"
+                    [style.color]="player?.fontColor">
+                    Diener Slot {{i + 1}}
+                </div>
+            </div>
+            <!-- TODO AC: Enable if Worrkarround of Player fixed -->
+            <!-- <div *ngIf="!diener" class="card">
+                <div class="card-image">
+                    <figure class="image">
+                        <img src="assets/icons/icon-384x384.png" />
+                    </figure>
+                </div>
+                <div class="card-content">
+                    Diener Slot {{i + 1}}
+                </div>
+            </div> -->
+        </div>
+    </ng-container>
+</div>
