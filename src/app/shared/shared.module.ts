@@ -7,7 +7,6 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { SearchBoxComponent } from './search-box/search-box.component';
-import { CardImgUrlPipe } from './card-img-url.pipe';
 
 @NgModule({
   imports: [
@@ -25,13 +24,11 @@ import { CardImgUrlPipe } from './card-img-url.pipe';
     ToolbarComponent,
     FooterComponent,
     SearchBoxComponent,
-    CardImgUrlPipe,
   ],
   declarations: [
     ToolbarComponent,
     FooterComponent,
     SearchBoxComponent,
-    CardImgUrlPipe,
   ],
 })
 export class SharedModule { }

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { SharedModule } from '../shared/shared.module';
+import { CardModule } from '../card/card.module';
 
 import { PlayerComponent } from './player/player.component';
 import { PlayerStatsComponent } from './player-stats/player-stats.component';
@@ -12,6 +13,7 @@ import { PlayerHandCardComponent } from './player-hand-card/player-hand-card.com
   imports: [
     CommonModule,
     SharedModule,
+    CardModule,
   ],
   declarations: [
     PlayerComponent,
