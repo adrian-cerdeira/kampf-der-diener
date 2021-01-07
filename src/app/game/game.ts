@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
-import { Card } from '../cards/card';
-import { CardLocation } from '../cards/card-location';
+import { Card } from '../card/card';
+import { CardLocation } from '../card/card-location';
 import { GameStatus } from './game-status';
 import { Move } from './move';
 

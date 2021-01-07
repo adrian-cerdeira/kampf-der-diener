@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { Card } from '../cards/card';
+import { Card } from '../card/card';
 import { Player } from '../player/player';
 
 import cards from '../cards/cards.json';

@@ -3,7 +3,7 @@ import { Move } from '../game/move';
 import { Player } from '../player/player';
 
 import cards from '../cards/cards.json';
-import { Card } from '../cards/card';
+import { Card } from '../card/card';
 
 // Straight Jasmine testing without Angular's testing support
 describe('Testing card class', () => {

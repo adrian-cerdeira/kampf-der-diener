@@ -1,8 +1,8 @@
-import { Card } from '../cards/card';
+import { Card } from '../card/card';
 import { Player } from '../player/player';
 import { Game } from '../game/game';
 
-import { CardLocation } from '../cards/card-location';
+import { CardLocation } from '../card/card-location';
 
 import cards from '../cards/cards.json';
 
