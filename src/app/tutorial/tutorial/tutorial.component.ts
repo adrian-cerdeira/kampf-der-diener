@@ -99,31 +99,20 @@ export class TutorialComponent implements OnInit {
     const isFourthDialogActive = isPlayer && this.modal.index === 4;
 
     if (isSecondDialogActive) {
-      // Turn 1 Player
       this.game.newTurn(this.player);
       this.game.drawCard(this.player, 59);
 
       setTimeout(() => {
-        // Turn 2 Bot
-        this.game.newTurn(this.playerBot);
-        this.game.drawCard(this.playerBot, 45);
-
-        const playerBotDienerSlots = this.playerBot.getDienerSlots();
-        const cardPlayerBotPosition = this.game.searchCard(playerBotDienerSlots, 5);
-        this.game.cardAttacksPlayer(playerBotDienerSlots[cardPlayerBotPosition], this.player);
-
-        this.showNextDialog(3, true);
+        this.playerBotSecondTurn();
       }, 2000);
     }
 
     if (isThirdDialogActive) {
-      // Turn 2 Player
       this.game.newTurn(this.player);
       this.game.drawCard(this.player, 65);
     }
 
     if (isFourthDialogActive) {
-      // Turn 3 Player
       this.game.newTurn(this.player);
       this.game.drawCard(this.player, 61);
     }
@@ -197,6 +186,17 @@ export class TutorialComponent implements OnInit {
     setTimeout(() => {
       this.showNextDialog(2, true);
     }, 2000);
+  }
+
+  private playerBotSecondTurn(): void {
+    this.game.newTurn(this.playerBot);
+    this.game.drawCard(this.playerBot, 45);
+
+    const playerBotDienerSlots = this.playerBot.getDienerSlots();
+    const cardPlayerBotPosition = this.game.searchCard(playerBotDienerSlots, 5);
+    this.game.cardAttacksPlayer(playerBotDienerSlots[cardPlayerBotPosition], this.player);
+
+    this.showNextDialog(3, true);
   }
 
   private showNextDialog(modalIndex: number, showNext: boolean): void {
