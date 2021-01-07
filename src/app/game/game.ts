@@ -15,7 +15,7 @@ import { Effects } from './effects';
 export class Game {
   public readonly MAX_CRYSTALYS = 10;
   public readonly AMMOUNT_OF_CARDS = 89;
-  public readonly BANNED_CARDS = [1, 12, 14];
+  public readonly BANNED_CARDS = [77, 78, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90];
 
   private startingHitpoints = 15;
   private playerA: Player;
