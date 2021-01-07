@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-player-stats',
@@ -7,10 +7,15 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class PlayerStatsComponent implements OnInit {
   @Input() player: any;
+  @Output() drawed = new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  draw() {
+    this.drawed.emit();
   }
 
 }
