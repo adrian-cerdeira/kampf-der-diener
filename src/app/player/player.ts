@@ -6,6 +6,7 @@ export class Player {
   private hitpoints: number;
   private maxHitpoints: number;
   private crystals: number;
+  private currentCrystals: number;
   private turn: number;
   private handCards: Card[] = new Array();
   // Workarround: Damit Slots nicht komsich aussehen
@@ -29,7 +30,7 @@ export class Player {
     if (this.crystals < this.service.MAX_CRYSTALYS) {
       this.crystals++;
     }
-
+    this.currentCrystals = this.crystals;
     this.turn++;
   }
 
@@ -60,6 +61,9 @@ export class Player {
 
   getCrystals(): number { return this.crystals; }
   setCrystals(crystals: number): void { this.crystals = crystals; }
+  
+  getCurrentCrystals(): number { return this.currentCrystals; }
+  setCurrentCrystals(crystals: number) {this.currentCrystals = crystals; }
 
   getTurn(): number { return this.turn; }
   setTurn(turn: number): void { this.turn = turn; }

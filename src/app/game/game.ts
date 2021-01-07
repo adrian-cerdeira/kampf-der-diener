@@ -78,11 +78,25 @@ export class Game {
   }
 
   placeDiener(player: Player, cardID: number) {
-    this.moves.placeCard(player.getHandCards(), player.getDienerSlots(), cardID);
+    if (this.cardCostValidation(player, player.getHandCards(), cardID)) {
+      this.moves.placeCard(player.getHandCards(), player.getDienerSlots(), cardID);     
+    }
+
   }
 
   placeSpell(player: Player, cardID: number) {
-    this.moves.placeCard(player.getHandCards(), player.getSpellSlots(), cardID);
+    if (this.cardCostValidation(player, player.getHandCards(), cardID)) { 
+      this.moves.placeCard(player.getHandCards(), player.getSpellSlots(), cardID);
+    }
+  }
+
+  cardCostValidation(player: Player, handCards: Card[], cardID: number): boolean {
+    let card = handCards[cardID];
+    if (card.getCost() <= player.getCurrentCrystals()){
+      player.setCurrentCrystals(player.getCurrentCrystals() - card.getCost());
+      return true;
+    }
+    return false;
   }
 
   cardAttacksPlayer(attacker: Card, player: Player) {
