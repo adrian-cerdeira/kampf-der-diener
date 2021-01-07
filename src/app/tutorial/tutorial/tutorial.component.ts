@@ -31,19 +31,15 @@ export class TutorialComponent implements OnInit {
     this.isStarted = localStorageIsStarted;
 
     if (this.isStarted) {
-      this.startGame();
+      this.start();
     }
 
   }
 
-  startGame(): void {
+  start(): void {
     this.isStarted = true;
     window.localStorage.setItem('isStarted', 'true');
 
-    this.initGame();
-  }
-
-  private initGame() {
     this.game = new Game();
 
     this.player = this.game.getPlayerA();
