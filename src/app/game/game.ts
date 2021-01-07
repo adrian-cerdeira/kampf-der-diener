@@ -84,7 +84,7 @@ export class Game {
   cardAttacksPlayer(attacker: Card, player: Player) {
     this.moves.attackOnPlayer(attacker, player);
     if(player.getHitpoints() <= 0){
-      this.otherPlayerWins(player)
+      this.playerWins();
     }
   }
 
@@ -118,13 +118,13 @@ export class Game {
     return new Player(this.startingHitpoints, this);
   }
 
-  playerWins(winningPlayer: Player){
-
-  }
-
-  otherPlayerWins(losingPlayer: Player){
-
-  }
+  playerWins(){
+    if (this.playerA.getHitpoints() <= 0) {
+      this.status = GameStatus.PlayerBWon;
+    } else if (this.playerB.getHitpoints() <= 0) {
+      this.status = GameStatus.PlayerAWon;
+    }
+  } 
 
   getPlayerA(): Player { return this.playerA; }
   setPlayerA(playerA: Player): void { this.playerA = playerA; }
