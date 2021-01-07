@@ -63,28 +63,24 @@ export class TutorialComponent implements OnInit {
         break;
       case 2:
         this.modal.isActive = showNext;
-
         showNext
           ? this.modal = this.tutorialDialogsService.getSecondDialog()
           : this.playerBotFirstTurn();
         break;
       case 3:
         this.modal.isActive = showNext;
-
         if (showNext) {
           this.modal = this.tutorialDialogsService.getThirdDialog();
         }
         break;
       case 4:
         this.modal.isActive = showNext;
-
         if (showNext) {
           this.modal = this.tutorialDialogsService.getFourthDialog();
         }
         break;
       case 5:
         this.modal.isActive = showNext;
-
         if (showNext) {
           this.modal = this.tutorialDialogsService.getLastDialog();
         }
@@ -130,18 +126,7 @@ export class TutorialComponent implements OnInit {
       this.game.placeDiener(this.player, newCardPlayerPosition);
 
       setTimeout(() => {
-        // Turn 3 Bot
-        this.game.newTurn(this.playerBot);
-        this.game.drawCard(this.playerBot, 41);
-
-        const playerDiener = this.player.getDienerSlots();
-        const playerBotDiener = this.playerBot.getDienerSlots();
-        const newCardPositionBot = this.game.searchCard(playerBotDiener, 5);
-        const newCardPositionPlayer = this.game.searchCard(playerDiener, 65);
-
-        this.game.cardAttacksCard(playerBotDiener[newCardPositionBot], playerDiener[newCardPositionPlayer]);
-
-        this.showNextDialog(4, true);
+        this.playerBotThirdTurn();
       }, 2000);
     }
 
@@ -151,28 +136,31 @@ export class TutorialComponent implements OnInit {
     }
 
     if (isPlayerLastTurn) {
-      // Turn 3 Player
-      const playerDiener = this.player.getDienerSlots();
-      const playerHandCards = this.player.getHandCards();
-      const receivingNewCardPosition = this.game.searchCard(playerDiener, 65);
-      const donatingNewCardPosition = this.game.searchCard(playerHandCards, 44);
-
-      this.game.getEffects().effectCard66(playerDiener[receivingNewCardPosition], playerHandCards[donatingNewCardPosition]);
-
-      const playerSpells = this.player.getSpellSlots();
-      const newPlayerSpellsPosition = this.game.searchCard(playerSpells, 66);
-
-      this.game.sendHandcardToGrave(playerHandCards[donatingNewCardPosition]);
-      this.game.sendSpellToGrave(playerSpells[newPlayerSpellsPosition]);
-
-      const newCardPlayerPosition = this.game.searchCard(playerDiener, 65);
-      this.game.cardAttacksPlayer(playerDiener[newCardPlayerPosition], this.playerBot);
-
-      setTimeout(() => {
-        this.game.playerWins();
-        this.showNextDialog(5, true)
-      }, 2000);
+      this.playerLastTurn();
     }
+  }
+
+  private playerLastTurn(): void {
+    const playerDiener = this.player.getDienerSlots();
+    const playerHandCards = this.player.getHandCards();
+    const receivingNewCardPosition = this.game.searchCard(playerDiener, 65);
+    const donatingNewCardPosition = this.game.searchCard(playerHandCards, 44);
+
+    this.game.getEffects().effectCard66(playerDiener[receivingNewCardPosition], playerHandCards[donatingNewCardPosition]);
+
+    const playerSpells = this.player.getSpellSlots();
+    const newPlayerSpellsPosition = this.game.searchCard(playerSpells, 66);
+
+    this.game.sendHandcardToGrave(playerHandCards[donatingNewCardPosition]);
+    this.game.sendSpellToGrave(playerSpells[newPlayerSpellsPosition]);
+
+    const newCardPlayerPosition = this.game.searchCard(playerDiener, 65);
+    this.game.cardAttacksPlayer(playerDiener[newCardPlayerPosition], this.playerBot);
+
+    setTimeout(() => {
+      this.game.playerWins();
+      this.showNextDialog(5, true);
+    }, 2000);
   }
 
   private playerBotFirstTurn(): void {
@@ -196,6 +184,20 @@ export class TutorialComponent implements OnInit {
     this.game.cardAttacksPlayer(playerBotDienerSlots[cardPlayerBotPosition], this.player);
 
     this.showNextDialog(3, true);
+  }
+
+  private playerBotThirdTurn(): void {
+    this.game.newTurn(this.playerBot);
+    this.game.drawCard(this.playerBot, 41);
+
+    const playerDiener = this.player.getDienerSlots();
+    const playerBotDiener = this.playerBot.getDienerSlots();
+    const newCardPositionBot = this.game.searchCard(playerBotDiener, 5);
+    const newCardPositionPlayer = this.game.searchCard(playerDiener, 65);
+
+    this.game.cardAttacksCard(playerBotDiener[newCardPositionBot], playerDiener[newCardPositionPlayer]);
+
+    this.showNextDialog(4, true);
   }
 
   private showNextDialog(modalIndex: number, showNext: boolean): void {
