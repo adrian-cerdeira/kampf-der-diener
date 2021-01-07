@@ -9,14 +9,19 @@ export class PlayerComponent implements OnInit {
   @Input() player: any;
   @Input() showCards: boolean | undefined;
   @Output() drawedCard = new EventEmitter();
+  @Output() playedCard = new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  draw() {
+  draw(): void {
     this.drawedCard.emit();
+  }
+
+  play(card: any): void {
+    this.playedCard.emit(card);
   }
 
 }
