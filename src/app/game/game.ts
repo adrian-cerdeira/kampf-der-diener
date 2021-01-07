@@ -5,7 +5,6 @@ import { GameStatus } from './game-status';
 import { Move } from './move';
 
 import { Player } from '../player/player';
-import { IfStmt } from '@angular/compiler';
 import { Effects } from './effects';
 
 @Injectable({
@@ -120,6 +119,12 @@ export class Game {
     let player = card.getPlayer();
     let index = this.searchCard(player.getDienerSlots(), card.getId());
     this.moves.sendCardToGrave(player.getGraveyard(), player.getDienerSlots(), index);
+  }
+
+  public sendHandcardToGrave(card: Card){
+    let player =card.getPlayer();
+    let index = this.searchCard(player.getHandCards(), card.getId());
+    this.moves.sendCardToGrave(player.getGraveyard(), player.getHandCards(), index);
   }
 
   public sendSpellToGrave(card: Card){
