@@ -64,22 +64,9 @@ export class TutorialComponent implements OnInit {
       case 2:
         this.modal.isActive = showNext;
 
-        if (showNext) {
-          this.modal = this.tutorialDialogsService.getSecondDialog();
-        } else {
-          // Turn 1 Bot
-          this.game.newTurn(this.playerBot);
-          this.game.drawCard(this.playerBot, 13);
-          const newCardPosition = this.game.searchCard(this.playerBot.getHandCards(), 5);
-          this.game.placeDiener(this.playerBot, newCardPosition);
-
-          setTimeout(() => {
-            this.showDialog({
-              modalIndex: 2,
-              showNext: true,
-            });
-          }, 2000);
-        }
+        showNext
+          ? this.modal = this.tutorialDialogsService.getSecondDialog()
+          : this.playerBotFirstTurn();
         break;
       case 3:
         this.modal.isActive = showNext;
@@ -207,6 +194,22 @@ export class TutorialComponent implements OnInit {
         });
       }, 2000);
     }
+  }
+
+  private playerBotFirstTurn(): void {
+    this.game.newTurn(this.playerBot);
+    this.game.drawCard(this.playerBot, 13);
+
+    const newCardPosition = this.game.searchCard(this.playerBot.getHandCards(), 5);
+
+    this.game.placeDiener(this.playerBot, newCardPosition);
+
+    setTimeout(() => {
+      this.showDialog({
+        modalIndex: 2,
+        showNext: true,
+      });
+    }, 2000);
   }
 
 }
