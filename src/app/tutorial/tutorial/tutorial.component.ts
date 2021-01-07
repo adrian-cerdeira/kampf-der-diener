@@ -110,10 +110,7 @@ export class TutorialComponent implements OnInit {
 
         this.game.cardAttacksPlayer(playerBotDienerSlots[cardPlayerBotPosition], this.player);
 
-        this.showDialog({
-          modalIndex: 3,
-          showNext: true,
-        });
+        this.showNextDialog(3, true);
       }, 2000);
     }
 
@@ -152,10 +149,7 @@ export class TutorialComponent implements OnInit {
 
         this.game.cardAttacksCard(playerBotDiener[newCardPositionBot], playerDiener[newCardPositionPlayer]);
 
-        this.showDialog({
-          modalIndex: 4,
-          showNext: true,
-        });
+        this.showNextDialog(4, true);
       }, 2000);
     }
 
@@ -185,13 +179,8 @@ export class TutorialComponent implements OnInit {
       this.game.cardAttacksPlayer(playerDiener[newCardPlayerPosition], this.playerBot);
 
       setTimeout(() => {
-        // Finish
         this.game.playerWins();
-
-        this.showDialog({
-          modalIndex: 5,
-          showNext: true,
-        });
+        this.showNextDialog(5, true)
       }, 2000);
     }
   }
@@ -201,15 +190,18 @@ export class TutorialComponent implements OnInit {
     this.game.drawCard(this.playerBot, 13);
 
     const newCardPosition = this.game.searchCard(this.playerBot.getHandCards(), 5);
-
     this.game.placeDiener(this.playerBot, newCardPosition);
 
     setTimeout(() => {
-      this.showDialog({
-        modalIndex: 2,
-        showNext: true,
-      });
+      this.showNextDialog(2, true);
     }, 2000);
+  }
+
+  private showNextDialog(modalIndex: number, showNext: boolean): void {
+    this.showDialog({
+      modalIndex,
+      showNext,
+    });
   }
 
 }
