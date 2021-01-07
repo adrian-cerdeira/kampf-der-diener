@@ -25,6 +25,13 @@ describe('Testing card class', () => {
         expect(move.getCard(cardId, player).getId()).toBe(card.getId());
     });
 
+    it('Search card of specific player array (ex. handcards, dienerslots etc.)', () => {
+        const handCards = [new Card(cards.find(c => c.id === 1), player)];
+        player.setHandCards(handCards);
+
+        expect(move.searchCard(player.getHandCards(), 1)).toBe(0);
+    });
+
     it('Battle between two cards in a game', () => {
         const enemyPlayer = new Player(startingHitPoints, game);
         const attackingCard = new Card(cards.find(c => c.id === 1), player);
@@ -42,5 +49,23 @@ describe('Testing card class', () => {
         move.attackOnPlayer(attackingCard, player);
 
         expect(player.getHitpoints()).toBe(5);
+    });
+
+    it('Set Card to from handcards to fields', () => {
+        const handCards = [new Card(cards.find(c => c.id === 1), player)];
+        player.setHandCards(handCards);
+
+        move.placeCard(player.getHandCards(), player.getDienerSlots(), 1);
+
+        expect(player.getDienerSlots().length).toBe(1);
+    });
+
+    it('Send Card to graveyard from ex. fields etc.', () => {
+        const handCards = [new Card(cards.find(c => c.id === 1), player)];
+        player.setHandCards(handCards);
+
+        move.sendCardToGrave(player.getGraveyard(), player.getDienerSlots(), 1);
+
+        expect(player.getGraveyard().length).toBe(1);
     });
 });
