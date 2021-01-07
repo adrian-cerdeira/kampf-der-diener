@@ -21,12 +21,12 @@ export class TutorialDialogsComponent implements OnInit {
     });
   }
 
-  last(): void {
-    this.showed.emit({
-      modalIndex: this.modal.index - 1,
-      isActive: true
-    });
-  }
+  // last(): void {
+  //   this.showed.emit({
+  //     modalIndex: this.modal.index - 1,
+  //     isActive: true
+  //   });
+  // }
 
   restart(): void {
     window.location.reload();

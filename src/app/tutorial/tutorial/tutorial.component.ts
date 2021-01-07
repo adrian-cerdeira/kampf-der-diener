@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Game } from '../../game/game';
+
 import { UpdateService } from '../../shared/update.service';
-import { ModalService } from '../../modal/modal.service';
+import { TutorialDialogsService } from '../tutorial-dialogs.service';
 
 @Component({
   selector: 'app-tutorial',
@@ -19,7 +20,7 @@ export class TutorialComponent implements OnInit {
 
   constructor(
     private updateService: UpdateService,
-    private modalService: ModalService,
+    private tutorialDialogsService: TutorialDialogsService,
   ) {
     this.updateService.checkUpdate();
   }
@@ -50,7 +51,7 @@ export class TutorialComponent implements OnInit {
     this.playerBot.fontColor = '#FFFFFF';
     this.playerBot.name = 'Bot Hai';
     this.game.getScriptedStartingCards([39, 66, 44, 14, 53], [5, 9, 49, 58, 1]);
-    this.modal = this.modalService.create(this.modalService.getStartDialog());
+    this.modal = this.tutorialDialogsService.getStartDialog();
   }
 
   showDialog(event: any): void {
@@ -58,13 +59,13 @@ export class TutorialComponent implements OnInit {
 
     switch (modalIndex) {
       case 1:
-        this.modal = this.modalService.create(this.modalService.getStartDialog());
+        this.modal = this.tutorialDialogsService.getStartDialog();
         break;
       case 2:
         this.modal.isActive = showNext;
 
         if (showNext) {
-          this.modal = this.modalService.getSecondDialog();
+          this.modal = this.tutorialDialogsService.getSecondDialog();
         } else {
           // Turn 1 Bot
           this.game.newTurn(this.playerBot);
@@ -84,21 +85,21 @@ export class TutorialComponent implements OnInit {
         this.modal.isActive = showNext;
 
         if (showNext) {
-          this.modal = this.modalService.getThirdDialog();
+          this.modal = this.tutorialDialogsService.getThirdDialog();
         }
         break;
       case 4:
         this.modal.isActive = showNext;
 
         if (showNext) {
-          this.modal = this.modalService.getFourthDialog();
+          this.modal = this.tutorialDialogsService.getFourthDialog();
         }
         break;
       case 5:
         this.modal.isActive = showNext;
 
         if (showNext) {
-          this.modal = this.modalService.getLastDialog();
+          this.modal = this.tutorialDialogsService.getLastDialog();
         }
         break;
     }
