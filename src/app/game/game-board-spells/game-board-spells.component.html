@@ -1,26 +1,27 @@
 <div class="columns">
-    <div class="column bordered">
-        {{player?.name}} Spell Slot 1
+  <ng-container *ngFor="let spell of player?.spellSlots; index as i">
+    <div class="column is-one-fifth">
+      <div *ngIf="spell" class="card">
+        <div class="card-image">
+          <figure class="image is-250x370">
+            <img src="{{spell.id | cardImgUrl | async}}" alt="Hand Card {{spell.id}}">
+          </figure>
+        </div>
+        <div class="card-content" [style.background]="player?.backgroundColor" [style.color]="player?.fontColor">
+          Zauber Slot {{i + 1}}
+        </div>
+      </div>
+      <!-- TODO AC: Enable if Worrkarround of Player fixed -->
+      <!-- <div *ngIf="!diener" class="card">
+                <div class="card-image">
+                    <figure class="image">
+                        <img src="assets/icons/icon-384x384.png" />
+                    </figure>
+                </div>
+                <div class="card-content">
+                    Diener Slot {{i + 1}}
+                </div>
+            </div> -->
     </div>
-    <div class="column bordered">
-        {{player?.name}} Spell Slot 2
-    </div>
-    <div class="column bordered">
-        {{player?.name}} Spell Slot 3
-    </div>
-    <div class="column bordered">
-        {{player?.name}} Spell Slot 4
-    </div>
-    <div class="column bordered">
-        {{player?.name}} Spell Slot 5
-    </div>
-    <div class="column bordered">
-        {{player?.name}} Space
-    </div>
-    <div class="column bordered">
-        {{player?.name}} Partner Slot 1
-    </div>
-    <div class="column bordered">
-        {{player?.name}} Partner Slot 2
-    </div>
+  </ng-container>
 </div>
