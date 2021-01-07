@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { WikiComponent } from './wiki/wiki.component';
-import { CardDetailsComponent } from './card-details/card-details.component';
+import { WikiDetailsComponent } from './wiki-details/wiki-details.component';
 
 const routes: Routes = [
   {
@@ -11,7 +11,7 @@ const routes: Routes = [
   },
   {
     path: ':id',
-    component: CardDetailsComponent,
+    component: WikiDetailsComponent,
   },
 ];
 

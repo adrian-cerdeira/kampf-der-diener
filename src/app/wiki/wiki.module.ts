@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { SharedModule } from '../shared/shared.module';
 import { CardModule } from '../card/card.module';
-import { CardDetailsModule } from './card-details/card-details.module';
+import { WikiDetailsModule } from './wiki-details/wiki-details.module';
 
 import { WikiRoutingModule } from './wiki-routing.module';
 
@@ -17,7 +17,7 @@ import { WikiListItemComponent } from './wiki-list-item/wiki-list-item.component
     CommonModule,
     SharedModule,
     CardModule,
-    CardDetailsModule,
+    WikiDetailsModule,
     WikiRoutingModule,
   ],
   declarations: [
