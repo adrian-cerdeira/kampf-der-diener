@@ -40,6 +40,10 @@ export class TutorialComponent implements OnInit {
     this.isStarted = true;
     window.localStorage.setItem('isStarted', 'true');
 
+    this.initGame();
+  }
+
+  private initGame() {
     this.game = new Game();
 
     this.player = this.game.getPlayerA();
