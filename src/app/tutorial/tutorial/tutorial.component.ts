@@ -275,7 +275,7 @@ export class TutorialComponent implements OnInit {
       title: 'Start',
       content: `
       <h1 class="title">Willkommen zu Kampf der Diener</h1>
-      <p class="has-text-left">
+      <p>
         In diesem Tutorial werden Sie das Spiel kennenlernen.
         <br />
         Schritt für Schritt werden Sie an das Spiel spielerisch herangeführt.
