@@ -94,8 +94,11 @@ export class TutorialComponent implements OnInit {
 
   drawCard(player: any): void {
     const isPlayer = player.name === 'Spieler 1';
+    const isSecondDialogActive = isPlayer && this.modal.index === 2;
+    const isThirdDialogActive = isPlayer && this.modal.index === 3;
+    const isFourthDialogActive = isPlayer && this.modal.index === 4;
 
-    if (isPlayer && this.modal.index === 2) {
+    if (isSecondDialogActive) {
       // Turn 1 Player
       this.game.newTurn(this.player);
       this.game.drawCard(this.player, 59);
@@ -107,20 +110,19 @@ export class TutorialComponent implements OnInit {
 
         const playerBotDienerSlots = this.playerBot.getDienerSlots();
         const cardPlayerBotPosition = this.game.searchCard(playerBotDienerSlots, 5);
-
         this.game.cardAttacksPlayer(playerBotDienerSlots[cardPlayerBotPosition], this.player);
 
         this.showNextDialog(3, true);
       }, 2000);
     }
 
-    if (isPlayer && this.modal.index === 3) {
+    if (isThirdDialogActive) {
       // Turn 2 Player
       this.game.newTurn(this.player);
       this.game.drawCard(this.player, 65);
     }
 
-    if (isPlayer && this.modal.index === 4) {
+    if (isFourthDialogActive) {
       // Turn 3 Player
       this.game.newTurn(this.player);
       this.game.drawCard(this.player, 61);
