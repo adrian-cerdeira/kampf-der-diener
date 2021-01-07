@@ -121,11 +121,12 @@ export class TutorialComponent implements OnInit {
 
   playCard(card: any, player: any): void {
     const isPlayer = player.name === 'Spieler 1';
+    const isPlayerInSecondTurn = isPlayer && card.id === 65 && this.modal.index === 3;
+    const isPlayerInThirdTurn = isPlayer && card.id === 66 && this.modal.index === 4;
+    const isPlayerLastTurn = isPlayer && card.id === 44 && this.modal.index === 4;
 
-    if (isPlayer && card.id === 65 && this.modal.index === 3) {
-      // Turn 2 Player
+    if (isPlayerInSecondTurn) {
       const newCardPlayerPosition = this.game.searchCard(this.player.getHandCards(), 65);
-
       this.game.placeDiener(this.player, newCardPlayerPosition);
 
       setTimeout(() => {
@@ -144,14 +145,12 @@ export class TutorialComponent implements OnInit {
       }, 2000);
     }
 
-    if (isPlayer && card.id === 66 && this.modal.index === 4) {
-      // Turn 3 Player
+    if (isPlayerInThirdTurn) {
       const newPlayerCardPosition = this.game.searchCard(this.player.getHandCards(), 66);
-
       this.game.placeSpell(this.player, newPlayerCardPosition);
     }
 
-    if (isPlayer && card.id === 44 && this.modal.index === 4) {
+    if (isPlayerLastTurn) {
       // Turn 3 Player
       const playerDiener = this.player.getDienerSlots();
       const playerHandCards = this.player.getHandCards();
