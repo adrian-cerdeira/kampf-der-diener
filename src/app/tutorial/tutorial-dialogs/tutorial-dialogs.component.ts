@@ -21,6 +21,7 @@ export class TutorialDialogsComponent implements OnInit {
     });
   }
 
+  // TODO AC: Last Function integrieren, falls Bug gelöst
   // last(): void {
   //   this.showed.emit({
   //     modalIndex: this.modal.index - 1,

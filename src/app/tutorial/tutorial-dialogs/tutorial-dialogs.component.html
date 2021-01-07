@@ -8,6 +8,7 @@
       <div [innerHTML]="modal.content"></div>
     </section>
     <footer class="modal-card-foot">
+      <!-- TODO AC: Return Button integrieren, falls Bug gelöst -->
       <!-- <button *ngIf="modal.index > 1 && modal.index !== 5" class="button" (click)="last()">Zurück</button> -->
       <button *ngIf="modal.index !== 5" class="button is-info next" (click)="next()">
         Weiter({{modal.index}}/5)
