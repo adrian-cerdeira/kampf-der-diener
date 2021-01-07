@@ -32,21 +32,7 @@ export class TutorialComponent implements OnInit {
       this.start();
     }
 
-    // Turn 1 Player
-    // this.game.drawCard(this.game.getPlayerA(), 59);
 
-
-    // Turn 2 Bot
-    // this.game.drawCard(this.game.getPlayerB(), 45);
-
-    // let playerBDiener = this.game.getPlayerB().getDienerSlots();
-    // let cardPosB = this.game.searchCard(playerBDiener, 5);
-
-    // this.game.cardAttacksPlayer(playerBDiener[cardPosB], this.game.getPlayerA());
-
-
-    // Turn 2 Player
-    // this.game.drawCard(this.game.getPlayerA(), 65);
 
     // let cardPos = this.game.searchCard(this.game.getPlayerA().getHandCards(), 65);
 
@@ -135,12 +121,12 @@ export class TutorialComponent implements OnInit {
           const newCardPosition = this.game.searchCard(this.playerBot.getHandCards(), 5);
           this.game.placeDiener(this.playerBot, newCardPosition);
 
-          // setTimeout(() => {
-          //   this.showDialog({
-          //     modalIndex: 2,
-          //     showNext: true,
-          //   });
-          // }, 3000);
+          setTimeout(() => {
+            this.showDialog({
+              modalIndex: 2,
+              showNext: true,
+            });
+          }, 3000);
         }
         break;
       case 3:
@@ -151,7 +137,9 @@ export class TutorialComponent implements OnInit {
             content: `
             <h1 class="title">Verteidige dich</h1>
             <p class="has-text-left">
-              Ziehe eine Karte und spiele die Karte <strong>Regenbogenviech</strong>, um keinen Schaden zu erleiden.
+              Der Bot Hai hat dich mit <strong>Agent Schnecke</strong> angegriffen.
+              <br />
+              Ziehe eine Karte und spiele das <strong>Regenbogenviech</strong>, um dich zu verteidigen.
             </p>
             `,
             index: 3,
@@ -208,6 +196,36 @@ export class TutorialComponent implements OnInit {
         }
         break;
     }
+  }
+
+  drawCard(player: any): void {
+    const isPlayer = player.name === 'Spieler 1';
+
+    if (isPlayer && this.modal.index === 2) {
+      // Turn 1 Player
+      this.game.drawCard(this.player, 59);
+
+      setTimeout(() => {
+        // Turn 2 Bot
+        this.game.drawCard(this.playerBot, 45);
+
+        const playerBotDienerSlots = this.playerBot.getDienerSlots();
+        const cardPlayerBotPosition = this.game.searchCard(playerBotDienerSlots, 5);
+
+        this.game.cardAttacksPlayer(playerBotDienerSlots[cardPlayerBotPosition], this.player);
+
+        this.showDialog({
+          modalIndex: 3,
+          showNext: true,
+        });
+      }, 2000);
+    }
+
+    if (isPlayer && this.modal.index === 3) {
+      // Turn 2 Player
+      this.game.drawCard(this.player, 65);
+    }
+
   }
 
   private getStartDialog(): any {

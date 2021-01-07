@@ -1,27 +1,28 @@
 <ng-container *ngIf="isStarted; else startGame">
-    <section class="section has-background-white has-text-black">
-        <div class="container has-text-centered">
-            <div class="columns is-flex is-flex-wrap-wrap">
-                <div class="column is-full">
-                    <app-player [player]="playerBot" [showCards]="!isSecondPlayer"></app-player>
-                </div>
-                <div class="column is-full">
-                    <app-game-board [player]="playerBot" [shouldChangePosition]="!isSecondPlayer"></app-game-board>
-                    <div class="columns">
-                        <div class="column bordered">
-                            Mid
-                        </div>
-                    </div>
-                    <app-game-board [player]="player" [shouldChangePosition]="isSecondPlayer"></app-game-board>
-                </div>
-                <div class="column is-full">
-                    <app-player [player]="player" [showCards]="isSecondPlayer"></app-player>
-                </div>
-            </div>
-            <app-tutorial-dialogs [modal]="modal" (showed)="showDialog($event)"></app-tutorial-dialogs>
+  <section class="section has-background-white has-text-black">
+    <div class="container has-text-centered">
+      <div class="columns is-flex is-flex-wrap-wrap">
+        <div class="column is-full">
+          <app-player [player]="playerBot" [showCards]="!isSecondPlayer" (drawedCard)="drawCard(playerBot)">
+          </app-player>
         </div>
-    </section>
+        <div class="column is-full">
+          <app-game-board [player]="playerBot" [shouldChangePosition]="!isSecondPlayer"></app-game-board>
+          <div class="columns">
+            <div class="column bordered">
+              Mid
+            </div>
+          </div>
+          <app-game-board [player]="player" [shouldChangePosition]="isSecondPlayer"></app-game-board>
+        </div>
+        <div class="column is-full">
+          <app-player [player]="player" [showCards]="isSecondPlayer" (drawedCard)="drawCard(player)"></app-player>
+        </div>
+      </div>
+      <app-tutorial-dialogs [modal]="modal" (showed)="showDialog($event)"></app-tutorial-dialogs>
+    </div>
+  </section>
 </ng-container>
 <ng-template #startGame>
-    <app-tutorial-start-game (started)="start()"></app-tutorial-start-game>
+  <app-tutorial-start-game (started)="start()"></app-tutorial-start-game>
 </ng-template>
