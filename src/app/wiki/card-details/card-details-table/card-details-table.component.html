@@ -1,55 +1,55 @@
 <table class="table is-fullwidth">
-    <tbody>
-        <tr>
-            <td class="has-text-left">
-                <strong>
-                    Kristall:
-                </strong>
-            </td>
-            <td class="has-text-left">
-                <span class="icon">
-                    <img src="assets/custom-icons/crystal.svg" width="16" height="16" />
-                </span>
-                {{card.crystal}}
-            </td>
-        <tr>
-        <tr *ngIf="card.attack >= 0">
-            <td class="has-text-left">
-                <strong>
-                    Angriff:
-                </strong>
-            </td>
-            <td class="has-text-left">
-                <span class="icon">
-                    <img src="assets/custom-icons/sword.svg" width="16" height="16" />
-                </span>
-                {{card.attack}}
-            </td>
-        <tr *ngIf="card.life">
-            <td class="has-text-left">
-                <strong>
-                    Leben:
-                </strong>
-            </td>
-            <td class="has-text-left">
-                <span class="icon">
-                    <i class="fas fa-tint"></i>
-                </span>
-                {{card.life}}
-            </td>
-        </tr>
-        <tr *ngIf="card.shield >= 0">
-            <td class="has-text-left">
-                <strong>
-                    Schild:
-                </strong>
-            </td>
-            <td class="has-text-left">
-                <span class="icon">
-                    <i class="fas fa-shield-alt"></i>
-                </span>
-                {{card.shield}}
-            </td>
-        </tr>
-    </tbody>
+  <tbody>
+    <tr>
+      <td class="has-text-left">
+        <strong>
+          Kristall:
+        </strong>
+      </td>
+      <td class="has-text-left">
+        <span class="icon">
+          <img src="assets/custom-icons/crystal.svg" width="16" height="16" />
+        </span>
+        {{card.crystal}}
+      </td>
+    <tr>
+    <tr *ngIf="card.attack >= 0">
+      <td class="has-text-left">
+        <strong>
+          Angriff:
+        </strong>
+      </td>
+      <td class="has-text-left">
+        <span class="icon">
+          <img src="assets/custom-icons/sword.svg" width="16" height="16" />
+        </span>
+        {{card.attack}}
+      </td>
+    <tr *ngIf="card.life">
+      <td class="has-text-left">
+        <strong>
+          Leben:
+        </strong>
+      </td>
+      <td class="has-text-left">
+        <span class="icon">
+          <i class="fas fa-tint"></i>
+        </span>
+        {{card.life}}
+      </td>
+    </tr>
+    <tr *ngIf="card.shield >= 0">
+      <td class="has-text-left">
+        <strong>
+          Schild:
+        </strong>
+      </td>
+      <td class="has-text-left">
+        <span class="icon">
+          <i class="fas fa-shield-alt"></i>
+        </span>
+        {{card.shield}}
+      </td>
+    </tr>
+  </tbody>
 </table>

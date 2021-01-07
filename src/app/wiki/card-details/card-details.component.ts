@@ -11,7 +11,6 @@ import { UpdateService } from '../../shared/update.service';
 })
 export class CardDetailsComponent implements OnInit {
   card: any;
-  cardImageUrl: any;
   previousCard: any;
   nextCard: any;
 
@@ -30,10 +29,6 @@ export class CardDetailsComponent implements OnInit {
 
     this.cardService.getById(id).subscribe(card => {
       this.card = card;
-
-      this.cardService.getImg(card.img).subscribe((imgUrl: string) => {
-        this.cardImageUrl = imgUrl;
-      });
     });
 
     this.cardService.getById(previousId).subscribe(previousCard => {

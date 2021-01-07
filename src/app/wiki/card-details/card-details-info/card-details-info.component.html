@@ -1,16 +1,16 @@
 <div class="columns">
-    <div class="column">
-        <img [src]="cardImageUrl" alt="Karte {{card.name}}" />
-    </div>
-    <div class="column">
-        <h2 class="subtitle has-text-left">Beschreibung</h2>
-        <p class="has-text-left">{{card.description}}</p>
-        <br />
-        <ng-container *ngIf="card.effects">
-            <h2 class="subtitle has-text-left">Effekte</h2>
-            <p class="has-text-left">{{card.effects}}</p>
-        </ng-container>
-        <br />
-        <app-card-details-table [card]="card"></app-card-details-table>
-    </div>
+  <div class="column">
+    <img src="{{card.id | cardImgUrl | async}}" alt="Karte {{card.name}}" />
+  </div>
+  <div class="column">
+    <h2 class="subtitle has-text-left">Beschreibung</h2>
+    <p class="has-text-left">{{card.description}}</p>
+    <br />
+    <ng-container *ngIf="card.effects">
+      <h2 class="subtitle has-text-left">Effekte</h2>
+      <p class="has-text-left">{{card.effects}}</p>
+    </ng-container>
+    <br />
+    <app-card-details-table [card]="card"></app-card-details-table>
+  </div>
 </div>
