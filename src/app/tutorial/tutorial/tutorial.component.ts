@@ -31,12 +31,12 @@ export class TutorialComponent implements OnInit {
     this.isStarted = localStorageIsStarted;
 
     if (this.isStarted) {
-      this.start();
+      this.startGame();
     }
 
   }
 
-  start(): void {
+  startGame(): void {
     this.isStarted = true;
     window.localStorage.setItem('isStarted', 'true');
 
