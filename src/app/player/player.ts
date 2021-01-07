@@ -23,6 +23,7 @@ export class Player {
     this.hitpoints = hitpoints;
     this.maxHitpoints = hitpoints;
     this.crystals = 0;
+    this.currentCrystals = 0;
     this.turn = 0;
   }
 
@@ -61,9 +62,9 @@ export class Player {
 
   getCrystals(): number { return this.crystals; }
   setCrystals(crystals: number): void { this.crystals = crystals; }
-  
+
   getCurrentCrystals(): number { return this.currentCrystals; }
-  setCurrentCrystals(crystals: number) {this.currentCrystals = crystals; }
+  setCurrentCrystals(crystals: number) { this.currentCrystals = crystals; }
 
   getTurn(): number { return this.turn; }
   setTurn(turn: number): void { this.turn = turn; }
