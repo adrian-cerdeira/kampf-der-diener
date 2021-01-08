@@ -32,12 +32,8 @@ export class Game {
     this.effects = new Effects();
   }
 
-  public getRandomInt(max: number): number {
-    return (Math.floor(Math.random() * Math.floor(max))) + 1;
-  }
-
-  public newTurn(player: Player): void {
-    player.nextTurn();
+  private createPlayer(): Player {
+    return new Player(this.startingHitpoints, this);
   }
 
   getStartingCards(): void {
@@ -68,13 +64,8 @@ export class Game {
     card.setLocation(CardLocation.inHand);
   }
 
-  generateRandomCardId(): number {
-    let randnum = 1;
-    randnum = this.getRandomInt(this.AMMOUNT_OF_CARDS);
-    if (this.BANNED_CARDS.includes(randnum)) {
-      randnum = this.generateRandomCardId();
-    }
-    return randnum;
+  public newTurn(player: Player): void {
+    player.nextTurn();
   }
 
   placeDiener(player: Player, cardID: number): void {
@@ -116,16 +107,16 @@ export class Game {
     }
   }
 
-  public sendDienerToGrave(card: Card): void {
-    const player = card.getPlayer();
-    const index = this.searchCard(player.getDienerSlots(), card.getId());
-    this.moves.sendCardToGrave(player.getGraveyard(), player.getDienerSlots(), index);
-  }
-
   public sendHandcardToGrave(card: Card): void {
     const player = card.getPlayer();
     const index = this.searchCard(player.getHandCards(), card.getId());
     this.moves.sendCardToGrave(player.getGraveyard(), player.getHandCards(), index);
+  }
+
+  public sendDienerToGrave(card: Card): void {
+    const player = card.getPlayer();
+    const index = this.searchCard(player.getDienerSlots(), card.getId());
+    this.moves.sendCardToGrave(player.getGraveyard(), player.getDienerSlots(), index);
   }
 
   public sendSpellToGrave(card: Card): void {
@@ -134,20 +125,29 @@ export class Game {
     this.moves.sendCardToGrave(player.getGraveyard(), player.getSpellSlots(), index);
   }
 
-  public searchCard(cardArray: Card[], id: number): number {
-    return this.moves.searchCard(cardArray, id);
-  }
-
-  private createPlayer(): Player {
-    return new Player(this.startingHitpoints, this);
-  }
-
   playerWins(): void {
     if (this.playerA.getHitpoints() <= 0) {
       this.status = GameStatus.PlayerBWon;
     } else if (this.playerB.getHitpoints() <= 0) {
       this.status = GameStatus.PlayerAWon;
     }
+  }
+
+  generateRandomCardId(): number {
+    let randnum = 1;
+    randnum = this.getRandomInt(this.AMMOUNT_OF_CARDS);
+    if (this.BANNED_CARDS.includes(randnum)) {
+      randnum = this.generateRandomCardId();
+    }
+    return randnum;
+  }
+
+  public getRandomInt(max: number): number {
+    return (Math.floor(Math.random() * Math.floor(max))) + 1;
+  }
+
+  public searchCard(cardArray: Card[], id: number): number {
+    return this.moves.searchCard(cardArray, id);
   }
 
   getPlayerA(): Player { return this.playerA; }
