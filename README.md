@@ -15,6 +15,6 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - Versionierung der Seite mit [standard-version](https://github.com/conventional-changelog/standard-version), siehe [CHANGELOG.md](CHANGELOG.md)
 - Testing mit [Karma](https://karma-runner.github.io/latest/index.html)
 
-## [Documentation](docs/documentation.md)
+## [Dokumentation](docs/documentation.md)
 
 ## [CONTRIBUTING](docs/CONTRIBUTING.md)
