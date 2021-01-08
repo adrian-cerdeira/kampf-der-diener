@@ -28,6 +28,11 @@ export class Move {
     return -1;
   }
 
+  placeCard(handcards: Card[], field: Card[], arrayIndex: number): void {
+    field.push(handcards[arrayIndex]);
+    handcards.splice(arrayIndex, 1);
+  }
+
   battleBetweenCards(attackingCard: Card, defendingCard: Card): void {
     defendingCard.setHitpoints(defendingCard.getHitpoints() - (attackingCard.getAttack() - defendingCard.getShield()));
     attackingCard.setHitpoints(attackingCard.getHitpoints() - (defendingCard.getAttack() - attackingCard.getShield()));
@@ -35,11 +40,6 @@ export class Move {
 
   attackOnPlayer(attackingCard: Card, player: Player): void {
     player.takeDamage(attackingCard.getAttack());
-  }
-
-  placeCard(handcards: Card[], field: Card[], arrayIndex: number): void {
-    field.push(handcards[arrayIndex]);
-    handcards.splice(arrayIndex, 1);
   }
 
   sendCardToGrave(graveyard: Card[], field: Card[], arrayIndex: number): void {
