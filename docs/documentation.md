@@ -1,4 +1,4 @@
-# Documentation
+# Dokumentation
 
 > Dokumentation des IDE ist unter [CONTRIBUTING.md](CONTRIBUTING.md) vorhanden.
 
