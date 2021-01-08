@@ -33,46 +33,42 @@ describe('Testing card class', () => {
         expect(findDrawedCard.id).toBe(5);
     });
 
-    // TODO MF: Get Cost Error
-    // it('Place card from hand to diener slot', () => {
-    //     game.newTurn(player);
-    //     player.setHandCards([new Card(cards.find((c: any) => c.id === 5), player)]);
-    //     game.placeDiener(player, 5);
+    it('Place card from hand to diener slot', () => {
+        game.newTurn(player);
+        player.setHandCards([new Card(cards.find((c: any) => c.id === 5), player)]);
+        game.placeDiener(player, 0);
 
-    //     const findDienerCard = player.getDienerSlots().find((c: any) => c.id === 5);
+        const findDienerCard = player.getDienerSlots().find((c: any) => c.id === 5);
 
-    //     expect(findDienerCard.id).toBe(5);
-    // });
+        expect(findDienerCard.id).toBe(5);
+    });
 
-    // TODO MF: Get Cost Error
-    // it('Place card from hand to spell slot', () => {
-    //     game.newTurn(player);
-    //     player.setHandCards([new Card(cards.find((c: any) => c.id === 5), player)]);
-    //     game.placeSpell(player, 5);
+    it('Place card from hand to spell slot', () => {
+        game.newTurn(player);
+        player.setHandCards([new Card(cards.find((c: any) => c.id === 5), player)]);
+        game.placeSpell(player, 0);
 
-    //     const findSpellCard = player.getSpellSlots().find((c: any) => c.id === 5);
+        const findSpellCard = player.getSpellSlots().find((c: any) => c.id === 5);
 
-    //     expect(findSpellCard.id).toBe(5);
-    // });
+        expect(findSpellCard.id).toBe(5);
+    });
 
-    // TODO MF: Get Cost Error
-    // it('Is card for current crystals from player allowed to play', () => {
-    //     player.setHandCards([new Card(cards.find((c: any) => c.id === 1), player)]);
+    it('Is card for current crystals from player allowed to play', () => {
+        player.setHandCards([new Card(cards.find((c: any) => c.id === 1), player)]);
 
-    //     expect(game.cardCostValidation(player, player.getHandCards(), 5)).toBe(false);
-    // });
+        expect(game.cardCostValidation(player, player.getHandCards(), 0)).toBe(false);
+    });
 
-    // TODO MF: Should but work, it dont
-    // it('Attacks between cards', () => {
-    //     const playerEnemy = new Player(startingHitPoints, game);
-    //     const attackerCard = new Card(cards.find((c: any) => c.id === 1), player);
-    //     const defenderCard = new Card(cards.find((c: any) => c.id === 2), playerEnemy);
+    it('Attacks between cards', () => {
+        const playerEnemy = new Player(startingHitPoints, game);
+        const attackerCard = new Card(cards.find((c: any) => c.id === 1), player);
+        const defenderCard = new Card(cards.find((c: any) => c.id === 4), playerEnemy);
 
-    //     game.cardAttacksCard(attackerCard, defenderCard);
+        game.cardAttacksCard(attackerCard, defenderCard);
 
-    //     // expect(attackerCard.getHitpoints()).toBe(-5);
-    //     // expect(defenderCard.getHitpoints()).toBe(0);
-    // });
+        expect(attackerCard.getHitpoints()).toBe(0);
+        expect(defenderCard.getHitpoints()).toBe(-9);
+    });
 
     it('Send diener to grave after defeat', () => {
         const graveCard = new Card(cards.find((c: any) => c.id === 1), player);
