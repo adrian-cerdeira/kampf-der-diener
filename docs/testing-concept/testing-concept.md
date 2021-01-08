@@ -31,7 +31,15 @@ describe('Hello world', () => { (1)
 
 ## Testfälle
 
-TODO MARIO noch
+Um unsere Applikation möglichst gut zu testen, haben wir ein Total von 61 automatischen Tests geschrieben. Sie testen hauptsächlich das Backend um die Seite "Tutorial"
+Die Tests verlaufen alle Fehlerfrei.
+In folgenden 5 Files können die 61 Tests zu 5 verschiedenen Klassen gefunden werden.
+1. `Card` [card.spec.ts](../../src/app/tests/card.spec.ts)
+2. `Effects` [effects.spec.ts](../../src/app/tests/effects.spec.ts)
+3. `Game` [game.spec.ts](../../src/app/tests/game.spec.ts)
+4. `Move` [move.spec.ts](../../src/app/tests/move.spec.ts)
+5. `Player` [player.spec.ts](../../src/app/tests/player.spec.ts)
+
 
 ## Start Testing
 
