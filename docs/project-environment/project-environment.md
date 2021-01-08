@@ -5,19 +5,19 @@
 ### Fronted
 
 Mit dem [Angular Framework](https://angular.io/) können wir unseren Single Page Webauftritt einfach erstellen.
-Dabei ist Angular, wie eine App aufgebaut, die aus vielen unter Komponenten, Services und Modules besteht.
+Dabei ist Angular wie eine App aufgebaut, die aus vielen unter Komponenten, Services und Modules besteht.
 Hier eine grafische Darstellung der Angular Architektur:  
 ![AngularArchitecture](angular-architecture.jpeg)  
 *Quelle: <https://s3.amazonaws.com/oodles-technologies1/blog-images/9c26b668-ac50-402d-bd87-b6bdac3d6eb7.jpeg>*
 
-Ausserdem erläutern wir kurz, die einzelnen Teile der Angular Architektur:
+Ausserdem erläutern wir kurz die einzelnen Teile der Angular Architektur:
 
 - **Module:** In Angular sind Apps modular aufgebaut. Mit Module werden Komponenten und Templates untergeordnet.
 - **Template:** Ist das HTML der Komponente.
 - **Metadata:** Grundinformationen der App.
 - **Component**: Komponenten sind die einzelnen Seiten der App. Die HTML, CSS oder SCSS, Test und Typescript beinhalten.
 - **Services**: In Services können Daten durch zum Beispiel HTTP Client aufgerufen werden.
-- **Directive**: Mit Direktiven können wiederholende Anweisungen definiert werden. Die im Template wiederverwenden werden können.
+- **Directive**: Mit Direktiven können wiederholende Anweisungen definiert werden. Diese können im Template wiederverwenden werden.
 
 #### PWA
 
@@ -26,7 +26,7 @@ Damit unsere App nicht im App Store oder Play Store zur Verfügung gestellt werd
 Eine Progressive Web App ist eine Website, die zahlreiche Merkmale besitzt, die bislang nativen Apps vorbehalten waren.
 Sie kann daher auch als Symbiose aus einer responsiven Webseite und einer App beschrieben werden.
 In Angular können PWA simpel durch Installierung des [@angular/pwa](https://github.com/angular/angular/blob/master/packages/service-worker/PACKAGE.md) Package eingerichtet werden.
-Auch hat Angular Service Worker coole Interaktionsmöglichkeiten von PWA und Angular, wie zum Beispiel Push Benachrichtigungen.
+Auch hat Angular Service Worker nützliche Interaktionsmöglichkeiten von PWA und Angular übernommen. Als Beispiel dienen die Push Benachrichtigungen.
 
 Hier eine grafische Darstellung der PWA Architektur:  
 ![PWAArchitecture](pwa-architecture.png)
@@ -35,10 +35,10 @@ Hier eine grafische Darstellung der PWA Architektur:
 ### Backend
 
 Grundsätzlich verwenden wir kein kompliziertes Backend.
-Also mit [Firebase](https://firebase.google.com/?gclid=CjwKCAiA_Kz-BRAJEiwAhJNY77YTjGqSSgsSSOLwD1eIsQD6xitIdvYir1lJJ05fd7XDPENJV_G2FBoCe5gQAvD_BwE) können wir folgende Aufgaben erledigen:
+Mit [Firebase](https://firebase.google.com/?gclid=CjwKCAiA_Kz-BRAJEiwAhJNY77YTjGqSSgsSSOLwD1eIsQD6xitIdvYir1lJJ05fd7XDPENJV_G2FBoCe5gQAvD_BwE) können wir folgende Aufgaben erledigen:
 
 - **Hosting**: Hosting der App und durch vorgegebenen oder benutzerdefinierten Domäne erreichbar.
-- **Authentification**: Authentifizierung mit Logins und Sign-On umsetzbar (wird in diesem Projekt nicht angewendet!).
+- **Authentification**: Authentifizierung mit Logins und Sign-On umsetzbar (wird in diesem Projekt zum aktuellen Stand nicht angewendet!).
 - **Realtime Database**: Lesen, Schreiben und Aktualisierung von Daten, die in der App verwendet werden.
 - **Storage**: Lagern von Bilder, die in der App verwendet werden.
 
@@ -48,16 +48,16 @@ Hier eine grafische Darstellung der Firebase Archtiektur:
 
 ## Schnittstellen
 
-### Github
+### GitHub
 
-Als Quellcodeverwalter verwenden wir das bereits sehr berühmte [Github](https://github.com/).
-Dort können wir Github Actions verweden, das unser CI (Continous Integration) regelt.
+Als Quellcodeverwalter verwenden wir das bereits sehr berühmte [GitHub](https://github.com/).
+Dort können wir GitHub Actions verweden, welche unser CI (Continous Integration) regelt.
 
-#### Github Actions - CI
+#### GitHub Actions - CI
 
 Mit GitHub Actions können wir unsere Software-Workflows mit CI / CD auf einfache Weise automatisieren.
 In unseren [CI](../../.github/workflows/master.yml) werden für die einzelen Actions Stages erstellt.
-Somit kann die App gebuildet, getestet, kompalität prüfen und schlussendlich veröffentlicht werden.
+Somit kann die App gebuildet, getestet, kompalität geprüft und schlussendlich veröffentlicht werden.
 
 Hier eine grafische Darstellung unseres CI:
 ![GithubCI](github-ci.png)
