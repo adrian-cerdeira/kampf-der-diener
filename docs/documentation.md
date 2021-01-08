@@ -26,7 +26,7 @@ Als Grundlage diente uns die alte [Abschlussarbeit der 3. Sekundarstufe](assets/
 Die Umsetzung verlief in der Projektmethode IPERKA.
 Mit Fokussierung zuerst an den einzelnen Seiten und zum Schluss am Spiel.
 Parallel wurde an Performance und Redesigns der Seite gearbeitet.
-Auch der Code wurde, falls notwendig, refactort und neu geschrieben.
+Auch der Code wurde, falls notwendig und bei vorhandener Zeit, refactort und neu geschrieben.
 
 ## Ergebnis
 
