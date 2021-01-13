@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0-beta](https://github.com/adrian-cerdeira/kampf-der-diener/compare/v0.0.18-beta.0...v1.0.0-beta) (2021-01-13)
+
 ### [0.0.18-beta.0](https://github.com/adrian-cerdeira/kampf-der-diener/compare/v0.0.15...v0.0.18-beta.0) (2021-01-07)
 
 ### [0.0.17](https://github.com/adrian-cerdeira/kampf-der-diener/compare/v0.0.11...v0.0.17) (2021-01-07)
